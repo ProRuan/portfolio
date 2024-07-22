@@ -1,0 +1,10 @@
+.link-group {
+  width: 326px;
+  height: 32px;
+  gap: 29px;
+
+  // double code (mixin)!!!
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}

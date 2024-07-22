@@ -1,0 +1,12 @@
+@mixin display-flex($jc: center, $ai: center) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+app-header {
+  box-sizing: border-box;
+  padding: 37px 100px;
+  background-color: #141d2f;
+  @include display-flex($jc: space-between);
+}
