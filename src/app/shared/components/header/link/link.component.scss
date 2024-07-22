@@ -11,15 +11,17 @@ a {
   flex-direction: column;
   gap: 1px;
 
-  svg {
-    display: none;
-  }
-
   &:hover {
     color: #70e61c;
-
-    svg {
-      display: flex;
-    }
   }
 }
+
+svg {
+  display: none;
+}
+
+// link selected !!!
+
+// svg {
+//   display: flex;
+// }
