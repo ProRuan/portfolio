@@ -9,4 +9,10 @@ import { CommonModule } from '@angular/common';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  links = [
+    { text: 'About me', width: 114 },
+    { text: 'Skills', width: 59 },
+    { text: 'Portfolio', width: 95 },
+  ];
+}

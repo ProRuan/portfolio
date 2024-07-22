@@ -4,8 +4,5 @@
 
 
 <div class="link-group">
-    <!-- ngfor !!! -->
-    <app-link [text]="'About me'" [ngStyle]="{'width.px': 114}"></app-link>
-    <app-link [text]="'Skills'" [ngStyle]="{'width.px': 59}"></app-link>
-    <app-link [text]="'Portfolio'" [ngStyle]="{'width.px': 95}"></app-link>
+    <app-link *ngFor="let link of links" [text]="link.text" [ngStyle]="{'width.px': link.width}"></app-link>
 </div>
