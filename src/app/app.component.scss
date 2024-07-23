@@ -59,6 +59,7 @@
 
 .icon-bar {
   @include display-flex($jc: flex-start);
+  height: 40px;
   gap: 32px;
 }
 
@@ -73,8 +74,22 @@
   writing-mode: vertical-lr;
 }
 
-// edit buttons and mail!!!
 button {
-  background-color: transparent;
   border: unset;
+  cursor: pointer;
+}
+
+.git-hub-btn {
+  box-sizing: border-box;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  background-image: url("../assets/img/git_hub_icon.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  &:hover {
+    background-size: 40px 40px;
+  }
 }

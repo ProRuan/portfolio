@@ -1,7 +1,7 @@
 @import "../../../../../mixins.scss";
 @import "../../../../../styles.scss";
 
-a {
+.link {
   @include font();
   height: 32px;
   text-align: left;
@@ -16,12 +16,10 @@ a {
   }
 }
 
-svg {
+.underline {
   display: none;
+  width: 55.5px;
+  height: 3px;
 }
 
-// link selected !!!
-
-// svg {
-//   display: flex;
-// }
+// link selected (with underline)!!!
