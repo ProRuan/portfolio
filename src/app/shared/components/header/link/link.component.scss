@@ -5,15 +5,9 @@
   @include font();
   height: 32px;
   text-align: left;
-  text-decoration: none;
-  color: #ffffff;
   display: flex;
   flex-direction: column;
   gap: 1px;
-
-  &:hover {
-    color: $prim1;
-  }
 }
 
 .underline {
