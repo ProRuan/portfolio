@@ -1,107 +1,45 @@
 @import "../mixins.scss";
-@import "../styles.scss";
 
-.atf {
-  @include display-flex(space-between, flex-end);
-  padding-top: 297px;
-  height: calc(100vh - 297px);
-  width: calc(100% - 100px);
-  flex-direction: column;
+.about-me {
+  // to edit!!!
+  height: calc(100vh - 109px);
 }
 
-// hero image + bgc are missing!!!
+.about-me-box {
+  @include display-flex(flex-start, flex-start);
+  padding: 124px 100px;
+  width: 471px;
+  flex-direction: column;
+  gap: 40px;
+}
 
-.hero {
+.about-me-title {
+  @include font(90px, 700, 108px);
+  margin: 0;
+  width: 471px;
+}
+
+.about-me-content {
   @include display-flex();
   flex-direction: column;
-  gap: 35px;
-}
-
-.hero-text {
-  @include display-flex($jc: flex-end);
-}
-
-.vert-text {
-  @include font(64px, 400, 76.8px);
-  min-width: 152px;
-  height: 63px;
-  transform: rotate(-90deg);
-}
-
-.horiz-text {
-  @include display-flex($ai: flex-start);
-  max-height: 172px;
-  flex-direction: column;
-}
-
-.name {
-  @include font(90px, 700, 108px);
-}
-
-.occupation {
-  @include font(58px, 400, 69.6px);
-  color: $prim2;
-}
-
-.hero-btn {
-  @include font();
-  padding: 15px 30px;
-  color: white;
-  background-color: $prim1;
-  border: unset;
-  border-radius: 10px;
-}
-
-.hero-bottom {
-  @include display-flex($jc: space-between, $ai: flex-end);
-  width: 100%;
-}
-
-.icon-bar {
-  @include display-flex($jc: flex-start);
-  height: 40px;
   gap: 32px;
 }
 
-.scroll-hint-box {
-  @include font();
-  @include display-flex($jc: flex-start);
+p {
+  text-align: justify;
+}
+
+.about-me-text {
+  @include font(16px, 400, 19.2px);
+}
+
+.about-me-details {
+  @include display-flex();
   flex-direction: column;
-  gap: 3px;
+  gap: 24px;
 }
 
-.scroll-hint {
-  writing-mode: vertical-lr;
-}
-
-button {
-  border: unset;
-  cursor: pointer;
-}
-
-.social-btn {
-  box-sizing: border-box;
-  padding: 0;
-  width: 40px;
-  max-width: 40px;
-  height: 40px;
-  background-color: transparent;
-  background-position: center center;
-  background-repeat: no-repeat;
-
-  &:hover {
-    background-size: 40px auto;
-  }
-}
-
-.git-hub-btn {
-  background-image: url("../assets/img/git_hub_icon.svg");
-}
-
-.email-btn {
-  background-image: url("../assets/img/email_icon.svg");
-}
-
-.linked-in-btn {
-  background-image: url("../assets/img/linked_in_icon.svg");
+.about-me-subbox {
+  @include display-flex();
+  gap: 16px;
 }
