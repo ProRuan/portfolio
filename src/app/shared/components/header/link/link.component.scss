@@ -1,9 +1,9 @@
+@import "../../../../../mixins.scss";
+@import "../../../../../styles.scss";
+
 a {
+  @include font();
   height: 32px;
-  font-family: "Poppins";
-  font-size: 23px;
-  font-weight: 400;
-  line-height: 27.6px;
   text-align: left;
   text-decoration: none;
   color: #ffffff;
@@ -12,7 +12,7 @@ a {
   gap: 1px;
 
   &:hover {
-    color: #4b47ff;
+    color: $prim1;
   }
 }
 

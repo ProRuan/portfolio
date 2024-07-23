@@ -1,19 +1,22 @@
+@import "../../../../mixins.scss";
+
+.header {
+  @include display-flex($jc: space-between);
+  box-sizing: border-box;
+  padding: 37px 100px;
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+
 .link-group {
+  @include display-flex(flex-end, flex-start);
   width: 326px;
   height: 32px;
   gap: 29px;
-
-  // double code (mixin)!!!
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
 }
 
 .logo {
-  font-family: "Poppins";
-  font-size: 35px;
-  font-weight: bold;
-  line-height: 35px;
+  @include font(35px, bold, 35px);
   letter-spacing: 2px;
-  color: #ffffff;
 }

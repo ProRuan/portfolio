@@ -1,13 +1,14 @@
-<div class="logo">
-    <span>R</span>
-    <span class="c-prim-1">u</span>
-    <span class="c-prim-2">d</span>
-    <span>o</span>
-    <span>l</span>
-    <span>f</span>
-</div>
+<header class="header">
+    <div class="logo">
+        <span>R</span>
+        <span class="c-prim-1">u</span>
+        <span class="c-prim-2">d</span>
+        <span>o</span>
+        <span>l</span>
+        <span>f</span>
+    </div>
 
-
-<div class="link-group">
-    <app-link *ngFor="let link of links" [text]="link.text" [ngStyle]="{'width.px': link.width}"></app-link>
-</div>
+    <div class="link-group">
+        <app-link *ngFor="let link of links" [text]="link.text" [ngStyle]="{'width.px': link.width}"></app-link>
+    </div>
+</header>

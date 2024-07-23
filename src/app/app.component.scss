@@ -1,12 +1,80 @@
-@mixin display-flex($jc: center, $ai: center) {
-  display: flex;
-  justify-content: $jc;
-  align-items: $ai;
+@import "../mixins.scss";
+@import "../styles.scss";
+
+.atf {
+  @include display-flex(space-between, flex-end);
+  padding-top: 297px;
+  height: calc(100vh - 297px);
+  width: calc(100% - 100px);
+  flex-direction: column;
 }
 
-app-header {
-  box-sizing: border-box;
-  padding: 37px 100px;
-  background-color: #141d2f;
-  @include display-flex($jc: space-between);
+// hero image + bgc are missing!!!
+
+.hero {
+  @include display-flex();
+  flex-direction: column;
+  gap: 35px;
+}
+
+.hero-text {
+  @include display-flex($jc: flex-end);
+}
+
+.vert-text {
+  @include font(64px, 400, 76.8px);
+  min-width: 152px;
+  height: 63px;
+  transform: rotate(-90deg);
+}
+
+.horiz-text {
+  @include display-flex($ai: flex-start);
+  max-height: 172px;
+  flex-direction: column;
+}
+
+.name {
+  @include font(90px, 700, 108px);
+}
+
+.occupation {
+  @include font(58px, 400, 69.6px);
+  color: $prim2;
+}
+
+.hero-btn {
+  @include font();
+  padding: 15px 30px;
+  color: white;
+  background-color: $prim1;
+  border: unset;
+  border-radius: 10px;
+}
+
+.hero-bottom {
+  @include display-flex($jc: space-between, $ai: flex-end);
+  width: 100%;
+}
+
+.icon-bar {
+  @include display-flex($jc: flex-start);
+  gap: 32px;
+}
+
+.scroll-hint-box {
+  @include font();
+  @include display-flex($jc: flex-start);
+  flex-direction: column;
+  gap: 3px;
+}
+
+.scroll-hint {
+  writing-mode: vertical-lr;
+}
+
+// edit buttons and mail!!!
+button {
+  background-color: transparent;
+  border: unset;
 }
