@@ -3,11 +3,20 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { HeroComponent } from './hero/hero.component';
+import { AboutMeComponent } from './about-me/about-me.component';
+import { MySkillsComponent } from './my-skills/my-skills.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HeaderComponent, HeroComponent],
+  imports: [
+    CommonModule,
+    RouterOutlet,
+    HeaderComponent,
+    HeroComponent,
+    AboutMeComponent,
+    MySkillsComponent,
+  ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss', '../../src/assets/fonts/font-face.scss'],
 })
