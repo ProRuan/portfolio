@@ -1,13 +1,22 @@
 @import "../mixins.scss";
+@import "../styles.scss";
 
 .about-me {
+  @include display-flex(flex-start, center);
+
   // to edit!!!
   height: calc(100vh - 109px);
 }
 
 .about-me-box {
-  @include display-flex(flex-start, flex-start);
+  @include display-flex($jc: flex-start);
   padding: 124px 100px;
+  width: 100%;
+  gap: 149px;
+}
+
+.about-me-box-left {
+  @include display-flex(flex-start, flex-start);
   width: 471px;
   flex-direction: column;
   gap: 40px;
@@ -26,6 +35,7 @@
 }
 
 p {
+  margin: 0;
   text-align: justify;
 }
 
@@ -40,6 +50,18 @@ p {
 }
 
 .about-me-subbox {
-  @include display-flex();
+  @include display-flex(flex-start, flex-start);
   gap: 16px;
+}
+
+.about-me-img {
+  box-sizing: border-box;
+  width: 453px;
+  height: 453px;
+  border: 4px solid $prim1;
+  border-radius: 50%;
+}
+
+.about-me-box-right {
+  @include display-flex();
 }
