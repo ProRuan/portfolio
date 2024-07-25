@@ -69,8 +69,32 @@
 }
 
 .project-button-box {
+  width: 100%;
+  // height: 65.36px;
   display: flex;
   gap: 86px;
 }
 
-// style buttons
+// double code!!!
+.live-test-btn {
+  @include font();
+  padding: 15px 30px;
+  color: white;
+  background-color: $prim2;
+  border: unset;
+  border-radius: 10px;
+
+  // drop shadow???
+}
+
+// double code!!!
+.github-btn {
+  @include font();
+  padding: 15px 30px;
+  color: white;
+  background-color: transparent;
+  border: 1px solid $prim1;
+  border-radius: 10px;
+
+  // drop shadow???
+}
