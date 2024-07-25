@@ -1,0 +1,76 @@
+@import "../../mixins.scss";
+@import "../../styles.scss";
+
+.portfolio {
+  // to edit!!!
+  height: 100vh;
+}
+
+.portfolio-content {
+  margin-left: 136px;
+}
+
+.portfolio-title-box {
+  @include display-flex($jc: flex-end);
+  gap: 32px;
+}
+
+.portfolio-title {
+  @include font(90px, 700, 108px);
+  text-align: center;
+}
+
+.projects {
+  width: 1168px;
+}
+
+.project-hint {
+  margin-left: 353px;
+  width: 733px;
+  text-align: center;
+}
+
+.project-hint-text {
+  @include font(16px, 400, 19.2px);
+}
+
+.project-box {
+  display: flex;
+  gap: 35px;
+}
+
+.project-box-right {
+  // to set!!!
+  @include display-flex();
+  flex-direction: column;
+  gap: 35px;
+}
+
+.project-info-box {
+  @include display-flex(flex-start, flex-start);
+  flex-direction: column;
+  gap: 15px;
+}
+
+.project-title {
+  @include font(32px, 700, 38.4px);
+  margin: 0;
+  color: $prim2;
+}
+
+.project-skills {
+  @include font();
+  color: $prim1;
+}
+
+.project-description {
+  @include font(16px, 400, 19.2px);
+  margin: 0;
+}
+
+.project-button-box {
+  display: flex;
+  gap: 86px;
+}
+
+// style buttons
