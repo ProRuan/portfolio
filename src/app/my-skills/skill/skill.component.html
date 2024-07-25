@@ -1,12 +1,4 @@
 <div class="skill">
-    <img class="skill-logo" src="{{ path }}" alt="html-logo">
-    <span [ngStyle]="highlightLast(name)" class="skill-text">{{
-        name }}</span>
+  <img class="skill-logo" src="{{ skill.path }}" [alt]="getAlt(skill)">
+  <span [ngStyle]="highlightLast(skill)" class="skill-text">{{ skill.name }}</span>
 </div>
-
-
-<!-- 
-tasks
------
-  - object variable
--->

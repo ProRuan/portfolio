@@ -1,7 +1,7 @@
 <section class="my-skills">
     <div class="my-skills-box">
         <div class="my-skills-box-left">
-            <app-skill *ngFor="let skill of skills" [path]="skill.path" [name]="skill.name"></app-skill>
+            <app-skill *ngFor="let skill of skills" [skill]="skill"></app-skill>
         </div>
     </div>
 </section>

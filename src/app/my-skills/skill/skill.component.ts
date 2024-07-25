@@ -9,14 +9,21 @@ import { Component, Input } from '@angular/core';
   styleUrl: './skill.component.scss',
 })
 export class SkillComponent {
-  @Input() path: string = '';
-  @Input() name: string = 'HTML';
+  @Input() skill: any = {
+    path: '',
+    name: 'HTML',
+  };
 
-  highlightLast(name: any) {
-    if (name == 'Continually leanring') {
+  highlightLast(skill: any) {
+    if (skill.name == 'Continually leanring') {
       return { color: '#00BEE8' };
     } else {
       return { color: 'white' };
     }
+  }
+
+  getAlt(skill: any) {
+    let name = skill.name.toLowerCase();
+    return `${name}-logo`;
   }
 }
