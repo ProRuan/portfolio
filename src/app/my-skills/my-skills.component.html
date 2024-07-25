@@ -3,5 +3,26 @@
         <div class="my-skills-box-left">
             <app-skill *ngFor="let skill of skills" [skill]="skill"></app-skill>
         </div>
+        <div class="my-skills-box-right">
+            <div class="skill-title-vector-box">
+                <h2 class="my-skills-title">My skills</h2>
+                <img src="../../assets/img/skill_vector.svg" alt="skill-vector">
+            </div>
+            <div class="my-another-skill-box">
+                <p class="experience-text">
+                    I have gained experience in building projects with different frontend technologies and concepts.
+                </p>
+                <div class="skill-touch-box">
+                    <div class="another-skill-subbox">
+                        <h3 class="another-skill-title">Looking for <span class="another-skill-highlight">another
+                                skill</span>?</h3>
+                        <p class="another-skill-text">
+                            Feel free to contact me. I look forward to expanding on my previous knowledge.
+                        </p>
+                    </div>
+                    <button class="get-in-touch-btn">Get in touch</button>
+                </div>
+            </div>
+        </div>
     </div>
 </section>

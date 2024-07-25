@@ -8,7 +8,9 @@
 }
 
 .my-skills-box {
+  @include display-flex(flex-start, flex-start);
   padding: 124px 100px;
+  gap: 125px;
 }
 
 .my-skills-box-left {
@@ -16,4 +18,75 @@
   width: 664px;
   flex-wrap: wrap;
   gap: 41px 88px;
+}
+
+.my-skills-box-right {
+  @include display-flex(flex-start, flex-end);
+  width: 471px;
+  height: 400px;
+  text-align: right;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.skill-title-vector-box {
+  display: flex;
+  gap: 32px;
+}
+
+.my-skills-title {
+  @include font(90px, 700, 108px);
+  margin: 0;
+}
+
+.my-another-skill-box {
+  @include display-flex(flex-start, flex-end);
+  flex-direction: column;
+  gap: 24px;
+}
+
+.experience-text {
+  @include font(16px, 400, 19.2px);
+  margin: 0;
+
+  // drop shadow???
+}
+
+.skill-touch-box {
+  @include display-flex(flex-start, flex-end);
+  width: 410px;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.my-another-skill-box {
+  @include display-flex(flex-start, flex-end);
+  flex-direction: column;
+  gap: 16px;
+}
+
+.another-skill-title {
+  @include font(32px, 700, 38.4px);
+
+  // drop shadow???
+}
+
+.another-skill-highlight {
+  color: $prim1;
+}
+
+.another-skill-text {
+  @include font(16px, 400, 19.2px);
+  margin: 0;
+}
+
+.get-in-touch-btn {
+  @include font();
+  padding: 15px 30px;
+  color: white;
+  background-color: $prim1;
+  border: unset;
+  border-radius: 10px;
+
+  // drop shadow???
 }
