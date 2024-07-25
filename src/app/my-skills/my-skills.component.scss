@@ -1,5 +1,6 @@
 @import "../../mixins.scss";
 @import "../../styles.scss";
+// import component.scss?
 
 .my-skills {
   // to edit!!!
@@ -13,26 +14,6 @@
 .my-skills-box-left {
   @include display-flex(flex-start, flex-start);
   width: 664px;
-  height: 404px;
-  gap: 88px;
-}
-
-.skill {
-  @include display-flex($jc: flex-start);
-  box-sizing: border-box;
-  padding-top: 12px;
-  width: 88px;
-  height: 101px;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.skill-logo {
-  height: 60px;
-  object-fit: contain;
-}
-
-.skill-text {
-  @include font(16px, 700, 19.2px);
-  text-align: center;
+  flex-wrap: wrap;
+  gap: 41px 88px;
 }
