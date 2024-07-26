@@ -1,0 +1,163 @@
+@import "../../mixins.scss";
+@import "../../styles.scss";
+
+.contact {
+  // to edit!
+  height: 100vh;
+}
+
+.contact-title-box {
+  display: flex;
+  gap: 32px;
+}
+
+.contact-title {
+  @include font(90px, 700, 108px);
+  text-align: center;
+}
+
+.contact-content {
+  padding: 0 100px;
+  display: flex;
+  gap: 149px;
+  // gap: 40px;    // for above!
+}
+
+.contact-hint-box {
+  @include display-flex(flex-start, flex-start);
+  width: 474px;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-hint-title {
+  @include font(32px, 700, 38.4px);
+}
+
+.contact-hint-text-group {
+  @include font(16px, 400, 19.2px);
+  @include display-flex(flex-start, flex-start);
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-hint-paragraph {
+  margin: 0;
+}
+
+.contact-form-box {
+  @include display-flex(flex-start, flex-end);
+  flex-direction: column;
+  gap: 52px;
+}
+
+.contact-form {
+  @include display-flex(flex-start, flex-start);
+  width: 617px;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.contact-input {
+  @include font(16px, 400, 19.2px);
+  box-sizing: border-box;
+  padding: 15px 25px;
+  width: 100%;
+  height: 50px;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  background-color: transparent;
+  border: 1px solid $prim2;
+  border-radius: 10px;
+
+  &::placeholder {
+    color: #ffffff;
+  }
+}
+
+.contact-message-box {
+  @include display-flex(flex-start, flex-start);
+  width: 100%;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-textarea {
+  @include font(16px, 400, 19.2px);
+  box-sizing: border-box;
+  padding: 15px 25px;
+  width: 100%;
+  height: 202px;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  background-color: transparent;
+  border: 1px solid $prim2;
+  border-radius: 10px;
+
+  &::placeholder {
+    color: #ffffff;
+  }
+
+  &::-webkit-resizer {
+    background-image: url("../../assets/img/resizer.svg");
+    background-repeat: no-repeat;
+    background-size: 13px 13px;
+  }
+}
+
+.contact-confirm-send-group {
+  @include display-flex($jc: flex-start);
+  width: 100%;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-privacy-policy-box {
+  @include display-flex(flex-start, flex-start);
+  width: 100%;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-privacy-policy {
+  @include display-flex(flex-start, center);
+  height: 27px;
+  gap: 8px;
+}
+
+.contact-checkbox {
+  width: 24px;
+  height: 24px;
+}
+
+.contact-privacy-policy-text {
+  @include font(14px, 400, 16.8px);
+  margin: 0;
+}
+
+.privacy-policy-link {
+  color: $prim2;
+}
+
+.privacy-policy-check-hint {
+  @include font(14px, 400, 16.8px);
+  color: #e61c40;
+  opacity: 0;
+}
+
+// disable btn!!!
+// double code!!!
+.send-message-btn {
+  @include font();
+  padding: 15px 30px;
+  color: white;
+  background-color: $prim1;
+  border: unset;
+  border-radius: 10px;
+
+  // drop shadow???
+
+  &:disabled {
+    background-color: #b6b6b6;
+  }
+}
