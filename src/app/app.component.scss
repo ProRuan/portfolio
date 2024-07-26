@@ -1,2 +1,46 @@
 @import "../mixins.scss";
 @import "../styles.scss";
+
+// make a mixin for position?
+.background-body {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.front-body {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.hero-bg-box {
+  width: 1440px;
+  height: 1078.6px;
+  @include display-flex(flex-end, flex-start);
+  position: absolute;
+  top: 379px;
+}
+
+.hero-bg {
+  width: 1280.5px;
+  height: 971.56px;
+}
+
+.about-me-shadow {
+  position: absolute;
+  width: 572.03px;
+  height: 608px;
+  left: 1526.23px;
+  top: 750px;
+}
+
+.skill-shadow {
+  position: absolute;
+  left: -121.49px;
+  top: 2982.96px;
+
+  // width and height
+}
