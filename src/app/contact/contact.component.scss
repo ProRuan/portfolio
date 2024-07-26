@@ -24,10 +24,8 @@
 }
 
 .contact-hint-box {
-  @include display-flex(flex-start, flex-start);
+  @include display-column($g: 24px);
   width: 474px;
-  flex-direction: column;
-  gap: 24px;
 }
 
 .contact-hint-title {
@@ -36,9 +34,7 @@
 
 .contact-hint-text-group {
   @include font(16px, 400, 19.2px);
-  @include display-flex(flex-start, flex-start);
-  flex-direction: column;
-  gap: 16px;
+  @include display-column($g: 16px);
 }
 
 .contact-hint-paragraph {
@@ -46,16 +42,12 @@
 }
 
 .contact-form-box {
-  @include display-flex(flex-start, flex-end);
-  flex-direction: column;
-  gap: 52px;
+  @include display-column($ai: flex-end, $g: 52px);
 }
 
 .contact-form {
-  @include display-flex(flex-start, flex-start);
+  @include display-column($g: 32px);
   width: 617px;
-  flex-direction: column;
-  gap: 32px;
 }
 
 .contact-input {
@@ -76,10 +68,8 @@
 }
 
 .contact-message-box {
-  @include display-flex(flex-start, flex-start);
+  @include display-column($g: 16px);
   width: 100%;
-  flex-direction: column;
-  gap: 16px;
 }
 
 .contact-textarea {
@@ -106,17 +96,13 @@
 }
 
 .contact-confirm-send-group {
-  @include display-flex($jc: flex-start);
+  @include display-column($ai: center, $g: 16px);
   width: 100%;
-  flex-direction: column;
-  gap: 16px;
 }
 
 .contact-privacy-policy-box {
-  @include display-flex(flex-start, flex-start);
+  @include display-column($ai: flex-end, $g: 8px);
   width: 100%;
-  flex-direction: column;
-  gap: 8px;
 }
 
 .contact-privacy-policy {

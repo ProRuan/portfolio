@@ -13,10 +13,8 @@
 }
 
 .about-me-box-left {
-  @include display-flex(flex-start, flex-start);
+  @include display-column($g: 40px);
   width: 471px;
-  flex-direction: column;
-  gap: 40px;
 }
 
 .about-me-title {
@@ -26,9 +24,7 @@
 }
 
 .about-me-content {
-  @include display-flex();
-  flex-direction: column;
-  gap: 32px;
+  @include display-column(center, center, 32px);
 }
 
 p {
@@ -41,9 +37,7 @@ p {
 }
 
 .about-me-details {
-  @include display-flex();
-  flex-direction: column;
-  gap: 24px;
+  @include display-column(center, center, 24px);
 }
 
 .about-me-subbox {

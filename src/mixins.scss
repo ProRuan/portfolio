@@ -4,6 +4,12 @@
   align-items: $ai;
 }
 
+@mixin display-column($jc: flex-start, $ai: flex-start, $g: 35px) {
+  @include display-flex($jc, $ai);
+  flex-direction: column;
+  gap: $g;
+}
+
 @mixin font($fs: 23px, $fw: 400, $lh: 27.6px) {
   font-size: $fs;
   font-weight: $fw;

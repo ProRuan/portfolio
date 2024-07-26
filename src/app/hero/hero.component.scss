@@ -2,19 +2,16 @@
 @import "../../styles.scss";
 
 .hero {
-  @include display-flex(space-between, flex-end);
+  @include display-column(space-between, flex-end, 0px);
   padding-top: 297px;
   height: calc(100vh - 297px);
   width: calc(100% - 100px);
-  flex-direction: column;
 }
 
 // hero image + bgc are missing!!!
 
 .hero-content {
-  @include display-flex();
-  flex-direction: column;
-  gap: 35px;
+  @include display-column($jc: center, $ai: center);
 }
 
 .hero-text {
@@ -29,9 +26,8 @@
 }
 
 .horiz-text {
-  @include display-flex($ai: flex-start);
+  @include display-column($jc: center, $g: 0px);
   max-height: 172px;
-  flex-direction: column;
 }
 
 .name {
@@ -65,9 +61,7 @@
 
 .scroll-hint-box {
   @include font();
-  @include display-flex($jc: flex-start);
-  flex-direction: column;
-  gap: 3px;
+  @include display-column($ai: center, $g: 3px);
 }
 
 .scroll-hint {

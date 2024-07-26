@@ -21,12 +21,10 @@
 }
 
 .my-skills-box-right {
-  @include display-flex(flex-start, flex-end);
+  @include display-column($ai: flex-end, $g: 32px);
   width: 471px;
   height: 400px;
   text-align: right;
-  flex-direction: column;
-  gap: 32px;
 }
 
 .skill-title-vector-box {
@@ -40,9 +38,7 @@
 }
 
 .my-another-skill-box {
-  @include display-flex(flex-start, flex-end);
-  flex-direction: column;
-  gap: 24px;
+  @include display-column($ai: flex-end, $g: 24px);
 }
 
 .experience-text {
@@ -53,16 +49,12 @@
 }
 
 .skill-touch-box {
-  @include display-flex(flex-start, flex-end);
+  @include display-column($ai: flex-end, $g: 40px);
   width: 410px;
-  flex-direction: column;
-  gap: 40px;
 }
 
 .my-another-skill-box {
-  @include display-flex(flex-start, flex-end);
-  flex-direction: column;
-  gap: 16px;
+  @include display-column($ai: flex-end, $g: 16px);
 }
 
 .another-skill-title {

@@ -10,9 +10,7 @@
 }
 
 .footer-logo-imprint-group {
-  @include display-flex();
-  flex-direction: column;
-  gap: 3px;
+  @include display-column(center, center, 3px);
 }
 
 .footer-logo {

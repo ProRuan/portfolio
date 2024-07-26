@@ -8,15 +8,11 @@
 
 .project-box-right {
   // to set!!!
-  @include display-flex();
-  flex-direction: column;
-  gap: 35px;
+  @include display-column($jc: center, $ai: center);
 }
 
 .project-info-box {
-  @include display-flex(flex-start, flex-start);
-  flex-direction: column;
-  gap: 15px;
+  @include display-column($g: 15px);
 }
 
 .project-title {

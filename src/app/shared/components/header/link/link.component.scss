@@ -5,9 +5,7 @@
   @include font();
   height: 32px;
   text-align: left;
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
+  @include display-column($g: 1px);
 }
 
 .underline {

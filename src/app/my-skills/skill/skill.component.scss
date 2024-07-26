@@ -1,12 +1,10 @@
 @import "../my-skills.component.scss";
 
 .skill {
-  @include display-flex($jc: flex-start);
+  @include display-column($ai: center, $g: 10px);
   box-sizing: border-box;
   padding-top: 12px;
   width: 88px;
-  flex-direction: column;
-  gap: 10px;
 }
 
 .skill-logo {
