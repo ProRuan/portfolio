@@ -9,6 +9,6 @@
     </div>
 
     <div class="link-group">
-        <app-link *ngFor="let link of links" [text]="link.text" [ngStyle]="{'width.px': link.width}"></app-link>
+        <app-link *ngFor="let link of links" [href]="link.href" [text]="link.text" [ngStyle]="{'width.px': link.width}"></app-link>
     </div>
 </header>

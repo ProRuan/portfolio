@@ -1,0 +1,36 @@
+@import "../../../../mixins.scss";
+@import "../../../../styles.scss";
+
+.footer {
+  @include display-flex($jc: space-between);
+  // set padding + width!
+  padding: 0 100px;
+  height: 291px;
+  border-top: 4px solid $prim1;
+}
+
+.footer-logo-imprint-group {
+  @include display-flex();
+  flex-direction: column;
+  gap: 3px;
+}
+
+.footer-logo {
+  color: #ffffff;
+}
+
+.imprint-link {
+  @include font(16px, 400, 19.2px);
+  box-sizing: border-box;
+  padding: 5px 0;
+}
+
+.copyright {
+  @include font();
+}
+
+.social-button-group {
+  @include display-flex($jc: space-between);
+  width: 174px;
+  height: 40px;
+}

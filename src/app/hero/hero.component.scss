@@ -73,35 +73,3 @@
 .scroll-hint {
   writing-mode: vertical-lr;
 }
-
-button {
-  border: unset;
-  cursor: pointer;
-}
-
-.social-btn {
-  box-sizing: border-box;
-  padding: 0;
-  width: 40px;
-  max-width: 40px;
-  height: 40px;
-  background-color: transparent;
-  background-position: center center;
-  background-repeat: no-repeat;
-
-  &:hover {
-    background-size: 40px auto;
-  }
-}
-
-.git-hub-btn {
-  background-image: url("../../assets/img/git_hub_icon.svg");
-}
-
-.email-btn {
-  background-image: url("../../assets/img/email_icon.svg");
-}
-
-.linked-in-btn {
-  background-image: url("../../assets/img/linked_in_icon.svg");
-}

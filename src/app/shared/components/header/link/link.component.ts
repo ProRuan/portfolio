@@ -8,6 +8,8 @@ import { Component, Input } from '@angular/core';
   styleUrl: './link.component.scss',
 })
 export class LinkComponent {
+  // replace with object!
+  @Input() href: string = '';
   @Input() width: string = '';
   @Input() text: string = 'link';
 }

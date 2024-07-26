@@ -11,8 +11,8 @@ import { CommonModule } from '@angular/common';
 })
 export class HeaderComponent {
   links = [
-    { text: 'About me', width: 114 },
-    { text: 'Skills', width: 59 },
-    { text: 'Portfolio', width: 95 },
+    { href: '#about-me', text: 'About me', width: 114 },
+    { href: '#my-skills', text: 'Skills', width: 59 },
+    { href: '#portfolio', text: 'Portfolio', width: 95 },
   ];
 }
