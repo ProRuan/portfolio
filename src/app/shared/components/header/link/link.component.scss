@@ -5,9 +5,4 @@
   @include font();
   @include display-column($g: 1px);
   height: 32px;
-  text-align: left;
-}
-
-.underline {
-  display: none;
 }

@@ -10,9 +10,27 @@ import { CommonModule } from '@angular/common';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  links = [
-    { id: 'about-me-link', href: '#about-me', text: 'About me', width: 114 },
-    { id: 'skills-link', href: '#my-skills', text: 'Skills', width: 59 },
-    { id: 'portfolio-link', href: '#portfolio', text: 'Portfolio', width: 95 },
+  links: any[] = [
+    { href: '#about-me', text: 'About me', width: 114, clicked: false },
+    { href: '#my-skills', text: 'Skills', width: 59, clicked: false },
+    { href: '#portfolio', text: 'Portfolio', width: 95, clicked: false },
   ];
+
+  /**
+   * Highlight the link.
+   * @param link - The link to highlight.
+   */
+  highlight(link: any) {
+    this.unhighlight();
+    link.clicked = true;
+  }
+
+  /**
+   * Unhighlight all links.
+   */
+  unhighlight() {
+    this.links.forEach((link) => {
+      link.clicked = false;
+    });
+  }
 }
