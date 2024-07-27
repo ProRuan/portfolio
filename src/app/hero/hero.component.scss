@@ -1,20 +1,29 @@
-@import "../../mixins.scss";
 @import "../../styles.scss";
 
 .hero {
   @include display-column(space-between, flex-end, 0px);
-  padding-top: 297px;
-  height: calc(100vh - 297px);
-  width: calc(100% - 100px);
+  @include position(relative);
+  box-sizing: border-box;
+  margin-top: 109px;
+  padding: 188px 100px 32px 0;
+  width: 100%;
+  height: calc(100vh - 109px);
 }
 
-// hero image + bgc are missing!!!
+.image-box {
+  @include size(646px, 705px);
+  @include position(absolute, 48px, 0);
+  background-image: url("../../assets/img/hero_shadow.svg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  // background-size: 646px 705px;
+}
 
-.hero-content {
+.content {
   @include display-column($jc: center, $ai: center);
 }
 
-.hero-text {
+.text {
   @include display-flex($jc: flex-end);
 }
 
@@ -39,21 +48,12 @@
   color: $prim2;
 }
 
-.hero-btn {
-  @include font();
-  padding: 15px 30px;
-  color: white;
-  background-color: $prim1;
-  border: unset;
-  border-radius: 10px;
-}
-
 .hero-bottom {
   @include display-flex($jc: space-between, $ai: flex-end);
   width: 100%;
 }
 
-.icon-bar {
+.contact-bar {
   @include display-flex($jc: flex-start);
   height: 40px;
   gap: 32px;

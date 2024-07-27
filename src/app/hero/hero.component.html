@@ -1,24 +1,23 @@
 <section id="hero" class="hero">
-    <article class="hero-content">
-        <div class="hero-text">
+    <div class="image-box"></div>
+
+    <article class="content">
+        <div class="text">
             <span class="vert-text">I am</span>
             <div class="horiz-text">
                 <span class="name">Rudolf Sachslehner</span>
                 <span class="occupation">Frontend Developer</span>
             </div>
         </div>
-        <button id="hero-btn" class="hero-btn">Let's talk!</button>
+        <button id="hero-btn" class="prim-btn">Let's talk!</button>
     </article>
 
     <div class="hero-bottom">
-        <div class="icon-bar">
-            <img src="../../assets/img/mail_vector.svg" alt="">
-
-            <!-- Create a component?! -->
-            <button class="social-btn git-hub-btn"></button>
-            <button class="social-btn email-btn"></button>
-            <button class="social-btn linked-in-btn"></button>
-
+        <div class="contact-bar">
+            <img src="../../assets/img/mail_vector.svg" alt="mail-vector">
+            <button class="social-btn git-hub-btn" (click)="redirect('https://github.com/')"></button>
+            <button class="social-btn email-btn" (click)="redirect('mailto:ahasver.loewenkoenig@gmail.com')"></button>
+            <button class="social-btn linked-in-btn" (click)="redirect('https://www.linkedin.com/')"></button>
             <a href="mailto:ahasver.loewenkoenig@gmail.com">ahasver.loewenkoenig&#64;gmail.com</a>
         </div>
 

@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { Link } from '../../../interfaces/link';
 
 @Component({
   selector: 'app-link',
@@ -9,9 +10,9 @@ import { Component, Input } from '@angular/core';
   styleUrl: './link.component.scss',
 })
 export class LinkComponent {
-  @Input() link: any = {
+  @Input() link: Link = {
     href: '',
-    width: '',
+    width: 0,
     text: 'link',
     clicked: false,
   };

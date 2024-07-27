@@ -1,3 +1,5 @@
+@import "./mixins.scss";
+
 $prim1: #4b47ff;
 $prim2: #00bee8;
 $primBg: #141d2f;
@@ -39,12 +41,23 @@ button {
   cursor: pointer;
 }
 
+.prim-btn {
+  @include font();
+  padding: 15px 30px;
+  color: white;
+  background-color: $prim1;
+  border-radius: 10px;
+}
+
 .social-btn {
   box-sizing: border-box;
   padding: 0;
   width: 40px;
+  min-width: 40px;
   max-width: 40px;
   height: 40px;
+  min-height: 40px;
+  max-height: 40px;
   background-color: transparent;
   background-position: center center;
   background-repeat: no-repeat;
