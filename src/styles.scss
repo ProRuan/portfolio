@@ -43,10 +43,12 @@ button {
 
 .prim-btn {
   @include font();
+  margin: 5px 10px;
   padding: 15px 30px;
   color: white;
   background-color: $prim1;
   border-radius: 10px;
+  transition: all 100ms ease-in-out;
 
   &:hover {
     padding: 20px 40px;
@@ -56,6 +58,7 @@ button {
   &:active {
     color: #000000;
     background-color: white;
+    transition-delay: 10ms;
   }
 }
 
