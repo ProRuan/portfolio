@@ -85,3 +85,15 @@ button {
 .linked-in-btn {
   background-image: url("./assets/img/linked_in_icon.svg");
 }
+
+h2 {
+  margin: 0;
+}
+
+.headline-2 {
+  @include font(90px, 700, 108px);
+}
+
+p {
+  margin: 0;
+}
