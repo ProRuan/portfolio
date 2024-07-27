@@ -47,8 +47,19 @@ button {
   color: white;
   background-color: $prim1;
   border-radius: 10px;
+
+  &:hover {
+    padding: 20px 40px;
+    background-color: $prim2;
+  }
+
+  &:active {
+    color: #000000;
+    background-color: white;
+  }
 }
 
+// check again!!!
 .social-btn {
   box-sizing: border-box;
   padding: 0;

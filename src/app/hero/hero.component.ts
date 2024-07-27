@@ -8,6 +8,17 @@ import { Component } from '@angular/core';
   styleUrl: './hero.component.scss',
 })
 export class HeroComponent {
+  /**
+   * Scroll to contact section.
+   */
+  scroll() {
+    window.location.href = '#contact';
+  }
+
+  /**
+   * Redirects to another website.
+   * @param path - The path of the other website.
+   */
   redirect(path: string) {
     window.open(path, '_blank');
   }

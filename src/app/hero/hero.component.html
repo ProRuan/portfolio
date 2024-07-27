@@ -1,5 +1,12 @@
 <section id="hero" class="hero">
-    <div class="image-box"></div>
+
+    <img class="hero-bg" src="../../assets/img/hero_background.svg" alt="hero-bg">
+
+    <div class="hero-shadow">
+        <div class="hero-img-box">
+            <div class="hero-img"></div>
+        </div>
+    </div>
 
     <article class="content">
         <div class="text">
@@ -9,7 +16,7 @@
                 <span class="occupation">Frontend Developer</span>
             </div>
         </div>
-        <button id="hero-btn" class="prim-btn">Let's talk!</button>
+        <button id="hero-btn" class="prim-btn" (click)="scroll()">Let's talk!</button>
     </article>
 
     <div class="hero-bottom">
@@ -18,7 +25,7 @@
             <button class="social-btn git-hub-btn" (click)="redirect('https://github.com/')"></button>
             <button class="social-btn email-btn" (click)="redirect('mailto:ahasver.loewenkoenig@gmail.com')"></button>
             <button class="social-btn linked-in-btn" (click)="redirect('https://www.linkedin.com/')"></button>
-            <a href="mailto:ahasver.loewenkoenig@gmail.com">ahasver.loewenkoenig&#64;gmail.com</a>
+            <a class="hero-email" href="mailto:ahasver.loewenkoenig@gmail.com">ahasver.loewenkoenig&#64;gmail.com</a>
         </div>
 
         <div class="scroll-hint-box">
