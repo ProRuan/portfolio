@@ -1,23 +1,13 @@
-<div class="background-body">
-    <div class="hero-bg-box">
-        <img class="hero-bg" src="../assets/img/hero_background.svg" alt="hero-background">
-    </div>
-    <!-- <img class="about-me-shadow" src="../assets/img/about_me_background.svg" alt="about-me-background"> -->
-    <!-- <img class="skill-shadow" src="../assets/img/skill_background.svg" alt="skill-background"> -->
-</div>
+<app-header></app-header>
 
-<div class="front-body">
-    <app-header></app-header>
+<main>
+    <app-hero></app-hero>
+    <app-about-me></app-about-me>
+    <app-my-skills></app-my-skills>
+    <app-portfolio></app-portfolio>
+    <app-contact></app-contact>
+</main>
 
-    <main>
-        <app-hero></app-hero>
-        <app-about-me></app-about-me>
-        <app-my-skills></app-my-skills>
-        <app-portfolio></app-portfolio>
-        <app-contact></app-contact>
-    </main>
-
-    <app-footer></app-footer>
-</div>
+<app-footer></app-footer>
 
 <router-outlet></router-outlet>
