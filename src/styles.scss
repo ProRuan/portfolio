@@ -1,5 +1,10 @@
 $prim1: #4b47ff;
 $prim2: #00bee8;
+$primBg: #141d2f;
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -7,7 +12,7 @@ body {
   // min-height: 100vh;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   color: #ffffff;
-  background-color: #141d2f;
+  background-color: $primBg;
   position: relative;
 }
 

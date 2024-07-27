@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { LinkComponent } from './link/link.component';
 import { CommonModule } from '@angular/common';
 
@@ -11,8 +11,8 @@ import { CommonModule } from '@angular/common';
 })
 export class HeaderComponent {
   links = [
-    { href: '#about-me', text: 'About me', width: 114 },
-    { href: '#my-skills', text: 'Skills', width: 59 },
-    { href: '#portfolio', text: 'Portfolio', width: 95 },
+    { id: 'about-me-link', href: '#about-me', text: 'About me', width: 114 },
+    { id: 'skills-link', href: '#my-skills', text: 'Skills', width: 59 },
+    { id: 'portfolio-link', href: '#portfolio', text: 'Portfolio', width: 95 },
   ];
 }

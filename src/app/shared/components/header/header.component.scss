@@ -1,23 +1,27 @@
 @import "../../../../mixins.scss";
+@import "../../../../styles.scss";
 
 .header {
   @include display-flex($jc: space-between);
+  @include position($p: fixed);
   box-sizing: border-box;
   padding: 37px 100px;
-  background-color: #141d2f;
-  position: fixed;
-  left: 0;
-  right: 0;
-}
-
-.link-group {
-  @include display-flex(flex-end, flex-start);
-  width: 326px;
-  height: 32px;
-  gap: 29px;
+  width: 100%;
+  background-color: $primBg;
 }
 
 .logo {
   @include font(35px, bold, 35px);
   letter-spacing: 2px;
+  cursor: pointer;
+
+  &:hover {
+    color: unset;
+  }
+}
+
+.link-group {
+  @include display-flex(flex-end, flex-start);
+  @include size(326px, 32px);
+  gap: 29px;
 }

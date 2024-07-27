@@ -15,3 +15,14 @@
   font-weight: $fw;
   line-height: $lh;
 }
+
+@mixin position($p: absolute, $l: 0, $t: 0) {
+  position: $p;
+  left: $l;
+  top: $t;
+}
+
+@mixin size($w: auto, $h: auto) {
+  width: $w;
+  height: $h;
+}

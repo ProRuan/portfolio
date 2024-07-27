@@ -3,15 +3,11 @@
 
 .link {
   @include font();
+  @include display-column($g: 1px);
   height: 32px;
   text-align: left;
-  @include display-column($g: 1px);
 }
 
 .underline {
   display: none;
-  width: 55.5px;
-  height: 3px;
 }
-
-// link selected (with underline)!!!

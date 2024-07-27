@@ -1,14 +1,14 @@
 <header class="header">
-    <div class="logo">
+    <a class="logo" href="#top">
         <span>R</span>
         <span class="c-prim-1">u</span>
         <span class="c-prim-2">d</span>
         <span>o</span>
         <span>l</span>
         <span>f</span>
-    </div>
+    </a>
 
     <div class="link-group">
-        <app-link *ngFor="let link of links" [href]="link.href" [text]="link.text" [ngStyle]="{'width.px': link.width}"></app-link>
+        <app-link *ngFor="let link of links" [link]="link" [ngStyle]="{'width.px': link.width}"></app-link>
     </div>
 </header>
