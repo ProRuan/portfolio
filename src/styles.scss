@@ -10,12 +10,9 @@ html {
 
 body {
   margin: 0;
-  height: 100vh;
-  // min-height: 100vh;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   color: #ffffff;
   background-color: $primBg;
-  position: relative;
 }
 
 a {
@@ -27,7 +24,6 @@ a {
   }
 }
 
-// in use?
 .c-prim-1 {
   color: $prim1;
 }
@@ -62,22 +58,19 @@ button {
   }
 }
 
-// check again!!!
 .social-btn {
+  @include size(30px, 30px);
   box-sizing: border-box;
   padding: 0;
-  width: 40px;
-  min-width: 40px;
-  max-width: 40px;
-  height: 40px;
-  min-height: 40px;
-  max-height: 40px;
   background-color: transparent;
   background-position: center center;
   background-repeat: no-repeat;
+  background-size: 30px 30px;
+  transition: all 125ms ease-out;
 
   &:hover {
-    background-size: 40px auto;
+    @include size(40px, 40px);
+    background-size: 40px 40px;
   }
 }
 
