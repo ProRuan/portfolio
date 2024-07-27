@@ -1,8 +1,7 @@
-@import "../../mixins.scss";
 @import "../../styles.scss";
 
 .about-me {
-  @include display-flex(flex-start, center);
+  @include display-flex(flex-end, center);
   padding: 156px 0 100px 100px;
   gap: 149px;
 }
@@ -26,11 +25,6 @@
 
 .intro-list {
   @include display-column(center, center, 24px);
-}
-
-.intro-list-item {
-  @include display-flex(flex-start, flex-start);
-  gap: 16px;
 }
 
 .img-box {

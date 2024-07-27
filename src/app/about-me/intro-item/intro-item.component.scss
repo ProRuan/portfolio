@@ -1,0 +1,6 @@
+@import "../../../styles.scss";
+
+.intro-item {
+  @include display-flex(flex-start, flex-start);
+  gap: 16px;
+}
