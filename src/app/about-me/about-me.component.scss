@@ -2,8 +2,10 @@
 
 .about-me {
   @include display-flex(flex-end, center);
-  padding: 156px 0 100px 100px;
+  @include position(relative);
+  padding: 156px 0 24px 100px;
   gap: 149px;
+  overflow-x: hidden;
 }
 
 .text-box {
@@ -37,4 +39,9 @@
   height: 453px;
   border: 4px solid $prim1;
   border-radius: 50%;
+}
+
+.shadow {
+  @include size(572.03px, 608px);
+  @include position(absolute, 1160px, 0);
 }

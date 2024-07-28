@@ -13,7 +13,7 @@ export class MySkillsComponent {
   skills = [
     { path: '../../assets/img/html.svg', name: 'HTML' },
     { path: '../../assets/img/css.svg', name: 'CSS' },
-    { path: '../../assets/img/javascript.svg', name: 'Javascript' },
+    { path: '../../assets/img/javascript.svg', name: 'JavaScript' },
     { path: '../../assets/img/typescript.svg', name: 'TypeScript' },
     { path: '../../assets/img/angular.svg', name: 'Angular' },
     { path: '../../assets/img/firebase.svg', name: 'Firebase' },
@@ -23,7 +23,7 @@ export class MySkillsComponent {
     { path: '../../assets/img/material_design.svg', name: 'Material Design' },
     {
       path: '../../assets/img/continually_learning.svg',
-      name: 'Continually leanring',
+      name: 'Continually learning',
     },
   ];
 }

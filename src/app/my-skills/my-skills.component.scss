@@ -1,75 +1,62 @@
-@import "../../mixins.scss";
 @import "../../styles.scss";
-// import component.scss?
 
 .my-skills {
-  // to edit!!!
-  height: 100vh;
+  @include display-flex(flex-end, flex-start);
+  padding: 156px 0 24px 100px;
+  gap: 105px;
 }
 
-.my-skills-box {
-  @include display-flex(flex-start, flex-start);
-  padding: 124px 100px;
-  gap: 125px;
-}
-
-.my-skills-box-left {
+.skill-group {
   @include display-flex(flex-start, flex-start);
   width: 664px;
   flex-wrap: wrap;
   gap: 41px 88px;
 }
 
-.my-skills-box-right {
-  @include display-column($ai: flex-end, $g: 32px);
-  width: 471px;
-  height: 400px;
+.text-box {
+  @include display-column($ai: flex-end, $g: 40px);
   text-align: right;
 }
 
-.skill-title-vector-box {
+.title-vector-box {
   display: flex;
   gap: 32px;
 }
 
-.my-skills-title {
-  @include font(90px, 700, 108px);
-  margin: 0;
+.w-395 {
+  width: 395px;
 }
 
-.my-another-skill-box {
+.another-skill-box {
   @include display-column($ai: flex-end, $g: 24px);
+  padding-right: 100px;
 }
 
-.experience-text {
+.exp-text {
   @include font(16px, 400, 19.2px);
-  margin: 0;
-
-  // drop shadow???
+  width: 471px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
-.skill-touch-box {
+.skill-button-box {
   @include display-column($ai: flex-end, $g: 40px);
   width: 410px;
 }
 
-.my-another-skill-box {
+.another-skill-subbox {
   @include display-column($ai: flex-end, $g: 16px);
 }
 
 .another-skill-title {
   @include font(32px, 700, 38.4px);
-
-  // drop shadow???
-}
-
-.another-skill-highlight {
-  color: $prim1;
+  margin: 0;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 .another-skill-text {
   @include font(16px, 400, 19.2px);
   margin: 0;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 // double code!!!

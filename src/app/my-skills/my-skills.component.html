@@ -1,27 +1,30 @@
 <section id="my-skills" class="my-skills">
-    <div class="my-skills-box">
-        <div class="my-skills-box-left">
-            <app-skill *ngFor="let skill of skills" [skill]="skill"></app-skill>
+    <div class="skill-group">
+        <app-skill *ngFor="let skill of skills" [skill]="skill"></app-skill>
+    </div>
+
+    <div class="text-box">
+        <div class="title-vector-box">
+            <h2 class="headline-2 w-395">My skills</h2>
+            <img src="../../assets/img/skill_vector.svg" alt="skill-vector">
         </div>
-        <div class="my-skills-box-right">
-            <div class="skill-title-vector-box">
-                <h2 class="my-skills-title">My skills</h2>
-                <img src="../../assets/img/skill_vector.svg" alt="skill-vector">
-            </div>
-            <div class="my-another-skill-box">
-                <p class="experience-text">
-                    I have gained experience in building projects with different frontend technologies and concepts.
-                </p>
-                <div class="skill-touch-box">
-                    <div class="another-skill-subbox">
-                        <h3 class="another-skill-title">Looking for <span class="another-skill-highlight">another
-                                skill</span>?</h3>
-                        <p class="another-skill-text">
-                            Feel free to contact me. I look forward to expanding on my previous knowledge.
-                        </p>
-                    </div>
-                    <button class="get-in-touch-btn">Get in touch</button>
+
+        <div class="another-skill-box">
+            <p class="exp-text">
+                I have gained experience in building projects with different frontend technologies and concepts.
+            </p>
+
+            <div class="skill-button-box">
+                <div class="another-skill-subbox">
+                    <h3 class="another-skill-title">
+                        Looking for <span class="c-prim-2">another skill</span>?
+                    </h3>
+                    <p class="another-skill-text">
+                        Feel free to contact me. I look forward to expanding on my previous knowledge.
+                    </p>
                 </div>
+
+                <button class="get-in-touch-btn">Get in touch</button>
             </div>
         </div>
     </div>
