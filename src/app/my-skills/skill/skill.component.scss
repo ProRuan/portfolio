@@ -1,10 +1,17 @@
-@import "../my-skills.component.scss";
+@import "../../../styles.scss";
 
 .skill {
-  @include display-column($ai: center, $g: 10px);
+  @include display-column($jc: space-between, $ai: center, $g: 10px);
+  @include position(relative, 0, 0);
   box-sizing: border-box;
   padding-top: 12px;
   width: 88px;
+  transition: all 100ms ease-in-out;
+
+  &:hover {
+    padding-top: 0;
+    gap: 22px;
+  }
 }
 
 .skill-logo {
@@ -15,4 +22,9 @@
 .skill-text {
   @include font(16px, 700, 19.2px);
   text-align: center;
+}
+
+.special-interest {
+  @include size(188px, 129px);
+  @include position(absolute, 0, -101px);
 }

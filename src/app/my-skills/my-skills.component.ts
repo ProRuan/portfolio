@@ -26,4 +26,11 @@ export class MySkillsComponent {
       name: 'Continually learning',
     },
   ];
+
+  /**
+   * Scroll to contact section.
+   */
+  scroll() {
+    window.location.href = '#contact';
+  }
 }

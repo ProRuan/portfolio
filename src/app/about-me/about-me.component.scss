@@ -43,5 +43,6 @@
 
 .shadow {
   @include size(572.03px, 608px);
-  @include position(absolute, 1160px, 0);
+  @include position(absolute, auto, 0);
+  right: -300px;
 }

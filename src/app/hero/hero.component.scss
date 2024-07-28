@@ -77,6 +77,7 @@
 
 .hero-email {
   @include font();
+  cursor: pointer;
   transition: all 75ms ease-in-out;
 }
 
