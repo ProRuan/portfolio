@@ -21,10 +21,6 @@ export class MySkillsComponent {
     { path: '../../assets/img/api.svg', name: 'Rest-Api' },
     { path: '../../assets/img/scrum.svg', name: 'Scrum' },
     { path: '../../assets/img/material_design.svg', name: 'Material Design' },
-    {
-      path: '../../assets/img/continually_learning.svg',
-      name: 'Continually learning',
-    },
   ];
 
   /**

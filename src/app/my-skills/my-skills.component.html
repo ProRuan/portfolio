@@ -1,6 +1,11 @@
 <section id="my-skills" class="my-skills">
     <div class="skill-group">
         <app-skill *ngFor="let skill of skills" [skill]="skill"></app-skill>
+        <div class="study-skill">
+            <img class="skill-logo" src="../../assets/img/continually_learning.svg" alt="study-logo">
+            <span class="skill-text">Continually learning</span>
+            <img class="special-interest" src="../../../assets/img/special_interest.svg" alt="special-interest">
+        </div>
     </div>
 
     <div class="text-box">

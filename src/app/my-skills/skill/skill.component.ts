@@ -15,19 +15,6 @@ export class SkillComponent {
   };
 
   /**
-   * Highlight the last skill.
-   * @param skill - The skill to highlight.
-   * @returns - The style to apply.
-   */
-  highlightLast(skill: any) {
-    if (skill.name == 'Continually learning') {
-      return { color: '#00BEE8' };
-    } else {
-      return { color: 'white' };
-    }
-  }
-
-  /**
    * Provides the alternative text.
    * @param skill - The providing skill.
    * @returns - The alternative text.

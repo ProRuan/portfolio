@@ -23,8 +23,3 @@
   @include font(16px, 700, 19.2px);
   text-align: center;
 }
-
-.special-interest {
-  @include size(188px, 129px);
-  @include position(absolute, 0, -101px);
-}

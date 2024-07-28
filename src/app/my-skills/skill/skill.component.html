@@ -1,6 +1,4 @@
 <div class="skill">
   <img class="skill-logo" src="{{ skill.path }}" [alt]="getAlt(skill)">
-  <span [ngStyle]="highlightLast(skill)" class="skill-text">{{ skill.name }}</span>
-  <img [ngStyle]="skill.name == 'Continually learning' ? {display: 'block'} : {display: 'none'}"
-    class="special-interest" src="../../../assets/img/special_interest.svg" alt="special-interest">
+  <span class="skill-text">{{ skill.name }}</span>
 </div>
