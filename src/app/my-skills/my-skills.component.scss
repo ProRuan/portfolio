@@ -23,6 +23,10 @@
   width: 88px;
 
   &:hover {
+    .skill-logo path {
+      fill: #ffffff;
+    }
+
     .skill-text {
       color: white;
     }
@@ -33,9 +37,7 @@
   }
 }
 
-.skill-logo {
-  height: 60px;
-  object-fit: contain;
+.skill-logo path {
   transition: all 300ms ease-in-out;
 }
 
@@ -51,6 +53,7 @@
   @include position(absolute, 0, -101px);
   opacity: 0;
   transition: all 300ms ease-in-out;
+  pointer-events: none;
 }
 
 .text-box {
