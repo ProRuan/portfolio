@@ -97,3 +97,42 @@ h2 {
 p {
   margin: 0;
 }
+
+.sec-btn {
+  @include font();
+  padding: 15px 30px;
+  color: white;
+  background-color: $prim2;
+  border-radius: 10px;
+  transition: all 100ms ease-in-out;
+
+  &:hover {
+    background-color: $prim1;
+  }
+
+  &:active {
+    color: $prim1;
+    background-color: white;
+    transition-delay: 10ms;
+  }
+}
+
+.tert-btn {
+  @include font();
+  padding: 14px 29px;
+  color: white;
+  background-color: transparent;
+  border: 1px solid $prim1;
+  border-radius: 10px;
+  transition: all 100ms ease-in-out;
+
+  &:hover {
+    background-color: $prim1;
+  }
+
+  &:active {
+    color: $prim2;
+    background-color: white;
+    transition-delay: 10ms;
+  }
+}

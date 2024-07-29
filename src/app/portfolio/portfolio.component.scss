@@ -1,35 +1,32 @@
-@import "../../mixins.scss";
 @import "../../styles.scss";
 
 .portfolio {
-  // to edit!
-  padding: 100px 0 100px 100px;
+  @include display-column($ai: flex-end, $g: 40px);
+  padding: 156px 0 24px 136px;
 }
 
-.portfolio-content {
-  margin-left: 136px;
-}
-
-.portfolio-title-box {
+.title-box {
   @include display-flex($jc: flex-end);
+  width: fit-content;
   gap: 32px;
 }
 
-.portfolio-title {
-  @include font(90px, 700, 108px);
+.ta-center {
   text-align: center;
 }
 
-.projects {
-  width: 1168px;
+.content {
+  @include display-column($ai: center, $g: 32px);
+  box-sizing: border-box;
+  padding-right: 136px;
+  width: 100%;
 }
 
-.project-hint {
-  margin-left: 353px;
-  width: 733px;
-  text-align: center;
-}
-
-.project-hint-text {
+.hint-text {
   @include font(16px, 400, 19.2px);
+  text-align: center;
+}
+
+.project-group {
+  width: 1168px;
 }

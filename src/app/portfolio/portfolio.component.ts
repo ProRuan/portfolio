@@ -28,8 +28,4 @@ export class PortfolioComponent {
       `,
     },
   ];
-
-  // remove placeholders!!!
-  // add live test!
-  // add github!
 }

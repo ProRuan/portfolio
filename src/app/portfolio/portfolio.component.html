@@ -1,20 +1,18 @@
 <section id="portfolio" class="portfolio">
-    <div class="portfolio-content">
-        <div class="portfolio-title-box">
-            <img src="../../assets/img/portfolio_left_line.svg" alt="left-line">
-            <h2 class="portfolio-title">Portfolio</h2>
-            <img src="../../assets/img/portfolio_right_line.svg" alt="right-line">
-        </div>
+    <div class="title-box">
+        <img src="../../assets/img/portfolio_left_line.svg" alt="left-line">
+        <h2 class="headline-2 ta-center">Portfolio</h2>
+        <img src="../../assets/img/portfolio_right_line.svg" alt="right-line">
     </div>
 
-    <!-- padding is wrong!!! -->
-    <div class="projects">
-        <div class="project-hint">
-            <span class="project-hint-text">Explore a selection of my work here - Interact with projects to see my
-                skills in action.</span>
-        </div>
+    <div class="content">
+        <span class="hint-text">
+            Explore a selection of my work here - Interact with projects to see my
+            skills in action.
+        </span>
+
         <div class="project-group">
-            <app-project *ngFor="let project of projects; index as i" [index]="i" [project]="projects[i]"></app-project>
+            <app-project *ngFor="let project of projects; index as i" [index]="i" [project]="project"></app-project>
         </div>
     </div>
 </section>

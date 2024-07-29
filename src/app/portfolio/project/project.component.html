@@ -1,18 +1,18 @@
-<div [ngStyle]="setStyle('flex-direction', 'row-reverse', 'row')" class="project-box">
-    <div class="project-box-left">
-        <img src="{{ project.path }}" [alt]="getAlt(project)">
-    </div>
-    <div class="project-box-right">
-        <div [ngStyle]="setStyle('align-items', 'flex-end', 'flex-start')" class="project-info-box">
-            <h3 class="project-title">{{ project.name }}</h3>
-            <span class="project-skills">{{ project.skills }}</span>
-            <p [ngStyle]="setStyle('text-align', 'right', 'left')" class="project-description">
+<div [ngStyle]="setStyle('flex-direction', 'row-reverse', 'row')" class="project">
+    <img src="{{ project.path }}" [alt]="getAlt(project)">
+
+    <div [ngStyle]="setStyle('align-items', 'flex-end', 'flex-start')" class="content">
+        <div [ngStyle]="setStyle('align-items', 'flex-end', 'flex-start')" class="text-box">
+            <h3 class="title">{{ project.name }}</h3>
+            <span class="skills">{{ project.skills }}</span>
+            <p [ngStyle]="setStyle('text-align', 'right', 'left')" class="description">
                 {{ project.description }}
             </p>
         </div>
-        <div [ngStyle]="setStyle('justify-content', 'flex-end', 'flex-start')" class="project-button-box">
-            <button class="live-test-btn">Live test</button>
-            <button class="github-btn">Github</button>
+
+        <div class="button-box">
+            <button class="sec-btn">Live test</button>
+            <button class="tert-btn">Github</button>
         </div>
     </div>
 </div>
