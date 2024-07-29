@@ -12,7 +12,7 @@
 
 .logo {
   @include font(35px, bold, 35px);
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   cursor: pointer;
 
   &:hover {

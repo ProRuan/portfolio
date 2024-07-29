@@ -1,26 +1,43 @@
-@import "../../../../mixins.scss";
 @import "../../../../styles.scss";
 
 .footer {
   @include display-flex($jc: space-between);
-  // set padding + width!
   padding: 0 100px;
   height: 291px;
   border-top: 4px solid $prim1;
 }
 
-.footer-logo-imprint-group {
-  @include display-column(center, center, 3px);
+.logo-imprint-group {
+  @include display-column($g: 4px);
 }
 
-.footer-logo {
-  color: #ffffff;
+.logo {
+  @include font(40px, bold, 40px);
+  letter-spacing: 1px;
+  cursor: pointer;
+
+  &:hover {
+    color: unset;
+  }
 }
 
 .imprint-link {
   @include font(16px, 400, 19.2px);
+  @include display-column($g: 3px);
   box-sizing: border-box;
   padding: 5px 0;
+
+  img {
+    opacity: 0;
+  }
+
+  &:hover {
+    color: #ffffff;
+
+    img {
+      opacity: 1;
+    }
+  }
 }
 
 .copyright {
@@ -28,7 +45,7 @@
 }
 
 .social-button-group {
+  @include size(174px, 40px);
   @include display-flex($jc: space-between);
-  width: 174px;
-  height: 40px;
+  gap: 32px;
 }
