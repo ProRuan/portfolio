@@ -56,6 +56,14 @@ button {
     background-color: white;
     transition-delay: 10ms;
   }
+
+  &:disabled {
+    padding: 15px 30px;
+    color: white;
+    background-color: #b6b6b6;
+    transition-delay: unset;
+    cursor: unset;
+  }
 }
 
 .social-btn {

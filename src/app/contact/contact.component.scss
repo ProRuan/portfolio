@@ -36,8 +36,12 @@
   @include display-column($g: 16px);
 }
 
-.contact-form-box {
+.right-content {
   @include display-column($ai: flex-end, $g: 52px);
+}
+
+.form-box {
+  @include display-column($ai: center, $g: 16px);
 }
 
 .contact-form {
@@ -60,11 +64,6 @@
   &::placeholder {
     color: #ffffff;
   }
-}
-
-.contact-message-box {
-  @include display-column($g: 16px);
-  width: 100%;
 }
 
 .contact-textarea {
@@ -90,60 +89,52 @@
   }
 }
 
-.contact-confirm-send-group {
-  @include display-column($ai: center, $g: 16px);
+.privacy-policy-box {
+  @include display-column($g: 8px);
   width: 100%;
 }
 
-.contact-privacy-policy-box {
-  @include display-column($ai: flex-end, $g: 8px);
-  width: 100%;
-}
-
-.contact-privacy-policy {
+.privacy-policy-line {
   @include display-flex(flex-start, center);
   height: 27px;
   gap: 8px;
 }
 
-.contact-checkbox {
+.checkbox {
   width: 24px;
   height: 24px;
+  object-fit: contain;
 }
 
-.contact-privacy-policy-text {
+.privacy-policy-text {
   @include font(14px, 400, 16.8px);
   margin: 0;
 }
 
 .privacy-policy-link {
   color: $prim2;
+
+  &:hover {
+    color: $prim2;
+    text-decoration: underline;
+  }
 }
 
-.privacy-policy-check-hint {
+.check-hint {
   @include font(14px, 400, 16.8px);
   color: #e61c40;
   opacity: 0;
 }
 
-// disable btn!!!
-// double code!!!
-.send-message-btn {
-  @include font();
-  padding: 15px 30px;
-  color: white;
-  background-color: $prim1;
-  border: unset;
-  border-radius: 10px;
-
-  // drop shadow???
-
-  &:disabled {
-    background-color: #b6b6b6;
-  }
-}
-
 .top-arrow {
-  width: fit-content;
-  height: fit-content;
+  @include size(39px, 39px);
+  background-image: url("../../assets/img/go_up_white.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: all 100ms ease-in-out;
+
+  &:hover {
+    background-image: url("../../assets/img/go_up.svg");
+  }
 }
