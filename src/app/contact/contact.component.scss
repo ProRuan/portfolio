@@ -2,43 +2,38 @@
 @import "../../styles.scss";
 
 .contact {
-  // to edit!
-  height: 100vh;
+  @include display-column($g: 40px);
+  padding: 156px 100px 90px 0;
 }
 
-.contact-title-box {
+.title-box {
   display: flex;
   gap: 32px;
 }
 
-.contact-title {
-  @include font(90px, 700, 108px);
+.ta-center {
   text-align: center;
 }
 
-.contact-content {
-  padding: 0 100px;
+.content {
+  padding-left: 100px;
   display: flex;
   gap: 149px;
-  // gap: 40px;    // for above!
 }
 
-.contact-hint-box {
+.hint-box {
   @include display-column($g: 24px);
   width: 474px;
 }
 
-.contact-hint-title {
+.hint-title {
   @include font(32px, 700, 38.4px);
+  margin: 0;
 }
 
-.contact-hint-text-group {
+.hint-text-group {
   @include font(16px, 400, 19.2px);
   @include display-column($g: 16px);
-}
-
-.contact-hint-paragraph {
-  margin: 0;
 }
 
 .contact-form-box {
