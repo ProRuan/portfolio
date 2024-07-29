@@ -46,6 +46,17 @@
 
 .social-button-group {
   @include size(174px, 40px);
-  @include display-flex($jc: space-between);
-  gap: 32px;
+  position: relative;
+}
+
+.l-0 {
+  @include position(absolute, 0, 5px);
+}
+
+.l-72 {
+  @include position(absolute, 72px, 5px);
+}
+
+.l-144 {
+  @include position(absolute, 144px, 5px);
 }
