@@ -1,4 +1,3 @@
-@import "../../mixins.scss";
 @import "../../styles.scss";
 
 .contact {
@@ -203,6 +202,12 @@ textarea:focus {
   width: 24px;
   height: 24px;
   object-fit: contain;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #183771;
+    border-radius: 38px;
+  }
 }
 
 .privacy-policy-text {
