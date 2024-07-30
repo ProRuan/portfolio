@@ -49,6 +49,12 @@
   width: 617px;
 }
 
+input:focus,
+textarea:focus {
+  border: 1px solid $prim1;
+  outline: none;
+}
+
 .contact-input {
   @include font(16px, 400, 19.2px);
   box-sizing: border-box;
