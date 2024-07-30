@@ -22,12 +22,28 @@
         <div class="right-content">
             <form #contactForm="ngForm" class="form-box" (ngSubmit)="onSubmit(contactForm)">
                 <div class="contact-form">
-                    <input [(ngModel)]="contactData.name" name="name" class="contact-input" type="text"
-                        placeholder="Your name" required>
-                    <input [(ngModel)]="contactData.email" name="email" class="contact-input" type="text"
-                        pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" placeholder="Your email" required>
-                    <textarea [(ngModel)]="contactData.message" name="message" minlength="10" class="contact-textarea"
-                        placeholder="Your message" required></textarea>
+                    <div class="input-box done">
+                        <input [(ngModel)]="contactData.name" name="name" class="contact-input" type="text"
+                            placeholder="Your name" required>
+                        <img class="check" src="../../assets/img/check.svg" alt="check">
+                        <img class="callsign" src="../../assets/img/callsign.svg" alt="callsign">
+                        <span class="hint">Your name is required</span>
+                    </div>
+                    <div class="input-box done">
+                        <input [(ngModel)]="contactData.email" name="email" class="contact-input" type="text"
+                            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" placeholder="Your email"
+                            required>
+                        <img class="check" src="../../assets/img/check.svg" alt="check">
+                        <img class="callsign" src="../../assets/img/callsign.svg" alt="callsign">
+                        <span class="hint">Your email is required</span>
+                    </div>
+                    <div class="textarea-box filled">
+                        <textarea [(ngModel)]="contactData.message" name="message" minlength="10"
+                            class="contact-textarea" placeholder="Your message" required></textarea>
+                        <img class="check" src="../../assets/img/check.svg" alt="check">
+                        <img class="callsign" src="../../assets/img/callsign.svg" alt="callsign">
+                        <span class="hint">Your message is empty</span>
+                    </div>
                 </div>
 
                 <div class="privacy-policy-box">
@@ -48,6 +64,9 @@
 
             <!-- position absolute -->
             <a class="top-arrow" href="#top"></a>
+
+            <!-- Finish form (style/script/max) ... (3/0/5) -->
+             <!-- Finish top arrow -->
         </div>
     </div>
 </section>
