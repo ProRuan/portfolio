@@ -20,16 +20,17 @@
         <!-- style + script -->
 
         <div class="right-content">
-            <form #contactForm="ngForm" class="form-box" (ngSubmit)="onSubmit(contactForm)">
+            <form #contactForm="ngForm" class="form-box" (keyup)="update(contactForm)"
+                (ngSubmit)="onSubmit(contactForm)">
                 <div class="contact-form">
-                    <div class="input-box" [ngClass]="!invalidName ? 'done' : 'error'">
+                    <div class="input-box" [ngClass]="nameClass">
                         <input [(ngModel)]="contactData.name" name="name" class="contact-input" type="text"
-                            placeholder="Your name" required>
+                            minlength="2" placeholder="Your name" required>
                         <img class="check" src="../../assets/img/check.svg" alt="check">
                         <img class="callsign" src="../../assets/img/callsign.svg" alt="callsign">
                         <span class="hint">Your name is required.</span>
                     </div>
-                    <div class="input-box" [ngClass]="!invalidEmail ? 'done' : 'error'">
+                    <div class="input-box" [ngClass]="emailClass">
                         <input [(ngModel)]="contactData.email" name="email" class="contact-input" type="text"
                             pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" placeholder="Your email"
                             required>
@@ -37,8 +38,8 @@
                         <img class="callsign" src="../../assets/img/callsign.svg" alt="callsign">
                         <span class="hint">Your email is required.</span>
                     </div>
-                    <div class="textarea-box" [ngClass]="!emptyMessage ? 'filled' : 'empty'">
-                        <textarea [(ngModel)]="contactData.message" name="message" minlength="10"
+                    <div class="textarea-box" [ngClass]="messageClass">
+                        <textarea [(ngModel)]="contactData.message" name="message" minlength="20"
                             class="contact-textarea" placeholder="Your message" required></textarea>
                         <img class="check" src="../../assets/img/check.svg" alt="check">
                         <img class="callsign" src="../../assets/img/callsign.svg" alt="callsign">

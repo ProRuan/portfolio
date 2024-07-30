@@ -12,6 +12,10 @@ import { FormsModule, NgForm } from '@angular/forms';
 })
 export class ContactComponent {
   http = inject(HttpClient);
+  nameClass = '';
+  emailClass = '';
+  messageClass = '';
+
   invalidName = false;
   invalidEmail = false;
   emptyMessage = false;
@@ -34,6 +38,39 @@ export class ContactComponent {
       },
     },
   };
+
+  update(ngForm: NgForm) {
+    this.setNameClass(ngForm);
+    this.updateEmailClass(ngForm);
+    this.updateMessageClass(ngForm);
+
+    // console.log(ngForm);
+  }
+
+  setNameClass(ngForm: NgForm) {
+    if (ngForm.value.name.length > 1) {
+      this.nameClass = 'done';
+    } else {
+      this.nameClass = '';
+    }
+  }
+
+  updateEmailClass(ngForm: NgForm) {
+    let pattern = /[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}/;
+    if (ngForm.value.email.match(pattern)) {
+      this.emailClass = 'done';
+    } else {
+      this.emailClass = '';
+    }
+  }
+
+  updateMessageClass(ngForm: NgForm) {
+    if (ngForm.value.message.length > 20) {
+      this.messageClass = 'filled';
+    } else {
+      this.messageClass = '';
+    }
+  }
 
   agree() {
     this.checked = !this.checked ? true : false;
@@ -59,17 +96,6 @@ export class ContactComponent {
       this.sendPost(ngForm);
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();
-    } else {
-      if (!ngForm.value.name) {
-        this.invalidName = true;
-      }
-      if (!ngForm.value.email) {
-        this.invalidEmail = true;
-      }
-      if (!ngForm.value.message) {
-        this.emptyMessage = true;
-      }
-      // console.log(ngForm);
     }
   }
 
