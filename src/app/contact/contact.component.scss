@@ -37,7 +37,7 @@
 }
 
 .right-content {
-  @include display-column($ai: flex-end, $g: 52px);
+  @include display-column($ai: flex-end, $g: 42px);
 }
 
 .form-box {
