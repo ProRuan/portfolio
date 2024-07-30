@@ -16,13 +16,19 @@
             </div>
         </div>
 
+        <!-- if condition  for message (sample) -->
+        <!-- style + script -->
+
         <div class="right-content">
-            <div class="form-box">
-                <form class="contact-form">
-                    <input class="contact-input" type="text" placeholder="Your name">
-                    <input class="contact-input" type="text" placeholder="Your email">
-                    <textarea class="contact-textarea" name="" id="" placeholder="Your message"></textarea>
-                </form>
+            <form #contactForm="ngForm" class="form-box" (ngSubmit)="onSubmit(contactForm)">
+                <div class="contact-form">
+                    <input [(ngModel)]="contactData.name" name="name" class="contact-input" type="text"
+                        placeholder="Your name" required>
+                    <input [(ngModel)]="contactData.email" name="email" class="contact-input" type="text"
+                        pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" placeholder="Your email" required>
+                    <textarea [(ngModel)]="contactData.message" name="message" minlength="10" class="contact-textarea"
+                        placeholder="Your message" required></textarea>
+                </div>
 
                 <div class="privacy-policy-box">
                     <div class="privacy-policy-line">
@@ -36,8 +42,9 @@
                     <span class="check-hint">Please accept the privacy policy.</span>
                 </div>
 
-                <button class="prim-btn" disabled>Send message :&#41;</button>
-            </div>
+                <button for="ngForm" class="prim-btn">Send message :&#41;</button>
+                <!-- <button class="prim-btn" disabled>Send message :&#41;</button> -->
+            </form>
 
             <a class="top-arrow" href="#top"></a>
         </div>
