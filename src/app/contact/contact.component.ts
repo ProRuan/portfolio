@@ -12,6 +12,10 @@ import { FormsModule, NgForm } from '@angular/forms';
 })
 export class ContactComponent {
   http = inject(HttpClient);
+  invalidName = false;
+  invalidEmail = false;
+  emptyMessage = false;
+  checked = false;
   mailTest = true;
 
   contactData = {
@@ -31,15 +35,41 @@ export class ContactComponent {
     },
   };
 
+  agree() {
+    this.checked = !this.checked ? true : false;
+  }
+
+  getSrc() {
+    if (this.checked) {
+      return '.../../../../assets/img/check_button_checked.svg';
+    } else {
+      return '.../../../../assets/img/check_button.svg';
+    }
+  }
+
   /**
    * Sumbit the form.
    * @param ngForm - The form to submit.
    */
   onSubmit(ngForm: NgForm) {
+    this.invalidName = false;
+    this.invalidEmail = false;
+    this.emptyMessage = false;
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.sendPost(ngForm);
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();
+    } else {
+      if (!ngForm.value.name) {
+        this.invalidName = true;
+      }
+      if (!ngForm.value.email) {
+        this.invalidEmail = true;
+      }
+      if (!ngForm.value.message) {
+        this.emptyMessage = true;
+      }
+      // console.log(ngForm);
     }
   }
 

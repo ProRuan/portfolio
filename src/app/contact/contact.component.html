@@ -22,14 +22,14 @@
         <div class="right-content">
             <form #contactForm="ngForm" class="form-box" (ngSubmit)="onSubmit(contactForm)">
                 <div class="contact-form">
-                    <div class="input-box done">
+                    <div class="input-box" [ngClass]="!invalidName ? 'done' : 'error'">
                         <input [(ngModel)]="contactData.name" name="name" class="contact-input" type="text"
                             placeholder="Your name" required>
                         <img class="check" src="../../assets/img/check.svg" alt="check">
                         <img class="callsign" src="../../assets/img/callsign.svg" alt="callsign">
                         <span class="hint">Your name is required.</span>
                     </div>
-                    <div class="input-box done">
+                    <div class="input-box" [ngClass]="!invalidEmail ? 'done' : 'error'">
                         <input [(ngModel)]="contactData.email" name="email" class="contact-input" type="text"
                             pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" placeholder="Your email"
                             required>
@@ -37,7 +37,7 @@
                         <img class="callsign" src="../../assets/img/callsign.svg" alt="callsign">
                         <span class="hint">Your email is required.</span>
                     </div>
-                    <div class="textarea-box filled">
+                    <div class="textarea-box" [ngClass]="!emptyMessage ? 'filled' : 'empty'">
                         <textarea [(ngModel)]="contactData.message" name="message" minlength="10"
                             class="contact-textarea" placeholder="Your message" required></textarea>
                         <img class="check" src="../../assets/img/check.svg" alt="check">
@@ -48,7 +48,7 @@
 
                 <div class="privacy-policy-box">
                     <div class="privacy-policy-line">
-                        <img class="checkbox" src=".../../../../assets/img/check_button.svg" alt="check-button">
+                        <img class="checkbox" (click)="agree()" [src]="getSrc()" alt="check-button">
                         <p class="privacy-policy-text">
                             I've read the <a class="privacy-policy-link" href="">privacy policy</a> and agree to
                             the
@@ -58,7 +58,7 @@
                     <span class="check-hint">Please accept the privacy policy.</span>
                 </div>
 
-                <button class="prim-btn" disabled>Send message :&#41;</button>
+                <button class="prim-btn" [disabled]="!checked">Send message :&#41;</button>
             </form>
 
             <!-- position absolute -->
