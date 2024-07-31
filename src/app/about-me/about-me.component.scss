@@ -4,11 +4,7 @@
   @include display-flex(flex-end, center);
   @include position(relative);
   padding: 156px 0 24px 100px;
-  background-image: url("../../assets/img/about_me_shadow.svg");
-  background-position: 1600px -100px;
-  background-repeat: no-repeat;
   gap: 149px;
-  overflow-x: hidden;
 }
 
 .text-box {
