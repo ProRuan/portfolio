@@ -1,0 +1,51 @@
+<form #contactForm="ngForm" class="form-box" (keyup)="update(contactForm)" (ngSubmit)="onSubmit(contactForm)">
+    <div class="contact-form">
+        <div class="input-box" [ngClass]="nameClass">
+            <input [(ngModel)]="contactData.name" name="name" class="contact-input" type="text" minlength="2"
+                placeholder="Your name" required>
+            <img class="check" src="../../assets/img/check.svg" alt="check">
+            <img class="callsign" src="../../assets/img/callsign.svg" alt="callsign">
+            @if (!contactData.name) {
+            <span class="hint">Your name is required.</span>
+            } @else if (nameClass != 'done') {
+            <span class="hint">Please use at least 2 signs.</span>
+            }
+        </div>
+        <div class="input-box" [ngClass]="emailClass">
+            <input [(ngModel)]="contactData.email" name="email" class="contact-input" type="text"
+                pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" placeholder="Your email" required>
+            <img class="check" src="../../assets/img/check.svg" alt="check">
+            <img class="callsign" src="../../assets/img/callsign.svg" alt="callsign">
+            @if (!contactData.email) {
+            <span class="hint">Your email is required.</span>
+            } @else if (emailClass != 'done') {
+            <span class="hint">Please enter a valid email.</span>
+            }
+        </div>
+        <div class="textarea-box" [ngClass]="messageClass">
+            <textarea [(ngModel)]="contactData.message" name="message" minlength="20" class="contact-textarea"
+                placeholder="Your message" required></textarea>
+            <img class="check" src="../../assets/img/check.svg" alt="check">
+            <img class="callsign" src="../../assets/img/callsign.svg" alt="callsign">
+            @if (!contactData.message) {
+            <span class="hint">Your message is empty.</span>
+            } @else if (messageClass != 'done') {
+            <span class="hint">Please use at least 20 signs.</span>
+            }
+        </div>
+    </div>
+
+    <div class="privacy-policy-box">
+        <div class="privacy-policy-line">
+            <img class="checkbox" (click)="agree()" [src]="getSrc()" alt="check-button">
+            <p class="privacy-policy-text">
+                I've read the <a class="privacy-policy-link" href="">privacy policy</a> and agree to
+                the
+                processing of my data as outlined.
+            </p>
+        </div>
+        <span class="check-hint" [ngClass]="updateCheckClass()">Please accept the privacy policy.</span>
+    </div>
+
+    <button class="prim-btn" [disabled]="!checked">Send message :&#41;</button>
+</form>
