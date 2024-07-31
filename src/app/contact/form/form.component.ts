@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
+import { Conditional } from '@angular/compiler';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 
@@ -36,66 +37,90 @@ export class FormComponent {
     },
   };
 
+  /**
+   * Update the contact data classes.
+   * @param ngForm - The providing form.
+   */
   update(ngForm: NgForm) {
-    this.setNameClass(ngForm);
+    this.updateNameClass(ngForm);
     this.updateEmailClass(ngForm);
     this.updateMessageClass(ngForm);
-    // console.log(ngForm);
   }
 
-  setNameClass(ngForm: NgForm) {
+  /**
+   * Update the validation class of the name.
+   * @param ngForm - The providing form.
+   */
+  updateNameClass(ngForm: NgForm) {
     if (ngForm.value.name) {
-      if (ngForm.value.name.length > 1) {
-        this.nameClass = 'done';
-      } else {
-        this.nameClass = '';
-      }
+      let condition = ngForm.value.name.length > 1;
+      this.nameClass = this.getValClass(condition);
     }
   }
 
+  /**
+   * Provide the validation class.
+   * @param condition - The condition to verify.
+   * @returns - The validation class.
+   */
+  getValClass(condition: boolean): string {
+    return condition ? 'done' : '';
+  }
+
+  /**
+   * Update the validation class of the email.
+   * @param ngForm - The providing form.
+   */
   updateEmailClass(ngForm: NgForm) {
     if (ngForm.value.email) {
       let pattern = /[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}/;
-      if (ngForm.value.email.match(pattern)) {
-        this.emailClass = 'done';
-      } else {
-        this.emailClass = '';
-      }
+      let condition = ngForm.value.email.match(pattern);
+      this.emailClass = this.getValClass(condition);
     }
   }
 
+  /**
+   * Update the validation class of the message.
+   * @param ngForm - The providing form.
+   */
   updateMessageClass(ngForm: NgForm) {
     if (ngForm.value.message) {
-      if (ngForm.value.message.length > 19) {
-        this.messageClass = 'filled';
-      } else {
-        this.messageClass = '';
-      }
+      let condition = ngForm.value.message.length > 19;
+      this.messageClass = this.getValClass(condition);
     }
   }
 
-  updateCheckClass() {
-    if (this.checked) {
-      if (!this.firstCheck) {
-        this.firstCheck = true;
-      }
-      return '';
-    } else if (this.firstCheck) {
-      return 'show';
-    } else {
-      return '';
-    }
-  }
-
+  /**
+   * Set the boolean value of the checkbox.
+   */
   agree() {
     this.checked = !this.checked ? true : false;
   }
 
-  getSrc() {
+  /**
+   * Provide the checkbox image.
+   * @returns - The path of the checkbox image.
+   */
+  getCheckbox() {
     if (this.checked) {
       return '.../../../../assets/img/check_button_checked.svg';
     } else {
       return '.../../../../assets/img/check_button.svg';
+    }
+  }
+
+  /**
+   * Update the class of the checkbox.
+   * @returns - The class to apply.
+   */
+  updateCheckClass() {
+    if (!this.checked && this.firstCheck) {
+      return 'show';
+    } else {
+      if (this.checked && !this.firstCheck) {
+        this.firstCheck = true;
+      }
+      return '';
     }
   }
 
@@ -110,10 +135,7 @@ export class FormComponent {
       ngForm.resetForm();
       this.resetStyle();
     } else {
-      let input = ngForm.controls;
-      this.nameClass = input['name'].valid ? 'done' : 'error';
-      this.emailClass = input['email'].valid ? 'done' : 'error';
-      this.messageClass = input['message'].valid ? 'filled' : 'empty';
+      this.setInputClass(ngForm);
     }
   }
 
@@ -135,11 +157,25 @@ export class FormComponent {
       });
   }
 
+  /**
+   * Reset the style of the form.
+   */
   resetStyle() {
     this.nameClass = '';
     this.emailClass = '';
     this.messageClass = '';
     this.firstCheck = false;
     this.checked = false;
+  }
+
+  /**
+   * Set the input classes.
+   * @param ngForm - The providing form.
+   */
+  setInputClass(ngForm: NgForm) {
+    let input = ngForm.controls;
+    this.nameClass = input['name'].valid ? 'done' : 'error';
+    this.emailClass = input['email'].valid ? 'done' : 'error';
+    this.messageClass = input['message'].valid ? 'done' : 'empty';
   }
 }

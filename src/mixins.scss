@@ -16,6 +16,36 @@
   line-height: $lh;
 }
 
+@mixin input-box($h: 50px) {
+  @include size(100%, $h);
+  @include display-column($g: 10px);
+  position: relative;
+  transition: all 300ms ease-out;
+  overflow-y: hidden;
+}
+
+@mixin contact-input($h: 50px) {
+  @include font(16px, 400, 19.2px);
+  box-sizing: border-box;
+  padding: 15px 25px;
+  width: 100%;
+  height: $h;
+  min-height: $h;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  background-color: transparent;
+  border: 1px solid $prim2;
+  border-radius: 10px;
+}
+
+@mixin input-icon($s: 25.05px, $t: 12.475px) {
+  @include size($s, $s);
+  display: none;
+  position: absolute;
+  top: $t;
+  right: 25px;
+}
+
 @mixin position($p: absolute, $l: 0, $t: 0) {
   position: $p;
   left: $l;
