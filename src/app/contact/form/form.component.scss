@@ -31,11 +31,10 @@
   height: 77px;
 
   .contact-input {
-    color: #e61c40;
     border: 1px solid #e61c40;
 
     &::placeholder {
-      color: #e61c40;
+      color: transparent;
     }
   }
 
@@ -53,6 +52,10 @@ input:focus,
 textarea:focus {
   border: 1px solid $prim1;
   outline: none;
+
+  &::placeholder {
+    color: transparent;
+  }
 }
 
 .contact-input {
@@ -116,11 +119,10 @@ textarea:focus {
   height: 229px;
 
   .contact-textarea {
-    color: #e61c40;
     border: 1px solid #e61c40;
 
     &::placeholder {
-      color: #e61c40;
+      color: transparent;
     }
   }
 
