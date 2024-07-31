@@ -56,7 +56,7 @@
                             processing of my data as outlined.
                         </p>
                     </div>
-                    <span class="check-hint">Please accept the privacy policy.</span>
+                    <span class="check-hint" [ngClass]="updateCheckClass()">Please accept the privacy policy.</span>
                 </div>
 
                 <button class="prim-btn" [disabled]="!checked">Send message :&#41;</button>

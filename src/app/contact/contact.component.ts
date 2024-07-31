@@ -15,10 +15,7 @@ export class ContactComponent {
   nameClass = '';
   emailClass = '';
   messageClass = '';
-
-  invalidName = false;
-  invalidEmail = false;
-  emptyMessage = false;
+  firstCheck = false;
   checked = false;
   mailTest = true;
 
@@ -43,32 +40,50 @@ export class ContactComponent {
     this.setNameClass(ngForm);
     this.updateEmailClass(ngForm);
     this.updateMessageClass(ngForm);
-
     // console.log(ngForm);
   }
 
   setNameClass(ngForm: NgForm) {
-    if (ngForm.value.name.length > 1) {
-      this.nameClass = 'done';
-    } else {
-      this.nameClass = '';
+    if (ngForm.value.name) {
+      if (ngForm.value.name.length > 1) {
+        this.nameClass = 'done';
+      } else {
+        this.nameClass = '';
+      }
     }
   }
 
   updateEmailClass(ngForm: NgForm) {
-    let pattern = /[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}/;
-    if (ngForm.value.email.match(pattern)) {
-      this.emailClass = 'done';
-    } else {
-      this.emailClass = '';
+    if (ngForm.value.email) {
+      let pattern = /[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}/;
+      if (ngForm.value.email.match(pattern)) {
+        this.emailClass = 'done';
+      } else {
+        this.emailClass = '';
+      }
     }
   }
 
   updateMessageClass(ngForm: NgForm) {
-    if (ngForm.value.message.length > 20) {
-      this.messageClass = 'filled';
+    if (ngForm.value.message) {
+      if (ngForm.value.message.length > 19) {
+        this.messageClass = 'filled';
+      } else {
+        this.messageClass = '';
+      }
+    }
+  }
+
+  updateCheckClass() {
+    if (this.checked) {
+      if (!this.firstCheck) {
+        this.firstCheck = true;
+      }
+      return '';
+    } else if (this.firstCheck) {
+      return 'show';
     } else {
-      this.messageClass = '';
+      return '';
     }
   }
 
@@ -89,13 +104,16 @@ export class ContactComponent {
    * @param ngForm - The form to submit.
    */
   onSubmit(ngForm: NgForm) {
-    this.invalidName = false;
-    this.invalidEmail = false;
-    this.emptyMessage = false;
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.sendPost(ngForm);
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();
+      this.resetStyle();
+    } else {
+      let input = ngForm.controls;
+      this.nameClass = input['name'].valid ? 'done' : 'error';
+      this.emailClass = input['email'].valid ? 'done' : 'error';
+      this.messageClass = input['message'].valid ? 'filled' : 'empty';
     }
   }
 
@@ -115,5 +133,13 @@ export class ContactComponent {
         },
         complete: () => console.info('send post complete'),
       });
+  }
+
+  resetStyle() {
+    this.nameClass = '';
+    this.emailClass = '';
+    this.messageClass = '';
+    this.firstCheck = false;
+    this.checked = false;
   }
 }
