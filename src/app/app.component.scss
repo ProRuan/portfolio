@@ -5,6 +5,25 @@ main {
   overflow: hidden;
 }
 
+// placeholder start
+.hero-img {
+  box-sizing: border-box;
+  width: 646px;
+  height: 705px;
+  // border: 1px solid $prim2;
+  position: absolute;
+  left: 47px;
+  top: 106px;
+  z-index: 100;
+}
+// placeholder end
+
+.hero-shadow {
+  position: absolute;
+  left: -48px;
+  top: 160px;
+}
+
 .about-me-shadow {
   position: absolute;
   right: -424px;
@@ -21,15 +40,13 @@ main {
   position: absolute;
   right: 0px;
   top: 2648px;
-  z-index: -1;
 }
 
 .footer-shadow {
   position: absolute;
   left: -400px;
   top: 3816px;
-  // bottom?!
 }
 
 // mixin?!
-// shadows ... (5/6 + 0/1)
+// hero bg ... (0/2)

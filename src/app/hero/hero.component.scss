@@ -15,26 +15,6 @@
   z-index: -1;
 }
 
-.hero-shadow {
-  @include size(859px, 820px);
-  @include position(absolute, -48px, 48px);
-  background-image: url("../../assets/img/hero_shadow.svg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -2;
-}
-
-.hero-img-box {
-  @include position(relative, 0, 0);
-}
-
-// add photo!!!
-.hero-img {
-  @include size(646px, 705px);
-  @include position(absolute, 120px, -64px);
-}
-
 .content {
   @include display-column($jc: center, $ai: center);
 }
