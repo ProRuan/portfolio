@@ -37,6 +37,8 @@
 
 .right-content {
   @include display-column($ai: flex-end, $g: 42px);
+  height: 598.39px;
+  position: relative;
 }
 
 .form-box {
@@ -241,10 +243,15 @@ textarea:focus {
 
 .top-arrow {
   @include size(39px, 39px);
+  min-width: 39px;
+  min-height: 39px;
   background-image: url("../../assets/img/go_up_white.svg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
+  position: absolute;
+  right: 0;
+  top: 559.38px;
   transition: all 100ms ease-in-out;
 
   &:hover {
