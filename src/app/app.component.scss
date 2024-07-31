@@ -17,11 +17,19 @@ main {
   top: 2000px;
 }
 
+.partner-shadow {
+  position: absolute;
+  right: 0px;
+  top: 2648px;
+  z-index: -1;
+}
+
 .footer-shadow {
   position: absolute;
   left: -400px;
   top: 3816px;
+  // bottom?!
 }
 
 // mixin?!
-// shadows ... (3/6 + 0/1)
+// shadows ... (5/6 + 0/1)
