@@ -3,9 +3,6 @@
 .contact {
   @include display-column($g: 40px);
   padding: 156px 100px 90px 0;
-  background-image: url("../../assets/img/footer_shadow.svg");
-  background-position: -400px 472px;
-  background-repeat: no-repeat;
 }
 
 .title-box {

@@ -2,11 +2,17 @@
 
 main {
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .about-me-shadow {
   position: absolute;
   right: -424px;
   top: 800px;
+}
+
+.footer-shadow {
+  position: absolute;
+  left: -400px;
+  top: 3816px;
 }
