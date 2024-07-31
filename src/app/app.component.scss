@@ -11,8 +11,17 @@ main {
   top: 800px;
 }
 
+.skills-shadow {
+  position: absolute;
+  left: -560px;
+  top: 2000px;
+}
+
 .footer-shadow {
   position: absolute;
   left: -400px;
   top: 3816px;
 }
+
+// mixin?!
+// shadows ... (3/6 + 0/1)
