@@ -19,42 +19,29 @@ main {
 // placeholder end
 
 .hero-bg {
-  position: absolute;
-  left: -2px;
-  top: 320px;
+  @include position(absolute, -2px, 320px);
   z-index: -1;
 }
 
 .hero-shadow {
-  position: absolute;
-  left: -64px;
-  top: 160px;
+  @include position(absolute, -64px, 160px);
   z-index: -2;
 }
 
 .about-me-shadow {
-  position: absolute;
+  @include position(absolute, unset, 800px);
   right: -424px;
-  top: 800px;
 }
 
 .skills-shadow {
-  position: absolute;
-  left: -560px;
-  top: 2000px;
+  @include position(absolute, -560px, 2000px);
 }
 
 .partner-shadow {
-  position: absolute;
-  right: 0px;
-  top: 2648px;
+  @include position(absolute, unset, 2648px);
+  right: 0;
 }
 
 .footer-shadow {
-  position: absolute;
-  left: -400px;
-  top: 3816px;
+  @include position(absolute, -400px, 3816px);
 }
-
-// mixin?!
-// hero bg ... (0/2)
