@@ -2,7 +2,6 @@
 
 .about-me {
   @include display-flex(flex-end, center);
-  @include position(relative);
   padding: 156px 0 24px 100px;
   gap: 149px;
 }

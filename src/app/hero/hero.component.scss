@@ -2,17 +2,10 @@
 
 .hero {
   @include display-column(space-between, flex-end, 0px);
-  @include position(relative);
   box-sizing: border-box;
   margin-top: 109px;
-  padding: 188px 100px 24px 0;
+  padding: 188px 96px 24px 0;
   height: calc(100vh - 109px);
-}
-
-.hero-bg {
-  @include size($w: 100%);
-  @include position(absolute, 0, 228.6px);
-  z-index: -1;
 }
 
 .content {

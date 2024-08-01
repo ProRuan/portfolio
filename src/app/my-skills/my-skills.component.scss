@@ -2,7 +2,6 @@
 
 .my-skills {
   @include display-flex(flex-end, flex-start);
-  @include position(relative, 0, 0);
   padding: 156px 0 24px 100px;
   height: 404px;
   gap: 105px;
