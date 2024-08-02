@@ -18,6 +18,8 @@ export class PortfolioComponent {
       description: `
       Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.
       `,
+      link: 'https://join-43.developerakademie.net/join-43/login.html',
+      github: 'https://github.com/joNsiii/join-group',
     },
     {
       path: '../../assets/img/raising_fantasy.jpg',
@@ -26,6 +28,8 @@ export class PortfolioComponent {
       description: `
       A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale.
       `,
+      link: 'https://rudolf-sachslehner.developerakademie.net/raising-fantasy/index.html',
+      github: 'https://github.com/ProRuan/raising-fantasy-new',
     },
   ];
 }

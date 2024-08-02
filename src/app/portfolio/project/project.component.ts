@@ -16,6 +16,8 @@ export class ProjectComponent {
     skills: 'Angular | TypeScript | HTML | CSS | Firebase',
     description:
       'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+    link: 'https://join-43.developerakademie.net/join-43/login.html',
+    github: 'https://github.com/joNsiii/join-group',
   };
 
   /**
@@ -38,5 +40,13 @@ export class ProjectComponent {
   setStyle(property: string, valueA: string, valueB: string) {
     let value = this.index % 2 == 1 ? valueA : valueB;
     return { [property]: value };
+  }
+
+  /**
+   * Redirects to another website.
+   * @param path - The path of the other website.
+   */
+  redirect(path: string) {
+    window.open(path, '_blank');
   }
 }
