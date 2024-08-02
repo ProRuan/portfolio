@@ -5,6 +5,17 @@
   gap: 35px;
 }
 
+.img-box {
+  @include display-flex();
+  min-width: 620px;
+  min-height: 339px;
+}
+
+.img {
+  width: 75%;
+  border-radius: 10px;
+}
+
 .content {
   @include display-column($jc: flex-end, $ai: center, $g: 35px);
 }

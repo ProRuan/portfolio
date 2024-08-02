@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
 export class PortfolioComponent {
   projects: any = [
     {
-      path: '../../assets/img/join_photo.png',
+      path: '../../assets/img/join.png',
       name: 'Join',
       skills: 'Angular | TypeScript | HTML | CSS | Firebase',
       description: `
@@ -20,7 +20,7 @@ export class PortfolioComponent {
       `,
     },
     {
-      path: '../../assets/img/sharkie_photo.png',
+      path: '../../assets/img/raising_fantasy.jpg',
       name: 'Sharkie',
       skills: 'JavaScript | HTML | CSS',
       description: `

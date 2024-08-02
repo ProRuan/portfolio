@@ -28,5 +28,6 @@
 }
 
 .project-group {
+  @include display-column($ai: center, $g: 80px);
   width: 1168px;
 }

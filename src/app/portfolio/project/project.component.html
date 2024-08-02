@@ -1,5 +1,7 @@
 <div [ngStyle]="setStyle('flex-direction', 'row-reverse', 'row')" class="project">
-    <img src="{{ project.path }}" [alt]="getAlt(project)">
+    <div class="img-box">
+        <img class="img" src="{{ project.path }}" [alt]="getAlt(project)">
+    </div>
 
     <div [ngStyle]="setStyle('align-items', 'flex-end', 'flex-start')" class="content">
         <div [ngStyle]="setStyle('align-items', 'flex-end', 'flex-start')" class="text-box">
