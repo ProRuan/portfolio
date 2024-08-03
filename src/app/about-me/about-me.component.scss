@@ -28,12 +28,16 @@
 }
 
 .img-box {
-  @include display-flex();
+  @include display-flex($jc: flex-start);
+  min-width: 453px;
+  overflow-x: clip;
 }
 
 .img {
   @include size(453px, 453px);
   box-sizing: border-box;
+  min-width: 453px;
+  min-height: 453px;
   background-image: url("../../assets/img/profile.png");
   background-position: -12px -0;
   background-repeat: no-repeat;

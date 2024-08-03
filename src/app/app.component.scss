@@ -32,6 +32,7 @@ main {
 .partner-shadow {
   @include position(absolute, unset, 2648px);
   right: 0;
+  z-index: -1;
 }
 
 .footer-shadow {
