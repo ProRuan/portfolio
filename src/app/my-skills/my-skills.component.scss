@@ -101,13 +101,15 @@
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
-@media (max-width: 1180px) {
-  .my-skills {
-    gap: 64px;
-  }
-
+@media (max-width: 1408px) {
   .skill-group {
     gap: 41px 48px;
+  }
+}
+
+@media (max-width: 1290px) {
+  .my-skills {
+    gap: 64px;
   }
 
   .exp-text {

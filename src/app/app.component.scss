@@ -39,16 +39,16 @@ main {
   @include position(absolute, -400px, 3780px);
 }
 
-@media (max-width: 1408px) {
+@media (max-width: 1290px) {
   .skills-shadow {
-    top: 2033px;
+    top: 1875px;
   }
 
   .partner-shadow {
-    top: 2790px;
+    top: 2616px;
   }
 
   .footer-shadow {
-    top: 3922px;
+    top: 3732px;
   }
 }

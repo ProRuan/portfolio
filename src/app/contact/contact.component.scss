@@ -62,20 +62,16 @@
 
 @media (max-width: 1439px) {
   .right-content {
-    width: 510px;
+    width: 440px;
   }
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 1290px) {
   .content {
     gap: 64px;
   }
 
   .hint-box {
     width: 459px;
-  }
-
-  .right-content {
-    width: 440px;
   }
 }
