@@ -38,3 +38,17 @@ main {
 .footer-shadow {
   @include position(absolute, -400px, 3780px);
 }
+
+@media (max-width: 1408px) {
+  .skills-shadow {
+    top: 2033px;
+  }
+
+  .partner-shadow {
+    top: 2790px;
+  }
+
+  .footer-shadow {
+    top: 3922px;
+  }
+}

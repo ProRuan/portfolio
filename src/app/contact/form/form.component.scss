@@ -6,7 +6,7 @@
 
 .contact-form {
   @include display-column($g: 32px);
-  width: 617px;
+  width: 100%;
 }
 
 .input-box {

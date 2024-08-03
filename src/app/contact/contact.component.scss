@@ -37,6 +37,7 @@
 
 .right-content {
   @include display-column($ai: flex-end, $g: 42px);
+  width: 617px;
   height: 598.39px;
   position: relative;
 }
@@ -56,5 +57,11 @@
 
   &:hover {
     background-image: url("../../assets/img/go_up.svg");
+  }
+}
+
+@media (max-width: 1439px) {
+  .right-content {
+    width: 510px;
   }
 }
