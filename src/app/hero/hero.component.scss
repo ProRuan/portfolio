@@ -83,4 +83,28 @@
   .occupation {
     @include font(48px, 400, 57.6px);
   }
+
+  @media (max-width: 1349px) {
+    .content {
+      padding-left: 600px;
+    }
+
+    .vert-text {
+      margin-top: 40px;
+      min-width: 98px;
+      height: unset;
+      font-size: 40px;
+      line-height: 48px;
+    }
+
+    .name {
+      font-size: 56px;
+      line-height: 67.2px;
+    }
+
+    .occupation {
+      font-size: 36px;
+      line-height: 43.2px;
+    }
+  }
 }
