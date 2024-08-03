@@ -2,31 +2,31 @@
 
 main {
   position: relative;
-  overflow: hidden;
+  overflow: clip;
 }
 
 .hero-shadow {
-  @include position(absolute, -64px, 160px);
+  @include position(absolute, -64px, 51px);
   z-index: -2;
 }
 
 .hero-img {
-  @include position(absolute, 144px, 80px);
+  @include position(absolute, 144px, -29px);
   z-index: -1;
 }
 
 .hero-bg {
-  @include position(absolute, -2px, 320px);
+  @include position(absolute, -2px, 211px);
   z-index: -1;
 }
 
 .about-me-shadow {
-  @include position(absolute, unset, 800px);
+  @include position(absolute, unset, 691px);
   right: -424px;
 }
 
 .skills-shadow {
-  @include position(absolute, -560px, 2000px);
+  @include position(absolute, -560px, 1891px);
 }
 
 .partner-shadow {
@@ -35,5 +35,5 @@ main {
 }
 
 .footer-shadow {
-  @include position(absolute, -400px, 3816px);
+  @include position(absolute, -400px, 3780px);
 }
