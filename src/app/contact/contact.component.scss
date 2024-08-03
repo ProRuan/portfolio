@@ -65,3 +65,17 @@
     width: 510px;
   }
 }
+
+@media (max-width: 1180px) {
+  .content {
+    gap: 64px;
+  }
+
+  .hint-box {
+    width: 459px;
+  }
+
+  .right-content {
+    width: 440px;
+  }
+}

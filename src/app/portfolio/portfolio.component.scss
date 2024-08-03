@@ -37,3 +37,17 @@
     width: 1080px;
   }
 }
+
+@media (max-width: 1180px) {
+  .portfolio {
+    padding: 156px 0 24px 100px;
+  }
+
+  .project-group {
+    width: 980px;
+  }
+
+  .content {
+    padding-right: 100px;
+  }
+}

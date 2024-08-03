@@ -44,3 +44,13 @@
   border: 4px solid $prim1;
   border-radius: 50%;
 }
+
+@media (max-width: 1180px) {
+  .about-me {
+    gap: 64px;
+  }
+
+  .w-471 {
+    width: 455px;
+  }
+}
