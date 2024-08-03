@@ -1,7 +1,7 @@
 @import "../../styles.scss";
 
 .hero {
-  @include display-column(space-between, flex-end, 0px);
+  @include display-column(space-between, flex-start, 0px);
   box-sizing: border-box;
   margin-top: 109px;
   padding: 188px 96px 24px 0;
@@ -10,14 +10,16 @@
 
 .content {
   @include display-column($jc: center, $ai: center);
+  padding-left: 612px;
 }
 
 .text {
-  @include display-flex($jc: flex-end);
+  @include display-flex($jc: flex-end, $ai: flex-start);
 }
 
 .vert-text {
   @include font(64px, 400, 76.8px);
+  margin-top: 56px;
   min-width: 152px;
   height: 63px;
   transform: rotate(-90deg);
@@ -25,7 +27,6 @@
 
 .horiz-text {
   @include display-column($jc: center, $g: 0px);
-  max-height: 172px;
 }
 
 .name {
@@ -61,4 +62,25 @@
 
 .scroll-hint {
   writing-mode: vertical-lr;
+}
+
+@media (max-width: 1754px) {
+  .vert-text {
+    margin-top: 72px;
+  }
+}
+
+@media (max-width: 1439px) {
+  .vert-text {
+    @include font(56px, 400, 100.8px);
+    margin-top: 40px;
+  }
+
+  .name {
+    @include font(72px, 700, 86.4px);
+  }
+
+  .occupation {
+    @include font(48px, 400, 57.6px);
+  }
 }
