@@ -153,3 +153,9 @@ p {
     @include font(72px, 700, 86.4px);
   }
 }
+
+@media (max-width: 1180px) {
+  .prim-btn {
+    @include font(16px, 400, 19.2px);
+  }
+}

@@ -36,6 +36,7 @@
 .occupation {
   @include font(58px, 400, 69.6px);
   color: $prim2;
+  text-transform: uppercase;
 }
 
 .hero-bottom {
@@ -64,13 +65,47 @@
   writing-mode: vertical-lr;
 }
 
+// mobile
+.mobile {
+  width: 100%;
+  display: none;
+}
+
+.mobile-content {
+  @include display-column($ai: center, $g: 24px);
+}
+
+.hero-box {
+  @include size(390px, 585px);
+  // border: 1px solid $prim1;
+  position: relative;
+}
+
+.hero-shadow {
+  @include size(560px, auto);
+  @include position(absolute, -64px, 32px);
+  z-index: -1;
+}
+
+.hero-img {
+  @include size(100%, 100%);
+  @include position(absolute, 32px, 0);
+  z-index: -1;
+}
+
+.hero-bg {
+  @include size(915.31px, 685.78px);
+  @include position(absolute, -30px, 288px);
+  z-index: -1;
+}
+
 @media (max-width: 1754px) {
   .vert-text {
     margin-top: 72px;
   }
 }
 
-@media (max-width: 1439px) {
+@media (max-width: 1495px) {
   .vert-text {
     @include font(56px, 400, 100.8px);
     margin-top: 40px;
@@ -84,7 +119,7 @@
     @include font(48px, 400, 57.6px);
   }
 
-  @media (max-width: 1349px) {
+  @media (max-width: 1388px) {
     .content {
       padding-left: 600px;
     }
@@ -106,5 +141,59 @@
       font-size: 36px;
       line-height: 43.2px;
     }
+  }
+}
+
+@media (max-width: 1180px) {
+  .hero {
+    margin-top: 109px;
+    padding: 0 0 24px 0;
+    height: calc(100vh - 109px);
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: unset;
+  }
+
+  .hero-content {
+    @include display-column($ai: center, $g: 40px);
+    width: 100%;
+  }
+
+  .vert-text {
+    @include size(72px, 33px);
+    @include font(32px, 400, 56px);
+    margin-top: 23px;
+    min-width: 72px;
+  }
+
+  .horiz-text {
+    gap: 4px;
+  }
+
+  .name {
+    @include font(44px, 700, 44px);
+  }
+
+  .occupation {
+    @include font(28px, 400, 33.6px);
+  }
+
+  .contact-bar {
+    width: 100%;
+    gap: 16px;
+  }
+
+  .mail-vector {
+    @include size(93px, 4px);
+  }
+
+  .social-btn-group {
+    @include display-flex($jc: space-between);
+    width: 174px;
   }
 }
