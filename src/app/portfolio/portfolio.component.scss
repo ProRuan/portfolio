@@ -1,10 +1,5 @@
 @import "../../styles.scss";
 
-.portfolio {
-  @include display-column($ai: flex-end, $g: 40px);
-  padding: 156px 0 24px 136px;
-}
-
 .title-box {
   @include display-flex($jc: flex-end);
   width: fit-content;
@@ -39,10 +34,6 @@
 }
 
 @media (max-width: 1290px) {
-  .portfolio {
-    padding: 156px 0 24px 100px;
-  }
-
   .project-group {
     width: 980px;
   }

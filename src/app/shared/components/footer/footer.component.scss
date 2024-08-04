@@ -1,12 +1,5 @@
 @import "../../../../styles.scss";
 
-.footer {
-  @include display-flex($jc: space-between);
-  padding: 0 100px;
-  height: 291px;
-  border-top: 4px solid $prim1;
-}
-
 .logo-imprint-group {
   @include display-column($g: 4px);
 }

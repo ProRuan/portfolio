@@ -1,14 +1,12 @@
-<header class="header">
-    <a class="logo" href="#top">
-        <span>R</span>
-        <span class="c-prim-2">u</span>
-        <span class="c-prim-1">d</span>
-        <span>o</span>
-        <span>l</span>
-        <span>f</span>
-    </a>
+<a class="logo" href="#top">
+    <span>R</span>
+    <span class="c-prim-2">u</span>
+    <span class="c-prim-1">d</span>
+    <span>o</span>
+    <span>l</span>
+    <span>f</span>
+</a>
 
-    <div class="link-group">
-        <app-link *ngFor="let link of links, index as i" [link]="link" (click)="highlight(link)"></app-link>
-    </div>
-</header>
+<div class="link-group">
+    <app-link *ngFor="let link of links, index as i" [link]="link" (click)="highlight(link)"></app-link>
+</div>

@@ -1,6 +1,16 @@
 @import "../styles.scss";
 
-main {
+.header {
+  @include display-flex($jc: space-between);
+  @include position($p: fixed);
+  box-sizing: border-box;
+  padding: 37px 100px;
+  width: 100%;
+  background-color: $primBg;
+  z-index: 10;
+}
+
+.main {
   position: relative;
   overflow: clip;
 }
@@ -39,6 +49,44 @@ main {
   @include position(absolute, -400px, 3780px);
 }
 
+.hero {
+  @include display-column(space-between, flex-start, 0px);
+  box-sizing: border-box;
+  margin-top: 109px;
+  padding: 188px 96px 24px 0;
+  height: calc(100vh - 109px);
+}
+
+.about-me {
+  @include display-flex(flex-end, center);
+  padding: 156px 0 24px 100px;
+  gap: 149px;
+}
+
+.my-skills {
+  @include display-flex(flex-end, flex-start);
+  padding: 156px 0 24px 100px;
+  min-height: 404px;
+  gap: 105px;
+}
+
+.portfolio {
+  @include display-column($ai: flex-end, $g: 40px);
+  padding: 156px 0 24px 136px;
+}
+
+.contact {
+  @include display-column($g: 40px);
+  padding: 156px 100px 90px 0;
+}
+
+.footer {
+  @include display-flex($jc: space-between);
+  padding: 0 100px;
+  height: 291px;
+  border-top: 4px solid $prim1;
+}
+
 @media (max-width: 1290px) {
   .skills-shadow {
     top: 1875px;
@@ -50,5 +98,25 @@ main {
 
   .footer-shadow {
     top: 3732px;
+  }
+
+  .about-me {
+    gap: 64px;
+  }
+
+  .my-skills {
+    gap: 64px;
+  }
+
+  .portfolio {
+    padding: 156px 0 24px 100px;
+  }
+}
+
+@media (max-width: 1180px) {
+  .hero {
+    margin-top: 109px;
+    padding: 0 0 24px 0;
+    height: calc(100vh - 109px);
   }
 }

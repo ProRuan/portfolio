@@ -1,6 +1,37 @@
-<section id="hero" class="hero">
-    <div class="desktop">
-        <article class="content">
+<article class="content desktop">
+    <div class="text">
+        <span class="vert-text">I am</span>
+        <div class="horiz-text">
+            <span class="name">Rudolf Sachslehner</span>
+            <span class="occupation">Frontend Developer</span>
+        </div>
+    </div>
+    <button id="hero-btn" class="prim-btn" (click)="scroll()">Let´s talk!</button>
+</article>
+<div class="hero-bottom desktop">
+    <div class="contact-bar">
+        <img src="../../assets/img/mail_vector.svg" alt="mail-vector">
+        <button class="social-btn git-hub-btn" (click)="redirect('https://github.com/')"></button>
+        <button class="social-btn email-btn" (click)="redirect('mailto:ahasver.loewenkoenig@gmail.com')"></button>
+        <button class="social-btn linked-in-btn" (click)="redirect('https://www.linkedin.com/')"></button>
+        <a class="hero-email" (click)="scroll()">ahasver.loewenkoenig&#64;gmail.com</a>
+    </div>
+
+    <div class="scroll-hint-box">
+        <span class="scroll-hint">Scroll down</span>
+        <img src="../assets/img/arrow_down.png" alt="arrow-down">
+    </div>
+</div>
+
+<div class="mobile">
+    <article class="mobile-content">
+        <div class="hero-box">
+            <img class="hero-shadow" src="../assets/img/hero_shadow.svg" alt="hero-shadow">
+            <img class="hero-img" src="../assets/img/hero.png" alt="hero">
+            <img class="hero-bg" src="../assets/img/hero_bg.svg" alt="hero-bg">
+        </div>
+
+        <div class="hero-content">
             <div class="text">
                 <span class="vert-text">I am</span>
                 <div class="horiz-text">
@@ -8,54 +39,16 @@
                     <span class="occupation">Frontend Developer</span>
                 </div>
             </div>
-            <button id="hero-btn" class="prim-btn" (click)="scroll()">Let´s talk!</button>
-        </article>
-
-        <div class="hero-bottom">
+            <button id="mobile-hero-btn" class="prim-btn" (click)="scroll()">Let´s talk!</button>
             <div class="contact-bar">
-                <img src="../../assets/img/mail_vector.svg" alt="mail-vector">
-                <button class="social-btn git-hub-btn" (click)="redirect('https://github.com/')"></button>
-                <button class="social-btn email-btn"
-                    (click)="redirect('mailto:ahasver.loewenkoenig@gmail.com')"></button>
-                <button class="social-btn linked-in-btn" (click)="redirect('https://www.linkedin.com/')"></button>
-                <a class="hero-email" (click)="scroll()">ahasver.loewenkoenig&#64;gmail.com</a>
-            </div>
-
-            <div class="scroll-hint-box">
-                <span class="scroll-hint">Scroll down</span>
-                <img src="../assets/img/arrow_down.png" alt="arrow-down">
+                <img class="mail-vector" src="../../assets/img/mail_vector.svg" alt="mail-vector">
+                <div class="social-btn-group">
+                    <button class="social-btn git-hub-btn" (click)="redirect('https://github.com/')"></button>
+                    <button class="social-btn email-btn"
+                        (click)="redirect('mailto:ahasver.loewenkoenig@gmail.com')"></button>
+                    <button class="social-btn linked-in-btn" (click)="redirect('https://www.linkedin.com/')"></button>
+                </div>
             </div>
         </div>
-    </div>
-
-    <div class="mobile">
-        <article class="mobile-content">
-            <div class="hero-box">
-                <img class="hero-shadow" src="../assets/img/hero_shadow.svg" alt="hero-shadow">
-                <img class="hero-img" src="../assets/img/hero.png" alt="hero">
-                <img class="hero-bg" src="../assets/img/hero_bg.svg" alt="hero-bg">
-            </div>
-
-            <div class="hero-content">
-                <div class="text">
-                    <span class="vert-text">I am</span>
-                    <div class="horiz-text">
-                        <span class="name">Rudolf Sachslehner</span>
-                        <span class="occupation">Frontend Developer</span>
-                    </div>
-                </div>
-                <button id="mobile-hero-btn" class="prim-btn" (click)="scroll()">Let´s talk!</button>
-                <div class="contact-bar">
-                    <img class="mail-vector" src="../../assets/img/mail_vector.svg" alt="mail-vector">
-                    <div class="social-btn-group">
-                        <button class="social-btn git-hub-btn" (click)="redirect('https://github.com/')"></button>
-                        <button class="social-btn email-btn"
-                            (click)="redirect('mailto:ahasver.loewenkoenig@gmail.com')"></button>
-                        <button class="social-btn linked-in-btn"
-                            (click)="redirect('https://www.linkedin.com/')"></button>
-                    </div>
-                </div>
-            </div>
-        </article>
-    </div>
-</section>
+    </article>
+</div>

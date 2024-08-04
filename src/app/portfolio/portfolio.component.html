@@ -1,18 +1,16 @@
-<section id="portfolio" class="portfolio">
-    <div class="title-box">
-        <img src="../../assets/img/portfolio_left_line.svg" alt="left-line">
-        <h2 class="headline-2 ta-center">Portfolio</h2>
-        <img src="../../assets/img/portfolio_right_line.svg" alt="right-line">
-    </div>
+<div class="title-box">
+    <img src="../../assets/img/portfolio_left_line.svg" alt="left-line">
+    <h2 class="headline-2 ta-center">Portfolio</h2>
+    <img src="../../assets/img/portfolio_right_line.svg" alt="right-line">
+</div>
 
-    <div class="content">
-        <span class="hint-text">
-            Explore a selection of my work here - Interact with projects to see my
-            skills in action.
-        </span>
+<div class="content">
+    <span class="hint-text">
+        Explore a selection of my work here - Interact with projects to see my
+        skills in action.
+    </span>
 
-        <div class="project-group">
-            <app-project *ngFor="let project of projects; index as i" [index]="i" [project]="project"></app-project>
-        </div>
+    <div class="project-group">
+        <app-project *ngFor="let project of projects; index as i" [index]="i" [project]="project"></app-project>
     </div>
-</section>
+</div>

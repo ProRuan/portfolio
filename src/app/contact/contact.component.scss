@@ -1,10 +1,5 @@
 @import "../../styles.scss";
 
-.contact {
-  @include display-column($g: 40px);
-  padding: 156px 100px 90px 0;
-}
-
 .title-box {
   display: flex;
   gap: 32px;

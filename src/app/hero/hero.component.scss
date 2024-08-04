@@ -1,13 +1,5 @@
 @import "../../styles.scss";
 
-.hero {
-  @include display-column(space-between, flex-start, 0px);
-  box-sizing: border-box;
-  margin-top: 109px;
-  padding: 188px 96px 24px 0;
-  height: calc(100vh - 109px);
-}
-
 .content {
   @include display-column($jc: center, $ai: center);
   padding-left: 612px;
@@ -145,12 +137,6 @@
 }
 
 @media (max-width: 1180px) {
-  .hero {
-    margin-top: 109px;
-    padding: 0 0 24px 0;
-    height: calc(100vh - 109px);
-  }
-
   .desktop {
     display: none;
   }

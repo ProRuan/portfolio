@@ -1,11 +1,5 @@
 @import "../../styles.scss";
 
-.about-me {
-  @include display-flex(flex-end, center);
-  padding: 156px 0 24px 100px;
-  gap: 149px;
-}
-
 .text-box {
   @include display-flex($jc: flex-start);
   @include display-column($g: 40px);
@@ -46,10 +40,6 @@
 }
 
 @media (max-width: 1290px) {
-  .about-me {
-    gap: 64px;
-  }
-
   .w-471 {
     width: 456px;
   }
