@@ -114,6 +114,14 @@
 }
 
 @media (max-width: 1180px) {
+  .header {
+    padding: 37px 48px;
+  }
+
+  .desktop-shadow {
+    display: none;
+  }
+
   .hero {
     margin-top: 109px;
     padding: 0 0 24px 0;

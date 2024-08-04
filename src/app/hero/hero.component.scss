@@ -58,17 +58,14 @@
 }
 
 // mobile
-.mobile {
+.mobile-content {
+  @include display-column($ai: center, $g: 24px);
   width: 100%;
   display: none;
 }
 
-.mobile-content {
-  @include display-column($ai: center, $g: 24px);
-}
-
 .hero-box {
-  @include size(390px, 585px);
+  @include size(390px, 493px);
   // border: 1px solid $prim1;
   position: relative;
 }
@@ -80,7 +77,7 @@
 }
 
 .hero-img {
-  @include size(100%, 100%);
+  @include size(unset, 100%);
   @include position(absolute, 32px, 0);
   z-index: -1;
 }
@@ -141,8 +138,8 @@
     display: none;
   }
 
-  .mobile {
-    display: unset;
+  .mobile-content {
+    display: flex;
   }
 
   .hero-content {
