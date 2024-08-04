@@ -66,25 +66,25 @@
 
 .hero-box {
   @include size(390px, 493px);
-  // border: 1px solid $prim1;
+  @include display-flex();
   position: relative;
 }
 
 .hero-shadow {
   @include size(560px, auto);
-  @include position(absolute, -64px, 32px);
+  @include position(absolute, -80px, 64px);
   z-index: -1;
 }
 
 .hero-img {
   @include size(unset, 100%);
-  @include position(absolute, 32px, 0);
+  padding-left: 20px;
   z-index: -1;
 }
 
 .hero-bg {
   @include size(915.31px, 685.78px);
-  @include position(absolute, -30px, 288px);
+  @include position(absolute, -30px, 196px);
   z-index: -1;
 }
 
