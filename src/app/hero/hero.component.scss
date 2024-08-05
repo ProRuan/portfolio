@@ -10,10 +10,15 @@
 }
 
 .vert-text {
+  @include display-flex();
+  margin: 0 -8px 0 0;
+  height: 172px;
+}
+
+.me-text {
+  @include size(152px, 63px);
   @include font(64px, 400, 76.8px);
-  margin-top: 56px;
-  min-width: 152px;
-  height: 63px;
+  display: block;
   transform: rotate(-90deg);
 }
 
@@ -90,14 +95,19 @@
 
 @media (max-width: 1754px) {
   .vert-text {
-    margin-top: 72px;
+    margin: -8px -8px 0 0;
+    height: 216px;
   }
 }
 
 @media (max-width: 1495px) {
   .vert-text {
-    @include font(56px, 400, 100.8px);
-    margin-top: 40px;
+    height: 172.78px;
+  }
+
+  .me-text {
+    @include size(120px, 49px);
+    @include font(50px, 400, 60px);
   }
 
   .name {
@@ -114,11 +124,12 @@
     }
 
     .vert-text {
-      margin-top: 40px;
-      min-width: 98px;
-      height: unset;
-      font-size: 40px;
-      line-height: 48px;
+      height: 144px;
+    }
+
+    .me-text {
+      @include size(107px, 43px);
+      @include font(44px, 400, 52.8px);
     }
 
     .name {
