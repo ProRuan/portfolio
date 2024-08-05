@@ -158,14 +158,22 @@
     width: 100%;
   }
 
+  .text {
+    padding: 0 24px;
+  }
+
   .vert-text {
+    margin: -1px -12px 0 0;
+    height: 81.59px;
+  }
+
+  .me-text {
     @include size(72px, 33px);
-    @include font(32px, 400, 56px);
-    margin-top: 23px;
-    min-width: 72px;
+    @include font(32px, 400, 32px);
   }
 
   .horiz-text {
+    margin-right: 20px;
     gap: 4px;
   }
 
@@ -191,3 +199,72 @@
     width: 174px;
   }
 }
+
+@media (max-width: 582px) {
+  .vert-text {
+    margin: 2px -12px 0 0;
+    height: 81.59px;
+  }
+
+  .horiz-text {
+    width: 300px;
+  }
+}
+
+@media (max-width: 428px) {
+  .text {
+    padding: 0 16px;
+  }
+
+  .vert-text {
+    margin: -10px -16px 0 0;
+  }
+
+  .me-text {
+    @include size(72px, 29px);
+    @include font(28px, 400, 28px);
+  }
+
+  .horiz-text {
+    width: 256px;
+  }
+
+  .name {
+    @include font(36px, 700, 36px);
+  }
+
+  .occupation {
+    @include font(24px, 400, 24px);
+  }
+}
+
+@media (max-width: 363px) {
+  .text {
+    padding: 0 0 0 0;
+  }
+
+  .vert-text {
+    margin: -18px -16px 0 0;
+  }
+
+  .me-text {
+    @include size(72px, 25px);
+    @include font(24px, 400, 24px);
+  }
+
+  .horiz-text {
+    width: 214px;
+  }
+
+  .name {
+    @include font(32px, 700, 32px);
+  }
+
+  .occupation {
+    @include font(20px, 400, 20px);
+  }
+}
+
+// vert text
+// text sprung
+// hero bg
