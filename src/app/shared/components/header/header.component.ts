@@ -2,6 +2,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
 import { LinkComponent } from '../link/link.component';
 import { CommonModule } from '@angular/common';
 import { Link } from '../../interfaces/link';
+import { DataService } from '../../../data.service';
 
 @Component({
   selector: 'app-header',
@@ -11,7 +12,6 @@ import { Link } from '../../interfaces/link';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  menuOpened = false;
   @Output() menuEvent = new EventEmitter<boolean>();
 
   links: Link[] = [
@@ -20,13 +20,20 @@ export class HeaderComponent {
     { href: '#portfolio', text: 'Portfolio', width: 95, clicked: false },
   ];
 
+  constructor(private data: DataService) {}
+
+  resetMenuState() {
+    this.data.menuOpened = false;
+    this.unhighlight();
+  }
+
   flipMenu() {
-    this.menuOpened = !this.menuOpened ? true : false;
-    return this.menuEvent.emit(this.menuOpened);
+    this.data.menuOpened = !this.data.menuOpened ? true : false;
+    return this.menuEvent.emit(this.data.menuOpened);
   }
 
   getClass() {
-    if (this.menuOpened) {
+    if (this.data.menuOpened) {
       return 'close-btn';
     } else {
       return 'burger-btn';
@@ -35,7 +42,7 @@ export class HeaderComponent {
 
   // double code!!!
   getAlt() {
-    if (this.menuOpened) {
+    if (this.data.menuOpened) {
       return 'close-button';
     } else {
       return 'burger-menu';

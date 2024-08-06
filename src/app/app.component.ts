@@ -9,6 +9,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { MenuComponent } from './shared/components/menu/menu.component';
+import { DataService } from './data.service';
 
 @Component({
   selector: 'app-root',
@@ -30,18 +31,18 @@ import { MenuComponent } from './shared/components/menu/menu.component';
 })
 export class AppComponent {
   title = 'portfolio';
-  menuOpened = false;
+
+  constructor(private data: DataService) {}
 
   flipMenu() {
-    if (this.menuOpened) {
+    if (this.data.menuOpened) {
       return '';
     } else {
       return 'menu-out';
     }
   }
 
-  clickOnMenu(event: boolean) {
-    this.menuOpened = event;
-    console.log('click on menu: ', event);
+  setMenuState(event: boolean) {
+    this.data.menuOpened = event;
   }
 }
