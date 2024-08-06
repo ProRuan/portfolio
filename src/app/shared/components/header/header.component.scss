@@ -15,3 +15,18 @@
   @include size(326px, 32px);
   gap: 29px;
 }
+
+.burger-menu {
+  @include size(30px, 27.72px);
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .link-group {
+    display: none;
+  }
+
+  .burger-menu {
+    display: unset;
+  }
+}
