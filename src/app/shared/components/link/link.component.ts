@@ -1,11 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { Link } from '../../../interfaces/link';
+import { Link } from '../../interfaces/link';
 
 @Component({
   selector: 'app-link',
   standalone: true,
-  imports: [CommonModule, LinkComponent],
+  imports: [CommonModule],
   templateUrl: './link.component.html',
   styleUrl: './link.component.scss',
 })
