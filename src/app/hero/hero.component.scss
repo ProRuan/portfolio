@@ -263,7 +263,8 @@
   .occupation {
     @include font(20px, 400, 20px);
   }
-}
 
-// text sprung
-// hero bg mobile
+  .social-btn-group {
+    width: 150px;
+  }
+}
