@@ -16,9 +16,26 @@
   gap: 29px;
 }
 
-.menu {
+.menu-btn {
   @include size(30px, 27.72px);
   display: none;
+  cursor: pointer;
+}
+
+.burger-btn {
+  content: url("../../../../assets/img/burger_menu.svg");
+
+  &:active {
+    content: url("../../../../assets/img/menu_transition.svg");
+  }
+}
+
+.close-btn {
+  content: url("../../../../assets/img/close_button.svg");
+
+  &:active {
+    content: url("../../../../assets/img/close_transition.svg");
+  }
 }
 
 @media (max-width: 768px) {
@@ -26,7 +43,7 @@
     display: none;
   }
 
-  .menu {
+  .menu-btn {
     display: unset;
   }
 }

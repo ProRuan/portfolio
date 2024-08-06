@@ -25,6 +25,23 @@ export class HeaderComponent {
     return this.menuEvent.emit(this.menuOpened);
   }
 
+  getClass() {
+    if (this.menuOpened) {
+      return 'close-btn';
+    } else {
+      return 'burger-btn';
+    }
+  }
+
+  // double code!!!
+  getAlt() {
+    if (this.menuOpened) {
+      return 'close-button';
+    } else {
+      return 'burger-menu';
+    }
+  }
+
   /**
    * Highlight the link.
    * @param link - The link to highlight.
