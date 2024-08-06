@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { LinkComponent } from '../link/link.component';
 import { CommonModule } from '@angular/common';
 import { Link } from '../../interfaces/link';
@@ -11,11 +11,19 @@ import { Link } from '../../interfaces/link';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
+  menuOpened = false;
+  @Output() menuEvent = new EventEmitter<boolean>();
+
   links: Link[] = [
     { href: '#about-me', text: 'About me', width: 114, clicked: false },
     { href: '#my-skills', text: 'Skills', width: 59, clicked: false },
     { href: '#portfolio', text: 'Portfolio', width: 95, clicked: false },
   ];
+
+  flipMenu() {
+    this.menuOpened = !this.menuOpened ? true : false;
+    return this.menuEvent.emit(this.menuOpened);
+  }
 
   /**
    * Highlight the link.

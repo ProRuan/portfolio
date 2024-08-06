@@ -15,11 +15,16 @@
   @include position(fixed, 0, 109px);
   box-sizing: border-box;
   padding-top: 181px;
-  width: 100%;
+  min-width: 100%;
   height: calc(100vh - 109px);
   background-color: rgba(20, 29, 47, 0.85);
   display: none;
   z-index: 1;
+  transition: all 100ms ease-in-out;
+}
+
+.menu-out {
+  left: 100%;
 }
 
 .main {

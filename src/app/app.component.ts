@@ -30,4 +30,18 @@ import { MenuComponent } from './shared/components/menu/menu.component';
 })
 export class AppComponent {
   title = 'portfolio';
+  menuOpened = false;
+
+  flipMenu() {
+    if (this.menuOpened) {
+      return '';
+    } else {
+      return 'menu-out';
+    }
+  }
+
+  clickOnMenu(event: boolean) {
+    this.menuOpened = event;
+    console.log('click on menu: ', event);
+  }
 }
