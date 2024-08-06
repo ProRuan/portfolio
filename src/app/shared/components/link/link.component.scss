@@ -4,4 +4,12 @@
   @include font();
   @include display-column($g: 1px);
   height: 32px;
+  transition: all 100ms ease-in;
+}
+
+@media (max-width: 768px) {
+  .link:active {
+    color: $prim1;
+    transition-delay: 10ms;
+  }
 }

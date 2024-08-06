@@ -3,9 +3,3 @@
 .link-group {
   @include display-column($g: 29px);
 }
-
-.link {
-  @include font();
-  @include display-column($g: 1px);
-  height: 32px;
-}
