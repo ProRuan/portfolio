@@ -47,6 +47,10 @@
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
+.break {
+  display: none;
+}
+
 .another-skill-text {
   @include font(16px, 400, 19.2px);
   margin: 0;
@@ -80,6 +84,7 @@
 @media (max-width: 1180px) {
   .text-box {
     width: 100%;
+    align-items: flex-end;
     gap: 32px;
   }
 
@@ -88,17 +93,31 @@
   }
 
   .title-vector-box {
+    box-sizing: border-box;
+    padding-left: 40px;
+    justify-content: flex-end;
     gap: 16px;
   }
 
+  .w-395 {
+    width: 100%;
+    max-width: 395px;
+  }
+
   .exp-text {
-    padding-right: 40px;
+    box-sizing: border-box;
+    padding: 0 40px;
+    width: 100%;
+    max-width: 418px;
   }
 
   .skill-group {
+    box-sizing: border-box;
+    padding: 0 24px;
     width: 100%;
-    max-width: 595px;
-    gap: 16px 39px;
+    max-width: 576px;
+    justify-content: center;
+    gap: 41px 48px;
   }
 
   .desktop {
@@ -106,10 +125,28 @@
   }
 
   .another-skill-box {
-    padding: 8px 40px 0 0;
+    padding: 8px 24px 0 24px;
   }
 
   .skill-button-box {
+    width: 100%;
+    align-items: center;
     gap: 32px;
+  }
+
+  .another-skill-text {
+    max-width: 342px;
+  }
+}
+
+@media (max-width: 424px) {
+  .skill-group {
+    gap: 41px 39px;
+  }
+}
+
+@media (max-width: 371px) {
+  .break {
+    display: unset;
   }
 }
