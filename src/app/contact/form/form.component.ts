@@ -20,7 +20,7 @@ export class FormComponent {
   checked = false;
   mailTest = true;
 
-  contactData = {
+  contact = {
     name: '',
     email: '',
     message: '',
@@ -144,17 +144,15 @@ export class FormComponent {
    * @param ngForm - The form to submit.
    */
   sendPost(ngForm: NgForm) {
-    this.http
-      .post(this.post.endPoint, this.post.body(this.contactData))
-      .subscribe({
-        next: (response) => {
-          ngForm.resetForm();
-        },
-        error: (error) => {
-          console.error(error);
-        },
-        complete: () => console.info('send post complete'),
-      });
+    this.http.post(this.post.endPoint, this.post.body(this.contact)).subscribe({
+      next: (response) => {
+        ngForm.resetForm();
+      },
+      error: (error) => {
+        console.error(error);
+      },
+      complete: () => console.info('send post complete'),
+    });
   }
 
   /**

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ProjectComponent } from './project/project.component';
 import { CommonModule } from '@angular/common';
+import { Project } from '../shared/interfaces/project';
 
 @Component({
   selector: 'app-portfolio',
@@ -10,7 +11,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './portfolio.component.scss',
 })
 export class PortfolioComponent {
-  projects: any = [
+  projects: Project[] = [
     {
       path: '../../assets/img/join.png',
       name: 'Join',

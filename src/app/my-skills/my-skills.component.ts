@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { SkillComponent } from './skill/skill.component';
 import { CommonModule } from '@angular/common';
 import { LinkService } from '../shared/services/link.service';
+import { Skill } from '../shared/interfaces/skill';
 
 @Component({
   selector: 'app-my-skills',
@@ -11,7 +12,7 @@ import { LinkService } from '../shared/services/link.service';
   styleUrl: './my-skills.component.scss',
 })
 export class MySkillsComponent {
-  skills = [
+  skills: Skill[] = [
     { path: '../../assets/img/html.svg', name: 'HTML' },
     { path: '../../assets/img/css.svg', name: 'CSS' },
     { path: '../../assets/img/javascript.svg', name: 'JavaScript' },

@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { LinkService } from '../../shared/services/link.service';
+import { Project } from '../../shared/interfaces/project';
 
 @Component({
   selector: 'app-project',
@@ -11,7 +12,7 @@ import { LinkService } from '../../shared/services/link.service';
 })
 export class ProjectComponent {
   @Input() index: number = 0;
-  @Input() project: any = {
+  @Input() project: Project = {
     path: '../../assets/img/join_photo.png',
     name: 'Join',
     skills: 'Angular | TypeScript | HTML | CSS | Firebase',

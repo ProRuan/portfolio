@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { Skill } from '../../shared/interfaces/skill';
 
 @Component({
   selector: 'app-skill',
@@ -9,7 +10,7 @@ import { Component, Input } from '@angular/core';
   styleUrl: './skill.component.scss',
 })
 export class SkillComponent {
-  @Input() skill: any = {
+  @Input() skill: Skill = {
     path: '',
     name: 'HTML',
   };

@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { IntroItemComponent } from './intro-item/intro-item.component';
 import { CommonModule } from '@angular/common';
+import { IntroItem } from '../shared/interfaces/intro-item';
 
 @Component({
   selector: 'app-about-me',
@@ -10,7 +11,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './about-me.component.scss',
 })
 export class AboutMeComponent {
-  @Input() introItems: any = [
+  @Input() items: IntroItem[] = [
     {
       path: '../assets/img/location.svg',
       alt: 'location',
