@@ -64,11 +64,22 @@
     content: url("../../assets/img/portfolio_right_line_mobile.svg");
   }
 
+  .hint-text {
+    max-width: 440px;
+  }
+
   .content {
     padding-right: 24px;
     gap: 24px;
   }
 
+  .project-group {
+    width: 440px;
+    gap: 100px;
+  }
+}
+
+@media (max-width: 768px) {
   .hint-text {
     max-width: 342px;
   }
@@ -76,6 +87,5 @@
   .project-group {
     width: 100%;
     max-width: 342px;
-    gap: 100px;
   }
 }

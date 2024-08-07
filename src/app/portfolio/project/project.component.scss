@@ -70,14 +70,9 @@
   }
 
   .img-box {
-    width: 342px;
-    min-width: unset;
-    min-height: 213px;
-  }
-
-  .content {
-    width: 100%;
-    max-width: 340px;
+    width: 440px;
+    min-width: 440px;
+    min-height: 275px;
   }
 
   .title {
@@ -92,6 +87,25 @@
 
   .description {
     text-align: center !important;
+  }
+
+  .button-box {
+    width: 100%;
+    justify-content: center;
+    gap: 64px;
+  }
+}
+
+@media (max-width: 768px) {
+  .img-box {
+    width: 342px;
+    min-width: unset;
+    min-height: 213px;
+  }
+
+  .content {
+    width: 100%;
+    max-width: 340px;
   }
 
   .button-box {
