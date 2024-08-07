@@ -176,3 +176,9 @@
     display: flex;
   }
 }
+
+@media (max-width: 373px) {
+  .portfolio {
+    align-items: flex-start;
+  }
+}
