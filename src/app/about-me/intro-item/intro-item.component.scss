@@ -24,3 +24,17 @@
 .text {
   @include font(16px, 400, 19.2px);
 }
+
+@media (max-width: 1180px) {
+  .icon {
+    cursor: pointer;
+
+    &:hover {
+      height: 32px;
+    }
+
+    &:active {
+      height: 48px;
+    }
+  }
+}
