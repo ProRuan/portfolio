@@ -155,6 +155,12 @@
     padding: 156px 24px 24px 24px;
     justify-content: center;
   }
+
+  .my-skills {
+    // g24, g32
+    @include display-column($ai: center, $g: 24px);
+    padding: 156px 0 24px 0;
+  }
 }
 
 @media (max-width: 768px) {

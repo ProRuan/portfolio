@@ -1,0 +1,42 @@
+@import "../../../styles.scss";
+
+.study-skill {
+  @include display-column($jc: space-between, $ai: center, $g: 10px);
+  @include position(relative, 0, 0);
+  box-sizing: border-box;
+  padding-top: 12px;
+  width: 88px;
+
+  &:hover {
+    .skill-logo path {
+      fill: #ffffff;
+    }
+
+    .skill-text {
+      color: white;
+    }
+
+    .special-interest {
+      opacity: 1;
+    }
+  }
+}
+
+.skill-logo path {
+  transition: all 300ms ease-in-out;
+}
+
+.skill-text {
+  @include font(16px, 700, 19.2px);
+  text-align: center;
+  color: $prim2;
+  transition: all 300ms ease-in-out;
+}
+
+.special-interest {
+  @include size(188px, 129px);
+  @include position(absolute, 0, -101px);
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+  pointer-events: none;
+}

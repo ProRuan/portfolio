@@ -3,11 +3,12 @@ import { SkillComponent } from './skill/skill.component';
 import { CommonModule } from '@angular/common';
 import { LinkService } from '../shared/services/link.service';
 import { Skill } from '../shared/interfaces/skill';
+import { StudySkillComponent } from './study-skill/study-skill.component';
 
 @Component({
   selector: 'app-my-skills',
   standalone: true,
-  imports: [CommonModule, SkillComponent],
+  imports: [CommonModule, SkillComponent, StudySkillComponent],
   templateUrl: './my-skills.component.html',
   styleUrl: './my-skills.component.scss',
 })

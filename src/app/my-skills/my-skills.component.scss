@@ -7,47 +7,6 @@
   gap: 41px 88px;
 }
 
-.study-skill {
-  @include display-column($jc: space-between, $ai: center, $g: 10px);
-  @include position(relative, 0, 0);
-  box-sizing: border-box;
-  padding-top: 12px;
-  width: 88px;
-
-  &:hover {
-    .skill-logo path {
-      fill: #ffffff;
-    }
-
-    .skill-text {
-      color: white;
-    }
-
-    .special-interest {
-      opacity: 1;
-    }
-  }
-}
-
-.skill-logo path {
-  transition: all 300ms ease-in-out;
-}
-
-.skill-text {
-  @include font(16px, 700, 19.2px);
-  text-align: center;
-  color: $prim2;
-  transition: all 300ms ease-in-out;
-}
-
-.special-interest {
-  @include size(188px, 129px);
-  @include position(absolute, 0, -101px);
-  opacity: 0;
-  transition: all 300ms ease-in-out;
-  pointer-events: none;
-}
-
 .text-box {
   @include display-column($ai: flex-end, $g: 40px);
   text-align: right;
@@ -94,6 +53,10 @@
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
+.mobile {
+  display: none;
+}
+
 @media (max-width: 1408px) {
   .skill-group {
     gap: 41px 48px;
@@ -111,5 +74,42 @@
 
   .another-skill-title {
     @include font(24px, 700, 28.8px);
+  }
+}
+
+@media (max-width: 1180px) {
+  .text-box {
+    width: 100%;
+    gap: 32px;
+  }
+
+  .mobile {
+    display: flex;
+  }
+
+  .title-vector-box {
+    gap: 16px;
+  }
+
+  .exp-text {
+    padding-right: 40px;
+  }
+
+  .skill-group {
+    width: 100%;
+    max-width: 595px;
+    gap: 16px 39px;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .another-skill-box {
+    padding: 8px 40px 0 0;
+  }
+
+  .skill-button-box {
+    gap: 32px;
   }
 }

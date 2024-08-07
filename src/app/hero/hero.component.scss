@@ -47,6 +47,10 @@
   gap: 32px;
 }
 
+.vector {
+  content: url("../../assets/img/mail_vector.svg");
+}
+
 .hero-email {
   @include font();
   cursor: pointer;
@@ -190,8 +194,8 @@
     gap: 16px;
   }
 
-  .mail-vector {
-    @include size(93px, 4px);
+  .vector {
+    content: url("../../assets/img/mail_vector_mobile.svg");
   }
 
   .social-btn-group {
