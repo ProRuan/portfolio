@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { SkillComponent } from './skill/skill.component';
 import { CommonModule } from '@angular/common';
-import { DataService } from '../data.service';
+import { LinkService } from '../shared/services/link.service';
 
 @Component({
   selector: 'app-my-skills',
@@ -24,5 +24,5 @@ export class MySkillsComponent {
     { path: '../../assets/img/material_design.svg', name: 'Material Design' },
   ];
 
-  constructor(public data: DataService) {}
+  constructor(public linkData: LinkService) {}
 }

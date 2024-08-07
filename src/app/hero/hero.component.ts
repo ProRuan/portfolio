@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DataService } from '../data.service';
+import { LinkService } from '../shared/services/link.service';
 
 @Component({
   selector: 'app-hero',
@@ -9,5 +9,5 @@ import { DataService } from '../data.service';
   styleUrl: './hero.component.scss',
 })
 export class HeroComponent {
-  constructor(public data: DataService) {}
+  constructor(public linkData: LinkService) {}
 }

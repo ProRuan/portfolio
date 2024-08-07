@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { DataService } from '../../data.service';
+import { LinkService } from '../../shared/services/link.service';
 
 @Component({
   selector: 'app-project',
@@ -21,7 +21,7 @@ export class ProjectComponent {
     github: 'https://github.com/joNsiii/join-group',
   };
 
-  constructor(public data: DataService) {}
+  constructor(public linkData: LinkService) {}
 
   /**
    * Provide the alternative text.

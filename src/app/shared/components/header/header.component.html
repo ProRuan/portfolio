@@ -8,7 +8,7 @@
 </a>
 
 <div class="link-group">
-    <app-link *ngFor="let link of links, index as i" [link]="link" (click)="data.highlight(link)"></app-link>
+    <app-link *ngFor="let link of links, index as i" [link]="link" (click)="linkData.highlight(link)"></app-link>
 </div>
 
 <img class="menu-btn" (click)="flipMenu()" [ngClass]="getAttribute()" [alt]="getAttribute()">

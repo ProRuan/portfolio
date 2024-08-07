@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LinkComponent } from '../link/link.component';
 import { Link } from '../../interfaces/link';
-import { DataService } from '../../../data.service';
+import { LinkService } from '../../services/link.service';
 
 @Component({
   selector: 'app-menu',
@@ -14,8 +14,8 @@ import { DataService } from '../../../data.service';
 export class MenuComponent {
   links: Link[];
 
-  constructor(private data: DataService) {
-    this.links = this.data.getLinks(4);
+  constructor(private linkData: LinkService) {
+    this.links = this.linkData.get(4);
   }
 
   /**
@@ -23,7 +23,7 @@ export class MenuComponent {
    * @param link - The link to highlight.
    */
   highlight(link: Link) {
-    this.data.highlight(link);
+    this.linkData.highlight(link);
     setTimeout(() => {
       link.clicked = false;
     }, 100);

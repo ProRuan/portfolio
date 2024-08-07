@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { Link } from '../../interfaces/link';
-import { DataService } from '../../../data.service';
+import { LinkService } from '../../services/link.service';
 
 @Component({
   selector: 'app-link',
@@ -18,7 +18,7 @@ export class LinkComponent {
     clicked: false,
   };
 
-  constructor(private data: DataService) {}
+  constructor(private linkData: LinkService) {}
 
   /**
    * Set the width.
@@ -32,7 +32,7 @@ export class LinkComponent {
    * Close the menu.
    */
   closeMenu() {
-    this.data.menuOpened = false;
+    this.linkData.menuOpened = false;
   }
 
   /**

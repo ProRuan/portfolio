@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import { Link } from './shared/interfaces/link';
+import { Link } from '../interfaces/link';
 
 @Injectable({
   providedIn: 'root',
 })
-export class DataService {
+export class LinkService {
   menuOpened: boolean = false;
 
   links: Link[] = [
@@ -16,7 +16,7 @@ export class DataService {
 
   constructor() {}
 
-  getLinks(n: number) {
+  get(n: number) {
     let links: Link[] = [];
     for (let i = 0; i < n; i++) {
       let link = this.links[i];
@@ -30,14 +30,14 @@ export class DataService {
    * @param link - The link to highlight.
    */
   highlight(link: Link) {
-    this.unhighlightLinks();
+    this.unhighlight();
     link.clicked = true;
   }
 
   /**
    * Unhighlight all links.
    */
-  unhighlightLinks() {
+  unhighlight() {
     this.links.forEach((link) => {
       link.clicked = false;
     });
@@ -50,6 +50,4 @@ export class DataService {
   redirect(path: string) {
     window.open(path, '_blank');
   }
-
-  // Create LinkService, AboutMeService, MySkillsService, ProjectService, GlobalService ...
 }

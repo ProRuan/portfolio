@@ -9,7 +9,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { MenuComponent } from './shared/components/menu/menu.component';
-import { DataService } from './data.service';
+import { LinkService } from './shared/services/link.service';
 
 @Component({
   selector: 'app-root',
@@ -32,10 +32,10 @@ import { DataService } from './data.service';
 export class AppComponent {
   title = 'portfolio';
 
-  constructor(private data: DataService) {}
+  constructor(private linkData: LinkService) {}
 
   flipMenu() {
-    if (this.data.menuOpened) {
+    if (this.linkData.menuOpened) {
       return '';
     } else {
       return 'menu-out';
