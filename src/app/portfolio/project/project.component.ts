@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { DataService } from '../../data.service';
 
 @Component({
   selector: 'app-project',
@@ -19,6 +20,8 @@ export class ProjectComponent {
     link: 'https://join-43.developerakademie.net/join-43/login.html',
     github: 'https://github.com/joNsiii/join-group',
   };
+
+  constructor(public data: DataService) {}
 
   /**
    * Provide the alternative text.
@@ -40,13 +43,5 @@ export class ProjectComponent {
   setStyle(property: string, valueA: string, valueB: string) {
     let value = this.index % 2 == 1 ? valueA : valueB;
     return { [property]: value };
-  }
-
-  /**
-   * Redirects to another website.
-   * @param path - The path of the other website.
-   */
-  redirect(path: string) {
-    window.open(path, '_blank');
   }
 }

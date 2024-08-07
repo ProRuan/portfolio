@@ -28,6 +28,9 @@ export class LinkComponent {
     return { 'width.px': this.link.width };
   }
 
+  /**
+   * Close the menu.
+   */
   closeMenu() {
     this.data.menuOpened = false;
   }

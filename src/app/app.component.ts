@@ -41,8 +41,4 @@ export class AppComponent {
       return 'menu-out';
     }
   }
-
-  setMenuState(event: boolean) {
-    this.data.menuOpened = event;
-  }
 }

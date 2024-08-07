@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { SkillComponent } from './skill/skill.component';
 import { CommonModule } from '@angular/common';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-my-skills',
@@ -23,10 +24,5 @@ export class MySkillsComponent {
     { path: '../../assets/img/material_design.svg', name: 'Material Design' },
   ];
 
-  /**
-   * Scroll to contact section.
-   */
-  scroll() {
-    window.location.href = '#contact';
-  }
+  constructor(public data: DataService) {}
 }

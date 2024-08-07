@@ -1,4 +1,4 @@
-<a class="logo" href="#top" (click)="resetMenuState()">
+<a class="logo" href="#top" (click)="resetMenu()">
     <span>R</span>
     <span class="c-prim-2">u</span>
     <span class="c-prim-1">d</span>
@@ -8,7 +8,7 @@
 </a>
 
 <div class="link-group">
-    <app-link *ngFor="let link of links, index as i" [link]="link" (click)="highlight(link)"></app-link>
+    <app-link *ngFor="let link of links, index as i" [link]="link" (click)="data.highlight(link)"></app-link>
 </div>
 
-<img class="menu-btn" (click)="flipMenu()" [ngClass]="getClass()" [alt]="getAlt()">
+<img class="menu-btn" (click)="flipMenu()" [ngClass]="getAttribute()" [alt]="getAttribute()">

@@ -12,58 +12,33 @@ import { DataService } from '../../../data.service';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
+  links: Link[] = [];
   @Output() menuEvent = new EventEmitter<boolean>();
 
-  links: Link[] = [
-    { href: '#about-me', text: 'About me', width: 114, clicked: false },
-    { href: '#my-skills', text: 'Skills', width: 59, clicked: false },
-    { href: '#portfolio', text: 'Portfolio', width: 95, clicked: false },
-  ];
-
-  constructor(private data: DataService) {}
-
-  resetMenuState() {
-    this.data.menuOpened = false;
-    this.unhighlight();
+  constructor(public data: DataService) {
+    this.links = this.data.getLinks(3);
   }
 
+  /**
+   * Reset the menu.
+   */
+  resetMenu() {
+    this.data.menuOpened = false;
+    this.data.unhighlightLinks();
+  }
+
+  /**
+   * Flip the menu.
+   */
   flipMenu() {
     this.data.menuOpened = !this.data.menuOpened ? true : false;
-    return this.menuEvent.emit(this.data.menuOpened);
-  }
-
-  getClass() {
-    if (this.data.menuOpened) {
-      return 'close-btn';
-    } else {
-      return 'burger-btn';
-    }
-  }
-
-  // double code!!!
-  getAlt() {
-    if (this.data.menuOpened) {
-      return 'close-button';
-    } else {
-      return 'burger-menu';
-    }
   }
 
   /**
-   * Highlight the link.
-   * @param link - The link to highlight.
+   * Get the attribute value.
+   * @returns - The value of the attribute.
    */
-  highlight(link: Link) {
-    this.unhighlight();
-    link.clicked = true;
-  }
-
-  /**
-   * Unhighlight all links.
-   */
-  unhighlight() {
-    this.links.forEach((link) => {
-      link.clicked = false;
-    });
+  getAttribute() {
+    return this.data.menuOpened ? 'close-btn' : 'burger-btn';
   }
 }
