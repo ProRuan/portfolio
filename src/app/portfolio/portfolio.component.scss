@@ -6,8 +6,16 @@
   gap: 32px;
 }
 
+.left-line {
+  content: url("../../assets/img/portfolio_left_line.svg");
+}
+
 .ta-center {
   text-align: center;
+}
+
+.right-line {
+  content: url("../../assets/img/portfolio_right_line.svg");
 }
 
 .content {
@@ -40,5 +48,34 @@
 
   .content {
     padding-right: 100px;
+  }
+}
+
+@media (max-width: 1180px) {
+  .title-box {
+    gap: 16px;
+  }
+
+  .left-line {
+    content: url("../../assets/img/portfolio_left_line_mobile.svg");
+  }
+
+  .right-line {
+    content: url("../../assets/img/portfolio_right_line_mobile.svg");
+  }
+
+  .content {
+    padding-right: 24px;
+    gap: 24px;
+  }
+
+  .hint-text {
+    max-width: 342px;
+  }
+
+  .project-group {
+    width: 100%;
+    max-width: 342px;
+    gap: 100px;
   }
 }

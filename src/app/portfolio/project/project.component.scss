@@ -62,3 +62,52 @@
     min-width: 505px;
   }
 }
+
+@media (max-width: 1180px) {
+  .project {
+    flex-direction: column !important;
+    align-items: center;
+  }
+
+  .img-box {
+    width: 342px;
+    min-width: unset;
+    min-height: 213px;
+  }
+
+  .content {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .title {
+    width: 100%;
+    text-align: center;
+  }
+
+  .skills {
+    width: 100%;
+    text-align: center;
+  }
+
+  .description {
+    text-align: center !important;
+  }
+
+  .button-box {
+    width: 100%;
+    justify-content: space-between;
+    gap: unset;
+  }
+}
+
+@media (max-width: 359px) {
+  .img-box {
+    width: 255px;
+    min-height: 160px;
+  }
+
+  .button-box {
+    @include display-column($ai: center, $g: 24px);
+  }
+}

@@ -135,6 +135,7 @@
 
   .portfolio {
     padding: 156px 0 24px 100px;
+    gap: 32px;
   }
 }
 
@@ -157,9 +158,12 @@
   }
 
   .my-skills {
-    // g24, g32
     @include display-column($ai: center, $g: 24px);
     padding: 156px 0 24px 0;
+  }
+
+  .portfolio {
+    padding: 156px 0 24px 24px;
   }
 }
 
