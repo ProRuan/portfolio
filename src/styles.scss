@@ -158,4 +158,8 @@ p {
   .prim-btn {
     @include font(16px, 400, 19.2px);
   }
+
+  .headline-2 {
+    @include font(45px, 700, 54px);
+  }
 }

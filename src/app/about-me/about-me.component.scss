@@ -9,7 +9,7 @@
   width: 471px;
 }
 
-.about-me-content {
+.content {
   @include display-column(center, center, 32px);
 }
 
@@ -42,5 +42,28 @@
 @media (max-width: 1290px) {
   .w-471 {
     width: 456px;
+  }
+}
+
+@media (max-width: 1180px) {
+  .text-box {
+    gap: 32px;
+  }
+
+  .w-471 {
+    width: 100%;
+    max-width: 471px;
+  }
+
+  .content {
+    gap: 24px;
+  }
+
+  .intro-list {
+    gap: 16px;
+  }
+
+  .img-box {
+    display: none;
   }
 }
