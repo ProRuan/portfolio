@@ -5,6 +5,10 @@
   gap: 32px;
 }
 
+.vector {
+  content: url("../../assets/img/contact_vector.svg");
+}
+
 .ta-center {
   text-align: center;
 }
@@ -68,5 +72,39 @@
 
   .hint-box {
     width: 459px;
+  }
+}
+
+@media (max-width: 1180px) {
+  .content {
+    box-sizing: border-box;
+    padding-left: 24px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .title-box {
+    gap: 16px;
+  }
+
+  .vector {
+    content: url("../../assets/img/contact_vector_mobile.svg");
+  }
+
+  .hint-box {
+    width: 100%;
+    max-width: 459px;
+    gap: 16px;
+  }
+
+  .hint-title {
+    @include font();
+  }
+
+  .right-content {
+    width: 100%;
+    max-width: 440px;
   }
 }

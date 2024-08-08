@@ -155,3 +155,52 @@ textarea {
 .show {
   opacity: 1;
 }
+
+@media (max-width: 1180px) {
+  .form-box {
+    gap: 12px;
+  }
+
+  .input-box {
+    height: 40px;
+  }
+
+  .error {
+    height: 67px;
+  }
+
+  .contact-input {
+    height: 40px;
+    min-height: 40px;
+  }
+
+  .check {
+    top: 7.5px;
+  }
+
+  .callsign {
+    top: 7.475px;
+  }
+
+  .textarea-box {
+    height: 162px;
+  }
+
+  .empty {
+    height: 189px;
+  }
+
+  .contact-textarea {
+    height: 162px;
+    min-height: 162px;
+  }
+
+  .privacy-policy-line {
+    height: fit-content;
+  }
+
+  .check-hint {
+    width: 100%;
+    text-align: center;
+  }
+}
