@@ -15,19 +15,23 @@ export class PortfolioComponent {
     {
       path: '../../assets/img/join.png',
       name: 'Join',
-      skills: 'Angular | TypeScript | HTML | CSS | Firebase',
+      skills: 'JavaScript | HTML | CSS',
       description: `
-      Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.
+      Task manager inspired by the Kanban System.
+      Create and organize tasks using drag and drop functions,
+      assign users and categories.
       `,
       link: 'https://rudolf-sachslehner.developerakademie.net/portfolio-join/login.html',
       github: 'https://github.com/ProRuan/portfolio-join',
     },
     {
       path: '../../assets/img/raising_fantasy.jpg',
-      name: 'Sharkie',
+      name: 'Raising Fantasy',
       skills: 'JavaScript | HTML | CSS',
       description: `
-      A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale.
+      A simple Jump-and-Run game based on an object-oriented approach.
+      Help the knight to collect items and unlock the key capability
+      to defeat the shaman.
       `,
       link: 'https://rudolf-sachslehner.developerakademie.net/portfolio-raising-fantasy/',
       github: 'https://github.com/ProRuan/portfolio-raising-fantasy',

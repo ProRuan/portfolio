@@ -16,15 +16,17 @@ export class AboutMeComponent {
       path: '../assets/img/location.svg',
       alt: 'location',
       text: `
-        Flexible in terms of working environments, I can work effectively both on-site in Munich
-        and remotely.
+        Flexible in terms of working environments,
+        I can work effectively both on-site and remotely.
       `,
     },
     {
       path: '../assets/img/bulb.svg',
       alt: 'bulb',
       text: `
-        I am open-minded and always looking for personal challenges to constantly improve my
+        My strategy is purposeful and
+        I am always looking for personal challenges
+        to constantly improve my
         knowledge and skills.
       `,
     },
@@ -32,10 +34,9 @@ export class AboutMeComponent {
       path: '../assets/img/puzzle.svg',
       alt: 'puzzle',
       text: `
-        In my profession, programming isn't just about writing code; it's a creative form of
-        problem-solving. I take pride in my ability to distill complex technical challenges into
-        simple, user-friendly solutions. This way, I help you achieve your goals and bring your
-        visions to life.
+        In my profession, coding is a creative form of problem-solving.
+        Complex technical challenges are transformed into simple, user-friendly solutions.
+        This way, I help you to achieve your goals and bring your visions to life.
       `,
     },
   ];
