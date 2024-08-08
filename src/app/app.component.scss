@@ -49,22 +49,22 @@
 }
 
 .about-me-shadow {
-  @include position(absolute, unset, 691px);
+  @include position(absolute, unset, 664px);
   right: -424px;
 }
 
 .skills-shadow {
-  @include position(absolute, -560px, 1891px);
+  @include position(absolute, -560px, 1840px);
 }
 
 .partner-shadow {
-  @include position(absolute, unset, 2648px);
+  @include position(absolute, unset, 2584px);
   right: 0;
   z-index: -1;
 }
 
 .footer-shadow {
-  @include position(absolute, -400px, 3780px);
+  @include position(absolute, -400px, 3736px);
 }
 
 .hero {
@@ -114,18 +114,6 @@
 }
 
 @media (max-width: 1290px) {
-  .skills-shadow {
-    top: 1875px;
-  }
-
-  .partner-shadow {
-    top: 2616px;
-  }
-
-  .footer-shadow {
-    top: 3732px;
-  }
-
   .about-me {
     gap: 64px;
   }
