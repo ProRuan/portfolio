@@ -141,15 +141,6 @@
     display: none;
   }
 
-  .about-me-shadow {
-    right: -520px;
-  }
-
-  .footer-shadow {
-    left: -600px;
-    bottom: -576px;
-  }
-
   .hero {
     padding: 0 0 24px 0;
   }
@@ -191,6 +182,10 @@
     display: flex;
   }
 
+  .about-me-shadow {
+    right: -520px;
+  }
+
   .skills-shadow {
     left: -672px;
     top: 2048px;
@@ -199,6 +194,11 @@
   .partner-shadow {
     right: -144px;
     bottom: 720px;
+  }
+
+  .footer-shadow {
+    left: -600px;
+    bottom: -576px;
   }
 }
 
