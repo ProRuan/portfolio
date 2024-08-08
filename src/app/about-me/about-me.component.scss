@@ -3,6 +3,7 @@
 .text-box {
   @include display-flex($jc: flex-start);
   @include display-column($g: 40px);
+  z-index: 0;
 }
 
 .w-471 {

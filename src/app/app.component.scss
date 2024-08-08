@@ -55,6 +55,7 @@
 
 .skills-shadow {
   @include position(absolute, -560px, 1840px);
+  z-index: -1;
 }
 
 .partner-shadow {
@@ -135,6 +136,24 @@
 
   .desktop-shadow {
     display: none;
+  }
+
+  .about-me-shadow {
+    right: -520px;
+  }
+
+  .skills-shadow {
+    left: -672px;
+    top: 2048px;
+  }
+
+  .partner-shadow {
+    top: 3448px;
+    right: -160px;
+  }
+
+  .footer-shadow {
+    @include position(absolute, -600px, 4824px);
   }
 
   .hero {
