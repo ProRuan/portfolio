@@ -40,3 +40,33 @@
   transition: all 300ms ease-in-out;
   pointer-events: none;
 }
+
+@media (max-width: 1180px) {
+  .study-skill {
+    cursor: pointer;
+
+    &:hover {
+      .skill-logo path {
+        fill: $prim2;
+      }
+
+      .special-interest {
+        opacity: 0;
+      }
+    }
+
+    &:active {
+      .skill-logo path {
+        fill: #ffffff;
+      }
+
+      .special-interest {
+        opacity: 1;
+      }
+    }
+  }
+
+  .skill-text {
+    color: #ffffff;
+  }
+}

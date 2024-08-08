@@ -72,4 +72,18 @@
   .mobile {
     display: flex;
   }
+
+  .imprint-link {
+    &:hover {
+      img {
+        opacity: 0;
+      }
+    }
+
+    &:active {
+      img {
+        opacity: 1;
+      }
+    }
+  }
 }

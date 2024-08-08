@@ -144,6 +144,7 @@ p {
   &:active {
     color: $prim2;
     background-color: white;
+    border-color: white;
     transition-delay: 10ms;
   }
 }
@@ -157,9 +158,53 @@ p {
 @media (max-width: 1180px) {
   .prim-btn {
     @include font(16px, 400, 19.2px);
+
+    &:hover {
+      margin-bottom: 10px;
+      padding: 15px 30px;
+      background-color: $prim1;
+    }
+
+    &:active {
+      margin-bottom: 0;
+      padding: 20px 40px;
+      color: white;
+      background-color: $prim2;
+      transition: all 100ms ease-out;
+    }
+  }
+
+  .social-btn {
+    &:hover {
+      @include size(30px, 30px);
+      background-size: 30px 30px;
+    }
   }
 
   .headline-2 {
     @include font(45px, 700, 54px);
+  }
+
+  .sec-btn {
+    &:hover {
+      background-color: $prim2;
+    }
+
+    &:active {
+      color: white;
+      background-color: $prim1;
+    }
+  }
+
+  .tert-btn {
+    &:hover {
+      background-color: transparent;
+    }
+
+    &:active {
+      color: white;
+      background-color: $prim1;
+      border-color: $prim1;
+    }
   }
 }

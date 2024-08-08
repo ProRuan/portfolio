@@ -199,6 +199,16 @@ textarea {
     height: fit-content;
   }
 
+  .privacy-policy-link {
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:active {
+      text-decoration: underline;
+    }
+  }
+
   .check-hint {
     width: 100%;
     text-align: center;

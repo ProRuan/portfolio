@@ -107,4 +107,14 @@
     width: 100%;
     max-width: 440px;
   }
+
+  .top-arrow {
+    &:hover {
+      background-image: url("../../assets/img/go_up_white.svg");
+    }
+
+    &:active {
+      background-image: url("../../assets/img/go_up.svg");
+    }
+  }
 }
