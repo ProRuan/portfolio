@@ -68,8 +68,8 @@
 
 // mobile
 .mobile-content {
+  @include size(100%, 100%);
   @include display-column($ai: center, $g: 24px);
-  width: 100%;
   display: none;
 }
 
@@ -178,6 +178,7 @@
 
   .horiz-text {
     margin-right: 32px;
+    height: 81.59px;
     gap: 4px;
   }
 
@@ -204,49 +205,7 @@
   }
 }
 
-@media (max-width: 582px) {
-  .vert-text {
-    margin: 2px -12px 0 0;
-    height: 81.59px;
-  }
-
-  .horiz-text {
-    width: 300px;
-  }
-}
-
-@media (max-width: 428px) {
-  .text {
-    padding: 0 16px;
-  }
-
-  .vert-text {
-    margin: -10px -16px 0 0;
-  }
-
-  .me-text {
-    @include size(72px, 29px);
-    @include font(28px, 400, 28px);
-  }
-
-  .horiz-text {
-    width: 256px;
-  }
-
-  .name {
-    @include font(36px, 700, 36px);
-  }
-
-  .occupation {
-    @include font(24px, 400, 24px);
-  }
-}
-
-@media (max-width: 363px) {
-  .text {
-    padding: 0 0 0 0;
-  }
-
+@media (max-width: 594px) {
   .vert-text {
     margin: -18px -16px 0 0;
   }
@@ -266,6 +225,18 @@
 
   .occupation {
     @include font(20px, 400, 20px);
+  }
+}
+
+@media (max-width: 428px) {
+  .text {
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 363px) {
+  .text {
+    padding: 0 0 0 0;
   }
 
   .social-btn-group {
