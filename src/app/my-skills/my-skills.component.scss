@@ -117,7 +117,7 @@
     width: 100%;
     max-width: 576px;
     justify-content: center;
-    gap: 41px 48px;
+    gap: 41px 39px;
   }
 
   .desktop {
@@ -136,12 +136,6 @@
 
   .another-skill-text {
     max-width: 342px;
-  }
-}
-
-@media (max-width: 424px) {
-  .skill-group {
-    gap: 41px 39px;
   }
 }
 
