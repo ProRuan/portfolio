@@ -59,13 +59,16 @@
 }
 
 .partner-shadow {
-  @include position(absolute, unset, 2584px);
+  position: absolute;
   right: 0;
+  bottom: 640px;
   z-index: -1;
 }
 
 .footer-shadow {
-  @include position(absolute, -400px, 3736px);
+  position: absolute;
+  left: -400px;
+  bottom: -440px;
 }
 
 .hero {
@@ -142,18 +145,9 @@
     right: -520px;
   }
 
-  .skills-shadow {
-    left: -672px;
-    top: 2048px;
-  }
-
-  .partner-shadow {
-    top: 3448px;
-    right: -160px;
-  }
-
   .footer-shadow {
-    @include position(absolute, -600px, 4824px);
+    left: -600px;
+    bottom: -576px;
   }
 
   .hero {
@@ -195,6 +189,16 @@
 
   .menu {
     display: flex;
+  }
+
+  .skills-shadow {
+    left: -672px;
+    top: 2048px;
+  }
+
+  .partner-shadow {
+    right: -144px;
+    bottom: 720px;
   }
 }
 
