@@ -113,6 +113,16 @@
   border-top: 4px solid $prim1;
 }
 
+@media (min-width: 1920px) {
+  .header {
+    left: calc(calc(100% - 1920px) / 2);
+  }
+
+  .main {
+    width: 1920px;
+  }
+}
+
 @media (max-width: 1440px) {
   .hero-bg {
     @include position(absolute, -2px, 211px);
