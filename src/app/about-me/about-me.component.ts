@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { IntroItemComponent } from './intro-item/intro-item.component';
 import { CommonModule } from '@angular/common';
 import { IntroItem } from '../shared/interfaces/intro-item';
+import { LanguageService } from '../shared/services/language.service';
 
 @Component({
   selector: 'app-about-me',
@@ -11,6 +12,9 @@ import { IntroItem } from '../shared/interfaces/intro-item';
   styleUrl: './about-me.component.scss',
 })
 export class AboutMeComponent {
+  headline: string = '';
+  introText: string = '';
+
   @Input() items: IntroItem[] = [
     {
       path: '../assets/img/location.svg',
@@ -40,4 +44,17 @@ export class AboutMeComponent {
       `,
     },
   ];
+
+  constructor(public langData: LanguageService) {
+    this.set();
+  }
+
+  set() {
+    let lang = this.langData.get();
+    this.headline = lang.links[0];
+    this.introText = lang.introText;
+    this.items[0].text = lang.location;
+    this.items[1].text = lang.bulb;
+    this.items[2].text = lang.puzzle;
+  }
 }

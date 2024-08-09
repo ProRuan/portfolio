@@ -1,12 +1,7 @@
 <div class="text-box w-471">
-    <h2 class="headline-2 w-471">About me</h2>
+    <h2 class="headline-2 w-471">{{ headline }}</h2>
     <div class="content">
-        <p class="intro-text">
-            Hi, I´m an Austrian Frontend Developer based at the center of Lower Austria.
-            Delighted by the limitless opportunities within IT,
-            I discovered programming as my mission to craft
-            salient and intuitve websites and applications.
-        </p>
+        <p class="intro-text">{{ introText }}</p>
         <div class="intro-list">
             <app-intro-item *ngFor="let item of items" [item]="item"></app-intro-item>
         </div>

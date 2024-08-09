@@ -8,7 +8,7 @@
             <span class="occupation">Frontend Developer</span>
         </div>
     </div>
-    <button id="hero-btn" class="prim-btn" (click)="linkData.scroll('#contact')">Let´s talk!</button>
+    <button id="hero-btn" class="prim-btn" (click)="linkData.scroll('#contact')">{{ buttonText }}</button>
 </article>
 <div class="hero-bottom desktop">
     <div class="contact-bar">
@@ -21,7 +21,7 @@
     </div>
 
     <div class="scroll-hint-box">
-        <span class="scroll-hint">Scroll down</span>
+        <span class="scroll-hint">{{ scrollHint }}</span>
         <img src="../assets/img/arrow_down.png" alt="arrow-down">
     </div>
 </div>
@@ -43,7 +43,7 @@
                 <span class="occupation">Frontend Developer</span>
             </div>
         </div>
-        <button id="mobile-hero-btn" class="prim-btn" (click)="linkData.scroll('#contact')">Let´s talk!</button>
+        <button id="mobile-hero-btn" class="prim-btn" (click)="linkData.scroll('#contact')">{{ buttonText }}</button>
         <div class="contact-bar">
             <img class="vector" alt="vector">
             <div class="social-btn-group">
