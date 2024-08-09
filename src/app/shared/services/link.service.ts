@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Link } from '../interfaces/link';
+import { LanguageService } from './language.service';
 
 @Injectable({
   providedIn: 'root',
@@ -8,13 +9,15 @@ export class LinkService {
   menuOpened: boolean = false;
 
   links: Link[] = [
-    { href: '#about-me', text: 'About me', width: 114, clicked: false },
-    { href: '#my-skills', text: 'Skills', width: 59, clicked: false },
-    { href: '#portfolio', text: 'Portfolio', width: 95, clicked: false },
-    { href: '#contact', text: 'Contact', width: 95, clicked: false },
+    { href: '#about-me', text: 'About me', clicked: false },
+    { href: '#my-skills', text: 'Skills', clicked: false },
+    { href: '#portfolio', text: 'Portfolio', clicked: false },
+    { href: '#contact', text: 'Contact', clicked: false },
   ];
 
-  constructor() {}
+  constructor(private langData: LanguageService) {
+    this.set();
+  }
 
   get(n: number) {
     let links: Link[] = [];
@@ -23,6 +26,13 @@ export class LinkService {
       links.push(link);
     }
     return links;
+  }
+
+  set() {
+    let lang = this.langData.get();
+    this.links.forEach((link: Link, i: number = 0) => {
+      link.text = lang.links[i++];
+    });
   }
 
   /**

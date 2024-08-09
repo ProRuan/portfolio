@@ -12,7 +12,7 @@
 
 .link-group {
   @include display-flex(flex-end, flex-start);
-  @include size(326px, 32px);
+  height: 32px;
   gap: 29px;
 }
 

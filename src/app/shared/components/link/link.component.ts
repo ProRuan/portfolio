@@ -13,20 +13,11 @@ import { LinkService } from '../../services/link.service';
 export class LinkComponent {
   @Input() link: Link = {
     href: '',
-    width: 0,
     text: 'link',
     clicked: false,
   };
 
   constructor(private linkData: LinkService) {}
-
-  /**
-   * Set the width.
-   * @returns - The width to set.
-   */
-  setWidth() {
-    return { 'width.px': this.link.width };
-  }
 
   /**
    * Close the menu.
