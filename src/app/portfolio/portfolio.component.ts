@@ -12,9 +12,6 @@ import { LanguageService } from '../shared/services/language.service';
   styleUrl: './portfolio.component.scss',
 })
 export class PortfolioComponent {
-  headline: string = '';
-  hintText: string = '';
-
   projects: Project[] = [
     {
       path: '../../assets/img/join.png',
@@ -42,14 +39,15 @@ export class PortfolioComponent {
     },
   ];
 
-  constructor(public langData: LanguageService) {
-    this.set();
+  constructor(public langData: LanguageService) {}
+
+  update() {
+    this.updateProjects();
+    return this.langData.get();
   }
 
-  set() {
+  updateProjects() {
     let lang = this.langData.get();
-    this.headline = lang.headlines[2];
-    this.hintText = lang.projectIntro;
     this.projects[0].description = lang.joinDesc;
     this.projects[1].description = lang.gameDesc;
   }

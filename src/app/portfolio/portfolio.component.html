@@ -1,11 +1,11 @@
 <div class="title-box">
     <img class="left-line" alt="left-line">
-    <h2 class="headline-2 ta-center">Portfolio</h2>
+    <h2 class="headline-2 ta-center">{{ update().headlines[2]}}</h2>
     <img class="right-line" alt="right-line">
 </div>
 
 <div class="content">
-    <span class="hint-text">{{ hintText }}</span>
+    <span class="hint-text">{{ update().projectIntro }}</span>
 
     <div class="project-group">
         <app-project *ngFor="let project of projects; index as i" [index]="i" [project]="project"></app-project>

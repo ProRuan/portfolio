@@ -11,7 +11,7 @@ export class LanguageService {
     links: ['About me', 'Skills', 'Portfolio', 'Contact'],
     heroButton: 'Let´s talk!',
     scrollHint: 'Scroll down',
-    headlines: ['About me', 'Skills', 'Portfolio', 'Contact'],
+    headlines: ['About me', 'My skills', 'Portfolio', 'Contact'],
     introText: `
       Hi, I´m an Austrian Frontend Developer based at the center of Lower Austria.
       Delighted by the limitless opportunities within IT,
@@ -58,7 +58,7 @@ export class LanguageService {
       Help the knight to collect items and unlock the key capability
       to defeat the shaman.
     `,
-    problemText: 'Got a problem to solve?',
+    contactIntro: 'Got a problem to solve?',
     contactText: `
       Contact me through this form.
       I am interested in hearing from you,
@@ -142,7 +142,7 @@ export class LanguageService {
       Hilf dem Ritter Gegenstände zu sammeln und
       den Schamanen zu besiegen.
     `,
-    problemText: 'Haben Sie eine Aufgabe zu bewältigen?',
+    contactIntro: 'Haben Sie eine Aufgabe zu bewältigen?',
     contactText: `
       Kontaktieren Sie mich.
       Ich freue mich, von Ihnen und

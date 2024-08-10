@@ -12,20 +12,9 @@ import { LanguageService } from '../shared/services/language.service';
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
-  headline: string = '';
-  subheadline: string = '';
-  contactText: string = '';
-  contactLine: string[] = [];
+  constructor(private langData: LanguageService) {}
 
-  constructor(private langData: LanguageService) {
-    this.set();
-  }
-
-  set() {
-    let lang = this.langData.get();
-    this.headline = lang.headlines[3];
-    this.subheadline = lang.problemText;
-    this.contactText = lang.contactText;
-    this.contactLine = lang.contactLine;
+  update() {
+    return this.langData.get();
   }
 }

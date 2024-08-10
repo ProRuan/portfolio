@@ -1,37 +1,37 @@
-<form #contactForm="ngForm" class="form-box" (keyup)="update(contactForm)" (ngSubmit)="onSubmit(contactForm)">
+<form #contactForm="ngForm" class="form-box" (keyup)="verify(contactForm)" (ngSubmit)="onSubmit(contactForm)">
     <div class="contact-form">
         <div class="input-box" [ngClass]="nameClass">
             <input [(ngModel)]="contact.name" name="name" class="contact-input" type="text" minlength="2"
-                placeholder="{{ placeholder.name }}" required>
+                placeholder="{{ update().placeholder.name }}" required>
             <img class="check" src="../../assets/img/check.svg" alt="check">
             <img class="callsign" src="../../assets/img/callsign.svg" alt="callsign">
             @if (!contact.name) {
-            <span class="hint">{{ nameHint.default }}</span>
+            <span class="hint">{{ update().nameHint.default }}</span>
             } @else if (nameClass != 'done') {
-            <span class="hint">{{ nameHint.enhanced }}</span>
+            <span class="hint">{{ update().nameHint.enhanced }}</span>
             }
         </div>
         <div class="input-box" [ngClass]="emailClass">
             <input [(ngModel)]="contact.email" name="email" class="contact-input" type="text"
-                pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" placeholder="{{ placeholder.email }}"
-                required>
+                pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                placeholder="{{ update().placeholder.email }}" required>
             <img class="check" src="../../assets/img/check.svg" alt="check">
             <img class="callsign" src="../../assets/img/callsign.svg" alt="callsign">
             @if (!contact.email) {
-            <span class="hint">{{ emailHint.default }}</span>
+            <span class="hint">{{ update().emailHint.default }}</span>
             } @else if (emailClass != 'done') {
-            <span class="hint">{{ emailHint.enhanced }}</span>
+            <span class="hint">{{ update().emailHint.enhanced }}</span>
             }
         </div>
         <div class="textarea-box" [ngClass]="messageClass">
             <textarea [(ngModel)]="contact.message" name="message" minlength="20" class="contact-textarea"
-                placeholder="{{ placeholder.message }}" required></textarea>
+                placeholder="{{ update().placeholder.message }}" required></textarea>
             <img class="check" src="../../assets/img/check.svg" alt="check">
             <img class="callsign" src="../../assets/img/callsign.svg" alt="callsign">
             @if (!contact.message) {
-            <span class="hint">{{ messageHint.default }}</span>
+            <span class="hint">{{ update().messageHint.default }}</span>
             } @else if (messageClass != 'done') {
-            <span class="hint">{{ messageHint.enhanced }}</span>
+            <span class="hint">{{ update().messageHint.enhanced }}</span>
             }
         </div>
     </div>
@@ -40,13 +40,13 @@
         <div class="privacy-policy-line">
             <img class="checkbox" (click)="agree()" [src]="getCheckbox()" alt="check-button">
             <p class="privacy-policy-text">
-                {{ privacyPolicy[0] }}
-                <a class="privacy-policy-link" href="">{{ privacyPolicy[1] }}</a>
-                {{ privacyPolicy[2] }}
+                {{ update().privacyPolicy[0] }}
+                <a class="privacy-policy-link" href="">{{ update().privacyPolicy[1] }}</a>
+                {{ update().privacyPolicy[2] }}
             </p>
         </div>
         <span class="check-hint" [ngClass]="updateCheckClass()">Please accept the privacy policy.</span>
     </div>
 
-    <button class="prim-btn" [disabled]="!checked">{{ submitButton }}</button>
+    <button class="prim-btn" [disabled]="!checked">{{ update().submitButton }}</button>
 </form>

@@ -21,17 +21,9 @@ export class FormComponent {
   firstCheck = false;
   checked = false;
   mailTest = true;
-  placeholder = { name: '', email: '', message: '' };
-  nameHint = { default: '', enhanced: '' };
-  emailHint = { default: '', enhanced: '' };
-  messageHint = { default: '', enhanced: '' };
-  privacyPolicy: string[] = [];
-  submitButton: string = '';
   contact = { name: '', email: '', message: '' };
 
-  constructor(private langData: LanguageService) {
-    this.set();
-  }
+  constructor(private langData: LanguageService) {}
 
   post = {
     endPoint: 'https://deineDomain.de/sendMail.php',
@@ -44,21 +36,15 @@ export class FormComponent {
     },
   };
 
-  set() {
-    let lang = this.langData.get();
-    this.placeholder = lang.placeholder;
-    this.nameHint = lang.nameHint;
-    this.emailHint = lang.emailHint;
-    this.messageHint = lang.messageHint;
-    this.privacyPolicy = lang.privacyPolicy;
-    this.submitButton = lang.submitButton;
+  update() {
+    return this.langData.get();
   }
 
   /**
    * Update the contact data classes.
    * @param ngForm - The providing form.
    */
-  update(ngForm: NgForm) {
+  verify(ngForm: NgForm) {
     this.updateNameClass(ngForm);
     this.updateEmailClass(ngForm);
     this.updateMessageClass(ngForm);

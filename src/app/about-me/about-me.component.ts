@@ -12,9 +12,6 @@ import { LanguageService } from '../shared/services/language.service';
   styleUrl: './about-me.component.scss',
 })
 export class AboutMeComponent {
-  headline: string = '';
-  introText: string = '';
-
   @Input() items: IntroItem[] = [
     {
       path: '../assets/img/location.svg',
@@ -45,14 +42,15 @@ export class AboutMeComponent {
     },
   ];
 
-  constructor(public langData: LanguageService) {
-    this.set();
+  constructor(public langData: LanguageService) {}
+
+  update() {
+    this.updateItems();
+    return this.langData.get();
   }
 
-  set() {
+  updateItems() {
     let lang = this.langData.get();
-    this.headline = lang.headlines[0];
-    this.introText = lang.introText;
     this.items[0].text = lang.location;
     this.items[1].text = lang.bulb;
     this.items[2].text = lang.puzzle;

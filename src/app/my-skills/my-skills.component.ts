@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { SkillComponent } from './skill/skill.component';
 import { CommonModule } from '@angular/common';
 import { LinkService } from '../shared/services/link.service';
@@ -14,11 +14,8 @@ import { LanguageService } from '../shared/services/language.service';
   styleUrl: './my-skills.component.scss',
 })
 export class MySkillsComponent {
-  headline: string = '';
-  expText: string = '';
-  subheadline: string[] = [];
-  anotherText: string = '';
-  buttonText: string = '';
+  linkData: LinkService = inject(LinkService);
+  langData: LanguageService = inject(LanguageService);
 
   skills: Skill[] = [
     { path: '../../assets/img/html.svg', name: 'HTML' },
@@ -33,16 +30,9 @@ export class MySkillsComponent {
     { path: '../../assets/img/material_design.svg', name: 'Material Design' },
   ];
 
-  constructor(public linkData: LinkService, private langData: LanguageService) {
-    this.set();
-  }
+  constructor() {}
 
-  set() {
-    let lang = this.langData.get();
-    this.headline = lang.headlines[1];
-    this.expText = lang.expText;
-    this.subheadline = lang.anotherSkill;
-    this.anotherText = lang.anotherText;
-    this.buttonText = lang.skillButton;
+  update() {
+    return this.langData.get();
   }
 }

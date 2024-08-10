@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { LinkService } from '../../shared/services/link.service';
 import { Project } from '../../shared/interfaces/project';
 import { LanguageService } from '../../shared/services/language.service';
@@ -12,7 +12,8 @@ import { LanguageService } from '../../shared/services/language.service';
   styleUrl: './project.component.scss',
 })
 export class ProjectComponent {
-  testButton: string = '';
+  linkData: LinkService = inject(LinkService);
+  langData: LanguageService = inject(LanguageService);
 
   @Input() index: number = 0;
   @Input() project: Project = {
@@ -25,16 +26,10 @@ export class ProjectComponent {
     github: 'https://github.com/joNsiii/join-group',
   };
 
-  constructor(
-    public linkData: LinkService,
-    private langData: LanguageService
-  ) {
-    this.set();
-  }
+  constructor() {}
 
-  set() {
-    let lang = this.langData.get();
-    this.testButton = lang.testButton;
+  update() {
+    return this.langData.get();
   }
 
   /**
