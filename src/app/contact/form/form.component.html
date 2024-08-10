@@ -1,8 +1,8 @@
 <form #contactForm="ngForm" class="form-box" (keyup)="verify(contactForm)" (ngSubmit)="onSubmit(contactForm)">
     <div class="contact-form">
         <div class="input-box" [ngClass]="nameClass">
-            <input [(ngModel)]="contact.name" name="name" class="contact-input" type="text" minlength="2"
-                placeholder="{{ update().placeholder.name }}" required>
+            <input [(ngModel)]="contact.name" name="name" class="contact-input" (focus)="focusName()"
+                (blur)="blurName()" type="text" minlength="2" placeholder="{{ update().placeholder.name }}" required>
             <img class="check" src="../../assets/img/check.svg" alt="check">
             <img class="callsign" src="../../assets/img/callsign.svg" alt="callsign">
             @if (!contact.name) {
@@ -12,8 +12,8 @@
             }
         </div>
         <div class="input-box" [ngClass]="emailClass">
-            <input [(ngModel)]="contact.email" name="email" class="contact-input" type="text"
-                pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+            <input [(ngModel)]="contact.email" name="email" class="contact-input" (focus)="focusEmail()"
+                (blur)="blurEmail()" type="text" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
                 placeholder="{{ update().placeholder.email }}" required>
             <img class="check" src="../../assets/img/check.svg" alt="check">
             <img class="callsign" src="../../assets/img/callsign.svg" alt="callsign">
@@ -25,7 +25,8 @@
         </div>
         <div class="textarea-box" [ngClass]="messageClass">
             <textarea [(ngModel)]="contact.message" name="message" minlength="20" class="contact-textarea"
-                placeholder="{{ update().placeholder.message }}" required></textarea>
+                (focus)="focusMessage()" (blur)="blurMessage()" placeholder="{{ update().placeholder.message }}"
+                required></textarea>
             <img class="check" src="../../assets/img/check.svg" alt="check">
             <img class="callsign" src="../../assets/img/callsign.svg" alt="callsign">
             @if (!contact.message) {

@@ -18,7 +18,7 @@ export class FormComponent {
   nameClass = '';
   emailClass = '';
   messageClass = '';
-  firstCheck = false;
+  firstCheck = true;
   mailTest = true;
   contact = { name: '', email: '', message: '' };
   checklist = {
@@ -45,59 +45,78 @@ export class FormComponent {
     return this.langData.get();
   }
 
-  /**
-   * Update the contact data classes.
-   * @param ngForm - The providing form.
-   */
+  focusName() {
+    if (this.nameClass == '') {
+      this.nameClass = 'error';
+    }
+  }
+
+  blurName() {
+    if (this.contact.name.length == 0) {
+      this.nameClass = '';
+    }
+  }
+
+  focusEmail() {
+    if (this.emailClass == '') {
+      this.emailClass = 'error';
+    }
+  }
+
+  blurEmail() {
+    if (this.contact.email.length == 0) {
+      this.emailClass = '';
+    }
+  }
+
+  focusMessage() {
+    if (this.messageClass == '') {
+      this.messageClass = 'empty';
+    }
+  }
+
+  blurMessage() {
+    if (this.contact.message.length == 0) {
+      this.messageClass = '';
+    }
+  }
+
   verify(ngForm: NgForm) {
     this.updateNameClass(ngForm);
     this.updateEmailClass(ngForm);
     this.updateMessageClass(ngForm);
   }
 
-  /**
-   * Update the validation class of the name.
-   * @param ngForm - The providing form.
-   */
   updateNameClass(ngForm: NgForm) {
     if (ngForm.value.name) {
       let condition = ngForm.value.name.length > 1;
-      this.nameClass = this.getValClass(condition);
-      this.checklist.name = condition ? true : false;
+      this.nameClass = this.getValClass(condition, 'error');
+      this.checklist.name = this.getBoolean(condition);
     }
   }
 
-  /**
-   * Provide the validation class.
-   * @param condition - The condition to verify.
-   * @returns - The validation class.
-   */
-  getValClass(condition: boolean): string {
-    return condition ? 'done' : '';
+  getValClass(condition: boolean, wrong: string): string {
+    return condition ? 'done' : wrong;
   }
 
-  /**
-   * Update the validation class of the email.
-   * @param ngForm - The providing form.
-   */
+  getBoolean(condition: boolean) {
+    return condition ? true : false;
+  }
+
   updateEmailClass(ngForm: NgForm) {
     if (ngForm.value.email) {
       let pattern = /[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}/;
       let condition = ngForm.value.email.match(pattern);
-      this.emailClass = this.getValClass(condition);
-      this.checklist.email = condition ? true : false;
+      this.emailClass = this.getValClass(condition, 'error');
+      this.checklist.email = this.getBoolean(condition);
     }
   }
 
-  /**
-   * Update the validation class of the message.
-   * @param ngForm - The providing form.
-   */
   updateMessageClass(ngForm: NgForm) {
     if (ngForm.value.message) {
       let condition = ngForm.value.message.length > 19;
-      this.messageClass = this.getValClass(condition);
-      this.checklist.message = condition ? true : false;
+      this.messageClass = this.getValClass(condition, 'empty');
+      this.checklist.message = this.getBoolean(condition);
     }
   }
 
@@ -126,35 +145,29 @@ export class FormComponent {
    * @returns - The class to apply.
    */
   updateCheckClass() {
-    if (!this.checklist.checkbox && this.firstCheck) {
+    if (!this.checklist.checkbox && !this.firstCheck) {
       return 'show';
     } else {
-      if (this.checklist.checkbox && !this.firstCheck) {
-        this.firstCheck = true;
-      }
+      this.setFirstCheck();
       return '';
     }
   }
 
-  /**
-   * Sumbit the form.
-   * @param ngForm - The form to submit.
-   */
+  setFirstCheck() {
+    if (this.checklist.checkbox && this.firstCheck) {
+      this.firstCheck = false;
+    }
+  }
+
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.sendPost(ngForm);
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();
       this.resetStyle();
-    } else {
-      this.setInputClass(ngForm);
     }
   }
 
-  /**
-   * Send the post.
-   * @param ngForm - The form to submit.
-   */
   sendPost(ngForm: NgForm) {
     this.http.post(this.post.endPoint, this.post.body(this.contact)).subscribe({
       next: (response) => {
@@ -174,19 +187,8 @@ export class FormComponent {
     this.nameClass = '';
     this.emailClass = '';
     this.messageClass = '';
-    this.firstCheck = false;
+    this.firstCheck = true;
     this.checklist.checkbox = false;
-  }
-
-  /**
-   * Set the input classes.
-   * @param ngForm - The providing form.
-   */
-  setInputClass(ngForm: NgForm) {
-    let input = ngForm.controls;
-    this.nameClass = input['name'].valid ? 'done' : 'error';
-    this.emailClass = input['email'].valid ? 'done' : 'error';
-    this.messageClass = input['message'].valid ? 'done' : 'empty';
   }
 
   isDisabled() {
