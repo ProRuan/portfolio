@@ -2,4 +2,6 @@
 
 .link-group {
   @include display-column($g: 29px);
+  width: 100%;
+  max-width: 144px;
 }

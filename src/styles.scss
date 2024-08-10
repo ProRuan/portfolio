@@ -37,6 +37,28 @@ button {
   cursor: pointer;
 }
 
+.lang-btn {
+  @include font(14px, 400, 16.8px);
+  padding: 6px 12px;
+  text-align: center;
+  color: white;
+  background-color: transparent;
+  border: 1px solid $prim1;
+  border-radius: 10px;
+  transition: all 100ms ease-in-out;
+
+  &:hover {
+    background-color: $prim1;
+  }
+
+  &:active {
+    color: $prim2;
+    background-color: white;
+    border-color: white;
+    transition-delay: 10ms;
+  }
+}
+
 .prim-btn {
   @include font();
   margin-bottom: 10px;
@@ -162,6 +184,18 @@ p {
 }
 
 @media (max-width: 1180px) {
+  .lang-btn {
+    &:hover {
+      background-color: transparent;
+    }
+
+    &:active {
+      color: white;
+      background-color: $prim1;
+      border-color: $prim1;
+    }
+  }
+
   .prim-btn {
     @include font(16px, 400, 19.2px);
 

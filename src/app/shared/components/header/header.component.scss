@@ -11,7 +11,7 @@
 }
 
 .link-group {
-  @include display-flex(flex-end, flex-start);
+  @include display-flex($jc: flex-end);
   height: 32px;
   gap: 29px;
 }

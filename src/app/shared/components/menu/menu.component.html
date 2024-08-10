@@ -1,3 +1,4 @@
 <div class="link-group">
     <app-link *ngFor="let link of links" [link]="link" (click)="highlight(link)"></app-link>
+    <button class="lang-btn" (click)="changeLang()">{{ lang }}</button>
 </div>
