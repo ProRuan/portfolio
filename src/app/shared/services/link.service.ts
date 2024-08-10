@@ -15,9 +15,7 @@ export class LinkService {
     { href: '#contact', text: 'Contact', clicked: false },
   ];
 
-  constructor(private langData: LanguageService) {
-    this.set();
-  }
+  constructor(private langData: LanguageService) {}
 
   get(n: number) {
     let links: Link[] = [];

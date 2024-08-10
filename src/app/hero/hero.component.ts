@@ -12,4 +12,8 @@ import { LanguageService } from '../shared/services/language.service';
 export class HeroComponent {
   linkData: LinkService = inject(LinkService);
   langData: LanguageService = inject(LanguageService);
+
+  update() {
+    return this.langData.get();
+  }
 }
