@@ -1,19 +1,14 @@
 <div class="title-box">
     <img class="vector" alt="vector">
-    <h2 class="headline-2 ta-center">Contact</h2>
+    <h2 class="headline-2 ta-center">{{ headline }}</h2>
 </div>
 
 <div class="content">
     <div class="hint-box">
-        <h3 class="hint-title">Got a problem to solve?</h3>
+        <h3 class="hint-title">{{ subheadline }}</h3>
         <div class="hint-text-group">
-            <p>
-                Contact me through this form.
-                I am interested in hearing from you,
-                knowing your ideas and
-                contributing to your projects with my work.
-            </p>
-            <span>Need a Frontend developer? <b>Contact me!</b></span>
+            <p>{{ contactText }}</p>
+            <span>{{ contactLine[0] }} <b>{{ contactLine[1] }}</b></span>
         </div>
     </div>
 

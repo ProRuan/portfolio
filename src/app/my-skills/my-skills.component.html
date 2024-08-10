@@ -1,13 +1,10 @@
 <div class="text-box mobile">
     <div class="title-vector-box">
-        <h2 class="headline-2 w-395">My skills</h2>
+        <h2 class="headline-2 w-395">{{ headline }}</h2>
         <img src="../../assets/img/skill_vector_mobile.svg" alt="vector">
     </div>
 
-    <p class="exp-text">
-        I have gained experience in building projects
-        with different frontend technologies and concepts.
-    </p>
+    <p class="exp-text">{{ expText }}</p>
 </div>
 
 <div class="skill-group">
@@ -22,23 +19,17 @@
     </div>
 
     <div class="another-skill-box">
-        <p class="exp-text desktop">
-            I have gained experience in building projects
-            with different frontend technologies and concepts.
-        </p>
+        <p class="exp-text desktop">{{ expText }}</p>
 
         <div class="skill-button-box">
             <div class="another-skill-subbox">
                 <h3 class="another-skill-title">
-                    Looking for <br class="break"><span class="c-prim-2">another skill</span>?
+                    {{ subheadline[0] }} <br class="break"><span class="c-prim-2">{{ subheadline[1] }}</span>?
                 </h3>
-                <p class="another-skill-text">
-                    Feel free to contact me.
-                    I look forward to expand my previous knowledge.
-                </p>
+                <p class="another-skill-text">{{ anotherText }}</p>
             </div>
 
-            <button class="prim-btn" (click)="linkData.scroll('#contact')">Get in touch</button>
+            <button class="prim-btn" (click)="linkData.scroll('#contact')">{{ buttonText }}</button>
         </div>
     </div>
 </div>

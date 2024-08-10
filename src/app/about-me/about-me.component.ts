@@ -51,7 +51,7 @@ export class AboutMeComponent {
 
   set() {
     let lang = this.langData.get();
-    this.headline = lang.links[0];
+    this.headline = lang.headlines[0];
     this.introText = lang.introText;
     this.items[0].text = lang.location;
     this.items[1].text = lang.bulb;

@@ -5,10 +5,7 @@
 </div>
 
 <div class="content">
-    <span class="hint-text">
-        Explore a selection of my work here - Interact
-        with a project to see my skills in action.
-    </span>
+    <span class="hint-text">{{ hintText }}</span>
 
     <div class="project-group">
         <app-project *ngFor="let project of projects; index as i" [index]="i" [project]="project"></app-project>

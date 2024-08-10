@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ProjectComponent } from './project/project.component';
 import { CommonModule } from '@angular/common';
 import { Project } from '../shared/interfaces/project';
+import { LanguageService } from '../shared/services/language.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -11,6 +12,9 @@ import { Project } from '../shared/interfaces/project';
   styleUrl: './portfolio.component.scss',
 })
 export class PortfolioComponent {
+  headline: string = '';
+  hintText: string = '';
+
   projects: Project[] = [
     {
       path: '../../assets/img/join.png',
@@ -37,4 +41,16 @@ export class PortfolioComponent {
       github: 'https://github.com/ProRuan/portfolio-raising-fantasy',
     },
   ];
+
+  constructor(public langData: LanguageService) {
+    this.set();
+  }
+
+  set() {
+    let lang = this.langData.get();
+    this.headline = lang.headlines[2];
+    this.hintText = lang.projectIntro;
+    this.projects[0].description = lang.joinDesc;
+    this.projects[1].description = lang.gameDesc;
+  }
 }

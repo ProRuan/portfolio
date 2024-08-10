@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { LinkService } from '../../shared/services/link.service';
 import { Project } from '../../shared/interfaces/project';
+import { LanguageService } from '../../shared/services/language.service';
 
 @Component({
   selector: 'app-project',
@@ -11,6 +12,8 @@ import { Project } from '../../shared/interfaces/project';
   styleUrl: './project.component.scss',
 })
 export class ProjectComponent {
+  testButton: string = '';
+
   @Input() index: number = 0;
   @Input() project: Project = {
     path: '../../assets/img/join_photo.png',
@@ -22,7 +25,17 @@ export class ProjectComponent {
     github: 'https://github.com/joNsiii/join-group',
   };
 
-  constructor(public linkData: LinkService) {}
+  constructor(
+    public linkData: LinkService,
+    private langData: LanguageService
+  ) {
+    this.set();
+  }
+
+  set() {
+    let lang = this.langData.get();
+    this.testButton = lang.testButton;
+  }
 
   /**
    * Provide the alternative text.

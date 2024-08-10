@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Conditional } from '@angular/compiler';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { LanguageService } from '../../shared/services/language.service';
 
 @Component({
   selector: 'app-form',
@@ -13,18 +14,24 @@ import { FormsModule, NgForm } from '@angular/forms';
 })
 export class FormComponent {
   http = inject(HttpClient);
+
   nameClass = '';
   emailClass = '';
   messageClass = '';
   firstCheck = false;
   checked = false;
   mailTest = true;
+  placeholder = { name: '', email: '', message: '' };
+  nameHint = { default: '', enhanced: '' };
+  emailHint = { default: '', enhanced: '' };
+  messageHint = { default: '', enhanced: '' };
+  privacyPolicy: string[] = [];
+  submitButton: string = '';
+  contact = { name: '', email: '', message: '' };
 
-  contact = {
-    name: '',
-    email: '',
-    message: '',
-  };
+  constructor(private langData: LanguageService) {
+    this.set();
+  }
 
   post = {
     endPoint: 'https://deineDomain.de/sendMail.php',
@@ -36,6 +43,16 @@ export class FormComponent {
       },
     },
   };
+
+  set() {
+    let lang = this.langData.get();
+    this.placeholder = lang.placeholder;
+    this.nameHint = lang.nameHint;
+    this.emailHint = lang.emailHint;
+    this.messageHint = lang.messageHint;
+    this.privacyPolicy = lang.privacyPolicy;
+    this.submitButton = lang.submitButton;
+  }
 
   /**
    * Update the contact data classes.
