@@ -183,12 +183,13 @@ export class LanguageService {
     return this.currLang == 'german' ? this.german : this.english;
   }
 
+  update() {
+    this.change();
+    return this.currLang == 'german' ? 'DE' : 'EN';
+  }
+
   change() {
     this.currLang = this.currLang != 'german' ? 'german' : 'english';
-    if (this.currLang == 'german') {
-      this.lang = this.german;
-    } else {
-      this.lang = this.english;
-    }
+    this.lang = this.currLang == 'german' ? this.german : this.english;
   }
 }

@@ -33,6 +33,11 @@ export class LinkService {
     });
   }
 
+  update(n: number) {
+    this.set();
+    return this.get(n);
+  }
+
   /**
    * Highlight the link.
    * @param link - The link to highlight.

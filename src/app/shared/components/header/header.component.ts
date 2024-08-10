@@ -48,18 +48,7 @@ export class HeaderComponent {
   }
 
   changeLang() {
-    this.updateLang();
-    this.updateLinks();
-  }
-
-  updateLang() {
-    this.langData.change();
-    let currLang = this.langData.currLang;
-    this.lang = currLang == 'german' ? 'DE' : 'EN';
-  }
-
-  updateLinks() {
-    this.linkData.set();
-    this.links = this.linkData.get(3);
+    this.lang = this.langData.update();
+    this.linkData.update(3);
   }
 }

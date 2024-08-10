@@ -22,22 +22,6 @@ export class MenuComponent {
     this.links = this.linkData.get(4);
   }
 
-  changeLang() {
-    this.updateLang();
-    this.updateLinks();
-  }
-
-  updateLang() {
-    this.langData.change();
-    let currLang = this.langData.currLang;
-    this.lang = currLang == 'german' ? 'DE' : 'EN';
-  }
-
-  updateLinks() {
-    this.linkData.set();
-    this.links = this.linkData.get(4);
-  }
-
   /**
    * Highlight the link.
    * @param link - The link to highlight.
@@ -47,5 +31,10 @@ export class MenuComponent {
     setTimeout(() => {
       link.clicked = false;
     }, 100);
+  }
+
+  changeLang() {
+    this.lang = this.langData.update();
+    this.linkData.update(4);
   }
 }
