@@ -1,8 +1,9 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, inject } from '@angular/core';
 import { LinkComponent } from '../link/link.component';
 import { CommonModule } from '@angular/common';
 import { Link } from '../../interfaces/link';
 import { LinkService } from '../../services/link.service';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-header',
@@ -12,10 +13,14 @@ import { LinkService } from '../../services/link.service';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
+  linkData: LinkService = inject(LinkService);
+  langData: LanguageService = inject(LanguageService);
+
   links: Link[] = [];
+  lang: string = 'EN';
   @Output() menuEvent = new EventEmitter<boolean>();
 
-  constructor(public linkData: LinkService) {
+  constructor() {
     this.links = this.linkData.get(3);
   }
 
@@ -40,5 +45,11 @@ export class HeaderComponent {
    */
   getAttribute() {
     return this.linkData.menuOpened ? 'close-btn' : 'burger-btn';
+  }
+
+  changeLang() {
+    this.langData.change();
+    let currLang = this.langData.currLang;
+    this.lang = currLang == 'german' ? 'DE' : 'EN';
   }
 }

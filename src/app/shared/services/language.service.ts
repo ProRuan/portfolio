@@ -4,7 +4,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class LanguageService {
-  currLang: string = 'german';
+  currLang: string = '';
+  lang;
 
   english = {
     links: ['About me', 'Skills', 'Portfolio', 'Contact'],
@@ -174,9 +175,20 @@ export class LanguageService {
     submitButton: 'Nachricht senden :)',
   };
 
-  constructor() {}
+  constructor() {
+    this.lang = this.english;
+  }
 
   get() {
     return this.currLang == 'german' ? this.german : this.english;
+  }
+
+  change() {
+    this.currLang = this.currLang != 'german' ? 'german' : 'english';
+    if (this.currLang == 'german') {
+      this.lang = this.german;
+    } else {
+      this.lang = this.english;
+    }
   }
 }

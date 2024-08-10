@@ -9,6 +9,7 @@
 
 <div class="link-group">
     <app-link *ngFor="let link of links, index as i" [link]="link" (click)="linkData.highlight(link)"></app-link>
+    <button class="tert-btn" (click)="changeLang()">{{ lang }}</button>
 </div>
 
 <img class="menu-btn" (click)="flipMenu()" [ngClass]="getAttribute()" [alt]="getAttribute()">
