@@ -48,5 +48,5 @@
         <span class="check-hint" [ngClass]="updateCheckClass()">Please accept the privacy policy.</span>
     </div>
 
-    <button class="prim-btn" [disabled]="!checked">{{ update().submitButton }}</button>
+    <button class="prim-btn" [disabled]="isDisabled()">{{ update().submitButton }}</button>
 </form>

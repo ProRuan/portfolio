@@ -19,9 +19,14 @@ export class FormComponent {
   emailClass = '';
   messageClass = '';
   firstCheck = false;
-  checked = false;
   mailTest = true;
   contact = { name: '', email: '', message: '' };
+  checklist = {
+    name: false,
+    email: false,
+    message: false,
+    checkbox: false,
+  };
 
   constructor(private langData: LanguageService) {}
 
@@ -58,6 +63,7 @@ export class FormComponent {
     if (ngForm.value.name) {
       let condition = ngForm.value.name.length > 1;
       this.nameClass = this.getValClass(condition);
+      this.checklist.name = condition ? true : false;
     }
   }
 
@@ -79,6 +85,7 @@ export class FormComponent {
       let pattern = /[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}/;
       let condition = ngForm.value.email.match(pattern);
       this.emailClass = this.getValClass(condition);
+      this.checklist.email = condition ? true : false;
     }
   }
 
@@ -90,6 +97,7 @@ export class FormComponent {
     if (ngForm.value.message) {
       let condition = ngForm.value.message.length > 19;
       this.messageClass = this.getValClass(condition);
+      this.checklist.message = condition ? true : false;
     }
   }
 
@@ -97,7 +105,8 @@ export class FormComponent {
    * Set the boolean value of the checkbox.
    */
   agree() {
-    this.checked = !this.checked ? true : false;
+    let checked = this.checklist.checkbox;
+    this.checklist.checkbox = !checked ? true : false;
   }
 
   /**
@@ -105,7 +114,7 @@ export class FormComponent {
    * @returns - The path of the checkbox image.
    */
   getCheckbox() {
-    if (this.checked) {
+    if (this.checklist.checkbox) {
       return '.../../../../assets/img/check_button_checked.svg';
     } else {
       return '.../../../../assets/img/check_button.svg';
@@ -117,10 +126,10 @@ export class FormComponent {
    * @returns - The class to apply.
    */
   updateCheckClass() {
-    if (!this.checked && this.firstCheck) {
+    if (!this.checklist.checkbox && this.firstCheck) {
       return 'show';
     } else {
-      if (this.checked && !this.firstCheck) {
+      if (this.checklist.checkbox && !this.firstCheck) {
         this.firstCheck = true;
       }
       return '';
@@ -166,7 +175,7 @@ export class FormComponent {
     this.emailClass = '';
     this.messageClass = '';
     this.firstCheck = false;
-    this.checked = false;
+    this.checklist.checkbox = false;
   }
 
   /**
@@ -178,5 +187,18 @@ export class FormComponent {
     this.nameClass = input['name'].valid ? 'done' : 'error';
     this.emailClass = input['email'].valid ? 'done' : 'error';
     this.messageClass = input['message'].valid ? 'done' : 'empty';
+  }
+
+  isDisabled() {
+    return !this.isFormComplete() ? true : false;
+  }
+
+  isFormComplete() {
+    for (const [key, value] of Object.entries(this.checklist)) {
+      if (value != true) {
+        return false;
+      }
+    }
+    return true;
   }
 }
