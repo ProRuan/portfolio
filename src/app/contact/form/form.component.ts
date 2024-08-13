@@ -19,6 +19,7 @@ export class FormComponent {
   emailPat = /[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}/;
   firstCheck = true;
   mailTest = true;
+  sent = false;
   contact: Contact = { name: '', email: '', message: '' };
   classes: Contact = { name: '', email: '', message: '' };
   checklist: Checklist = {
@@ -132,12 +133,14 @@ export class FormComponent {
     }
   }
 
+  // Reset style!!!
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.sendPost(ngForm);
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();
       this.resetStyle();
+      this.confirm();
     }
   }
 
@@ -175,5 +178,16 @@ export class FormComponent {
       }
     }
     return true;
+  }
+
+  confirm() {
+    this.sent = true;
+    setTimeout(() => {
+      this.sent = false;
+    }, 2000);
+  }
+
+  showConfirmation() {
+    return this.sent ? 'show' : '';
   }
 }

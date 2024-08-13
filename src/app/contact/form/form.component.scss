@@ -152,6 +152,12 @@ textarea {
   opacity: 0;
 }
 
+.feedback {
+  @include font(14px, 400, 16.8px);
+  color: #70e61c;
+  opacity: 0;
+}
+
 .show {
   opacity: 1;
 }

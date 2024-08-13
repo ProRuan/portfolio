@@ -46,7 +46,11 @@
                 {{ update().privacyPolicy[2] }}
             </p>
         </div>
+        @if (!sent) {
         <span class="check-hint" [ngClass]="updateCheckClass()">Please accept the privacy policy.</span>
+        } @else if (sent) {
+        <span class="feedback" [ngClass]="showConfirmation()">Your message has been successfully sent.</span>
+        }
     </div>
 
     <button class="prim-btn" [disabled]="isDisabled()">{{ update().submitButton }}</button>
