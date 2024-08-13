@@ -4,6 +4,7 @@ import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { LanguageService } from '../../shared/services/language.service';
 import { Contact } from '../../shared/interfaces/contact';
+import { Checklist } from '../../shared/interfaces/checklist';
 
 @Component({
   selector: 'app-form',
@@ -15,15 +16,12 @@ import { Contact } from '../../shared/interfaces/contact';
 export class FormComponent {
   http = inject(HttpClient);
 
-  nameClass = '';
-  emailClass = '';
-  messageClass = '';
-
+  emailPat = /[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}/;
   firstCheck = true;
   mailTest = true;
   contact: Contact = { name: '', email: '', message: '' };
   classes: Contact = { name: '', email: '', message: '' };
-  checklist = {
+  checklist: Checklist = {
     name: false,
     email: false,
     message: false,
@@ -60,17 +58,31 @@ export class FormComponent {
   }
 
   verify(ngForm: NgForm) {
-    this.updateNameClass(ngForm);
-    this.updateEmailClass(ngForm);
-    this.updateMessageClass(ngForm);
+    this.verifyInput(ngForm, 'name', 'error');
+    this.verifyInput(ngForm, 'email', 'error');
+    this.verifyInput(ngForm, 'message', 'empty');
   }
 
-  updateNameClass(ngForm: NgForm) {
-    if (ngForm.value.name) {
-      let condition = ngForm.value.name.length > 1;
-      this.nameClass = this.getValClass(condition, 'error');
-      this.checklist.name = this.getBoolean(condition);
+  verifyInput(ngForm: NgForm, key: string, className: string) {
+    if (ngForm.value[key]) {
+      let condition = this.getCondition(ngForm, key);
+      this.updateInput(key, condition, className);
     }
+  }
+
+  getCondition(ngForm: NgForm, key: string) {
+    if (key == 'message') {
+      return ngForm.value.message.length > 19;
+    } else if (key == 'email') {
+      return ngForm.value.email.match(this.emailPat);
+    } else if (key == 'name') {
+      return ngForm.value.name.length > 1;
+    }
+  }
+
+  updateInput(key: string, condition: boolean, className: string) {
+    this.classes[key] = this.getValClass(condition, className);
+    this.checklist[key] = this.getBoolean(condition);
   }
 
   getValClass(condition: boolean, wrong: string): string {
@@ -79,23 +91,6 @@ export class FormComponent {
 
   getBoolean(condition: boolean) {
     return condition ? true : false;
-  }
-
-  updateEmailClass(ngForm: NgForm) {
-    if (ngForm.value.email) {
-      let pattern = /[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}/;
-      let condition = ngForm.value.email.match(pattern);
-      this.emailClass = this.getValClass(condition, 'error');
-      this.checklist.email = this.getBoolean(condition);
-    }
-  }
-
-  updateMessageClass(ngForm: NgForm) {
-    if (ngForm.value.message) {
-      let condition = ngForm.value.message.length > 19;
-      this.messageClass = this.getValClass(condition, 'empty');
-      this.checklist.message = this.getBoolean(condition);
-    }
   }
 
   /**
@@ -162,9 +157,9 @@ export class FormComponent {
    * Reset the style of the form.
    */
   resetStyle() {
-    this.nameClass = '';
-    this.emailClass = '';
-    this.messageClass = '';
+    this.classes.name = '';
+    this.classes.email = '';
+    this.classes.message = '';
     this.firstCheck = true;
     this.checklist.checkbox = false;
   }
