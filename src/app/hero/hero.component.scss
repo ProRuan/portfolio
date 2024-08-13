@@ -1,8 +1,39 @@
 @import "../../styles.scss";
 
+// width: 100%;
 .content {
   @include display-column($jc: center, $ai: center);
-  padding-left: 612px;
+  padding-left: 600px;
+  flex: 1;
+}
+
+// rename + size + position!!!
+.hero-box {
+  padding-left: 96px;
+  position: relative;
+}
+
+.shadow {
+  height: 120%;
+  position: absolute;
+  left: 10%;
+  top: 0;
+  z-index: -1;
+}
+
+.img {
+  height: 120%;
+  position: absolute;
+  left: 200px;
+  z-index: -1;
+}
+
+.bg {
+  width: 1920px;
+  position: absolute;
+  left: 0;
+  top: -72px;
+  z-index: -1;
 }
 
 .text {
@@ -39,6 +70,7 @@
 .hero-bottom {
   @include display-flex($jc: space-between, $ai: flex-end);
   width: 100%;
+  min-height: 160px;
 }
 
 .contact-bar {
@@ -104,142 +136,142 @@
   }
 }
 
-@media (max-width: 1495px) {
-  .vert-text {
-    height: 172.78px;
-  }
+// @media (max-width: 1495px) {
+//   .vert-text {
+//     height: 172.78px;
+//   }
 
-  .me-text {
-    @include size(120px, 49px);
-    @include font(50px, 400, 60px);
-  }
+//   .me-text {
+//     @include size(120px, 49px);
+//     @include font(50px, 400, 60px);
+//   }
 
-  .name {
-    @include font(72px, 700, 86.4px);
-  }
+//   .name {
+//     @include font(72px, 700, 86.4px);
+//   }
 
-  .occupation {
-    @include font(46px, 400, 55.2px);
-  }
+//   .occupation {
+//     @include font(46px, 400, 55.2px);
+//   }
 
-  @media (max-width: 1388px) {
-    .content {
-      padding-left: 600px;
-    }
+//   @media (max-width: 1388px) {
+//     .content {
+//       padding-left: 600px;
+//     }
 
-    .vert-text {
-      height: 144px;
-    }
+//     .vert-text {
+//       height: 144px;
+//     }
 
-    .me-text {
-      @include size(107px, 43px);
-      @include font(44px, 400, 52.8px);
-    }
+//     .me-text {
+//       @include size(107px, 43px);
+//       @include font(44px, 400, 52.8px);
+//     }
 
-    .name {
-      font-size: 60px;
-      line-height: 72px;
-    }
+//     .name {
+//       font-size: 60px;
+//       line-height: 72px;
+//     }
 
-    .occupation {
-      font-size: 38px;
-      line-height: 45.6px;
-    }
-  }
-}
+//     .occupation {
+//       font-size: 38px;
+//       line-height: 45.6px;
+//     }
+//   }
+// }
 
-@media (max-width: 1180px) {
-  .desktop {
-    display: none;
-  }
+// @media (max-width: 1180px) {
+//   .desktop {
+//     display: none;
+//   }
 
-  .mobile-content {
-    display: flex;
-  }
+//   .mobile-content {
+//     display: flex;
+//   }
 
-  .hero-content {
-    @include display-column($ai: center, $g: 40px);
-    width: 100%;
-  }
+//   .hero-content {
+//     @include display-column($ai: center, $g: 40px);
+//     width: 100%;
+//   }
 
-  .text {
-    padding: 0 24px;
-  }
+//   .text {
+//     padding: 0 24px;
+//   }
 
-  .vert-text {
-    margin: -1px -12px 0 0;
-    height: 81.59px;
-  }
+//   .vert-text {
+//     margin: -1px -12px 0 0;
+//     height: 81.59px;
+//   }
 
-  .me-text {
-    @include size(72px, 33px);
-    @include font(32px, 400, 32px);
-  }
+//   .me-text {
+//     @include size(72px, 33px);
+//     @include font(32px, 400, 32px);
+//   }
 
-  .horiz-text {
-    margin-right: 32px;
-    height: 81.59px;
-    gap: 4px;
-  }
+//   .horiz-text {
+//     margin-right: 32px;
+//     height: 81.59px;
+//     gap: 4px;
+//   }
 
-  .name {
-    @include font(44px, 700, 44px);
-  }
+//   .name {
+//     @include font(44px, 700, 44px);
+//   }
 
-  .occupation {
-    @include font(28px, 400, 33.6px);
-  }
+//   .occupation {
+//     @include font(28px, 400, 33.6px);
+//   }
 
-  .contact-bar {
-    width: 100%;
-    gap: 16px;
-  }
+//   .contact-bar {
+//     width: 100%;
+//     gap: 16px;
+//   }
 
-  .vector {
-    content: url("../../assets/img/mail_vector_mobile.svg");
-  }
+//   .vector {
+//     content: url("../../assets/img/mail_vector_mobile.svg");
+//   }
 
-  .social-btn-group {
-    @include display-flex($jc: space-between);
-    width: 174px;
-  }
-}
+//   .social-btn-group {
+//     @include display-flex($jc: space-between);
+//     width: 174px;
+//   }
+// }
 
-@media (max-width: 594px) {
-  .vert-text {
-    margin: -18px -16px 0 0;
-  }
+// @media (max-width: 594px) {
+//   .vert-text {
+//     margin: -18px -16px 0 0;
+//   }
 
-  .me-text {
-    @include size(72px, 25px);
-    @include font(24px, 400, 24px);
-  }
+//   .me-text {
+//     @include size(72px, 25px);
+//     @include font(24px, 400, 24px);
+//   }
 
-  .horiz-text {
-    width: 214px;
-  }
+//   .horiz-text {
+//     width: 214px;
+//   }
 
-  .name {
-    @include font(32px, 700, 32px);
-  }
+//   .name {
+//     @include font(32px, 700, 32px);
+//   }
 
-  .occupation {
-    @include font(20px, 400, 20px);
-  }
-}
+//   .occupation {
+//     @include font(20px, 400, 20px);
+//   }
+// }
 
-@media (max-width: 428px) {
-  .text {
-    padding: 0 16px;
-  }
-}
+// @media (max-width: 428px) {
+//   .text {
+//     padding: 0 16px;
+//   }
+// }
 
-@media (max-width: 363px) {
-  .text {
-    padding: 0 0 0 0;
-  }
+// @media (max-width: 363px) {
+//   .text {
+//     padding: 0 0 0 0;
+//   }
 
-  .social-btn-group {
-    width: 150px;
-  }
-}
+//   .social-btn-group {
+//     width: 150px;
+//   }
+// }

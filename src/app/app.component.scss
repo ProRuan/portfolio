@@ -34,51 +34,11 @@
   overflow: clip;
 }
 
-.hero-shadow {
-  @include position(absolute, -64px, 51px);
-  z-index: -2;
-}
-
-.hero-img {
-  @include position(absolute, 144px, -29px);
-  z-index: -1;
-}
-
-.hero-bg {
-  @include position(absolute, -2px, 51px);
-  width: 1922px;
-  z-index: -1;
-}
-
-.about-me-shadow {
-  @include position(absolute, unset, 664px);
-  right: -424px;
-}
-
-.skills-shadow {
-  @include position(absolute, -560px, 1840px);
-  z-index: -1;
-}
-
-.partner-shadow {
-  position: absolute;
-  right: 0;
-  bottom: 640px;
-  z-index: -1;
-}
-
-.footer-shadow {
-  position: absolute;
-  left: -400px;
-  bottom: -440px;
-}
-
 .hero {
   @include display-column(space-between, flex-start, 0px);
   box-sizing: border-box;
-  margin-top: 109px;
-  padding: 188px 96px 24px 0;
-  height: 802px;
+  padding: 180px 96px 24px 0;
+  height: 100vh;
 }
 
 .about-me {
@@ -123,13 +83,6 @@
   }
 }
 
-@media (max-width: 1440px) {
-  .hero-bg {
-    @include position(absolute, -2px, 211px);
-    width: unset;
-  }
-}
-
 @media (max-width: 1290px) {
   .about-me {
     gap: 64px;
@@ -148,10 +101,6 @@
 @media (max-width: 1180px) {
   .header {
     padding: 37px 48px;
-  }
-
-  .desktop-shadow {
-    display: none;
   }
 
   .hero {
@@ -193,25 +142,6 @@
 
   .menu {
     display: flex;
-  }
-
-  .about-me-shadow {
-    right: -520px;
-  }
-
-  .skills-shadow {
-    left: -672px;
-    top: 2048px;
-  }
-
-  .partner-shadow {
-    right: -144px;
-    bottom: 720px;
-  }
-
-  .footer-shadow {
-    left: -600px;
-    bottom: -576px;
   }
 }
 
