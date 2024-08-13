@@ -1,9 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Conditional } from '@angular/compiler';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { LanguageService } from '../../shared/services/language.service';
+import { Contact } from '../../shared/interfaces/contact';
 
 @Component({
   selector: 'app-form',
@@ -18,9 +18,11 @@ export class FormComponent {
   nameClass = '';
   emailClass = '';
   messageClass = '';
+
   firstCheck = true;
   mailTest = true;
-  contact = { name: '', email: '', message: '' };
+  contact: Contact = { name: '', email: '', message: '' };
+  classes: Contact = { name: '', email: '', message: '' };
   checklist = {
     name: false,
     email: false,
@@ -45,39 +47,15 @@ export class FormComponent {
     return this.langData.get();
   }
 
-  focusName() {
-    if (this.nameClass == '') {
-      this.nameClass = 'error';
+  focus(key: string, className: string) {
+    if (this.classes[key] == '') {
+      this.classes[key] = className;
     }
   }
 
-  blurName() {
-    if (this.contact.name.length == 0) {
-      this.nameClass = '';
-    }
-  }
-
-  focusEmail() {
-    if (this.emailClass == '') {
-      this.emailClass = 'error';
-    }
-  }
-
-  blurEmail() {
-    if (this.contact.email.length == 0) {
-      this.emailClass = '';
-    }
-  }
-
-  focusMessage() {
-    if (this.messageClass == '') {
-      this.messageClass = 'empty';
-    }
-  }
-
-  blurMessage() {
-    if (this.contact.message.length == 0) {
-      this.messageClass = '';
+  blur(key: string) {
+    if (this.contact[key].length == 0) {
+      this.classes[key] = '';
     }
   }
 
