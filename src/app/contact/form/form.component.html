@@ -47,9 +47,9 @@
             </p>
         </div>
         @if (!sent) {
-        <span class="check-hint" [ngClass]="updateCheckClass()">Please accept the privacy policy.</span>
+        <span class="check-hint" [ngClass]="updateCheckClass()">{{ update().checkHint }}</span>
         } @else if (sent) {
-        <span class="feedback" [ngClass]="showConfirmation()">Your message has been successfully sent.</span>
+        <span class="feedback" [ngClass]="showConfirmation()">{{ update().confirmation }}</span>
         }
     </div>
 

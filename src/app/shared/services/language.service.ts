@@ -88,6 +88,8 @@ export class LanguageService {
       'privacy policy',
       'and agree to the processing of my data as outlined.',
     ],
+    checkHint: 'Please accept the privacy policy.',
+    confirmation: 'Your message has been successfully sent.',
     submitButton: 'Send message :)',
   };
 
@@ -172,6 +174,8 @@ export class LanguageService {
       'Datenschutzerklärung',
       'gelesen und stimme der Verarbeitung meiner Daten zu.',
     ],
+    checkHint: 'Bitte akzeptieren Sie die Datenschutzerklärung.',
+    confirmation: 'Ihre Nachricht wurde erfolgreich versendet.',
     submitButton: 'Nachricht senden :)',
   };
 
