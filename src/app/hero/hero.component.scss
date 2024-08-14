@@ -1,60 +1,32 @@
 @import "../../styles.scss";
 
-// width: 100%;
-.content {
-  @include display-column($jc: center, $ai: center);
-  padding-left: 600px;
-  flex: 1;
-}
-
-// rename + size + position!!!
-.hero-box {
-  padding-left: 96px;
-  position: relative;
-}
-
-.shadow {
-  height: 120%;
-  position: absolute;
-  left: 10%;
-  top: 0;
-  z-index: -1;
-}
-
-.img {
-  height: 120%;
-  position: absolute;
-  left: 200px;
-  z-index: -1;
-}
-
-.bg {
-  width: 1920px;
-  position: absolute;
-  left: 0;
-  top: -72px;
-  z-index: -1;
+.text-button-box {
+  @include display-column($ai: center);
 }
 
 .text {
-  @include display-flex($jc: flex-end, $ai: flex-start);
+  @include display-flex($jc: flex-end);
+  height: 172px;
+  gap: 35px;
 }
 
 .vert-text {
   @include display-flex();
-  margin: 0 -8px 0 0;
-  height: 172px;
+  max-width: 63px;
+  max-height: 152px;
 }
 
 .me-text {
   @include size(152px, 63px);
   @include font(64px, 400, 76.8px);
+  min-width: 152px;
+  min-height: 63px;
   display: block;
   transform: rotate(-90deg);
 }
 
 .horiz-text {
-  @include display-column($jc: center, $g: 0px);
+  @include display-column($g: 0px);
 }
 
 .name {
@@ -67,74 +39,105 @@
   text-transform: uppercase;
 }
 
-.hero-bottom {
-  @include display-flex($jc: space-between, $ai: flex-end);
-  width: 100%;
-  min-height: 160px;
-}
+// old code ----------
 
-.contact-bar {
-  @include display-flex($jc: flex-start);
-  height: 40px;
-  gap: 32px;
-}
+// // rename + size + position!!!
+// .hero-box {
+//   padding-left: 96px;
+//   position: relative;
+// }
 
-.vector {
-  content: url("../../assets/img/mail_vector.svg");
-}
+// .shadow {
+//   height: 120%;
+//   position: absolute;
+//   left: 10%;
+//   top: 0;
+//   z-index: -1;
+// }
 
-.hero-email {
-  @include font();
-  cursor: pointer;
-  transition: all 75ms ease-in-out;
-}
+// .img {
+//   height: 120%;
+//   position: absolute;
+//   left: 200px;
+//   z-index: -1;
+// }
 
-.scroll-hint-box {
-  @include font();
-  @include display-column($ai: center, $g: 3px);
-}
+// .bg {
+//   width: 1920px;
+//   position: absolute;
+//   left: 0;
+//   top: -72px;
+//   z-index: -1;
+// }
 
-.scroll-hint {
-  writing-mode: vertical-lr;
-}
+// .hero-bottom {
+//   @include display-flex($jc: space-between, $ai: flex-end);
+//   width: 100%;
+//   min-height: 160px;
+// }
 
-// mobile
-.mobile-content {
-  @include size(100%, 100%);
-  @include display-column($ai: center, $g: 24px);
-  display: none;
-}
+// .contact-bar {
+//   @include display-flex($jc: flex-start);
+//   height: 40px;
+//   gap: 32px;
+// }
 
-.hero-box {
-  @include size(390px, 493px);
-  @include display-flex();
-  position: relative;
-}
+// .vector {
+//   content: url("../../assets/img/mail_vector.svg");
+// }
 
-.hero-shadow {
-  @include size(560px, auto);
-  @include position(absolute, -80px, 64px);
-  z-index: -1;
-}
+// .hero-email {
+//   @include font();
+//   cursor: pointer;
+//   transition: all 75ms ease-in-out;
+// }
 
-.hero-img {
-  @include size(unset, 100%);
-  padding-left: 20px;
-  z-index: -1;
-}
+// .scroll-hint-box {
+//   @include font();
+//   @include display-column($ai: center, $g: 3px);
+// }
 
-.hero-bg {
-  @include size(915.31px, 685.78px);
-  @include position(absolute, -30px, 196px);
-  z-index: -1;
-}
+// .scroll-hint {
+//   writing-mode: vertical-lr;
+// }
 
-@media (max-width: 1754px) {
-  .vert-text {
-    margin: -8px -8px 0 0;
-    height: 216px;
-  }
-}
+// // mobile
+// .mobile-content {
+//   @include size(100%, 100%);
+//   @include display-column($ai: center, $g: 24px);
+//   display: none;
+// }
+
+// .hero-box {
+//   @include size(390px, 493px);
+//   @include display-flex();
+//   position: relative;
+// }
+
+// .hero-shadow {
+//   @include size(560px, auto);
+//   @include position(absolute, -80px, 64px);
+//   z-index: -1;
+// }
+
+// .hero-img {
+//   @include size(unset, 100%);
+//   padding-left: 20px;
+//   z-index: -1;
+// }
+
+// .hero-bg {
+//   @include size(915.31px, 685.78px);
+//   @include position(absolute, -30px, 196px);
+//   z-index: -1;
+// }
+
+// @media (max-width: 1754px) {
+//   .vert-text {
+//     margin: -8px -8px 0 0;
+//     height: 216px;
+//   }
+// }
 
 // @media (max-width: 1495px) {
 //   .vert-text {
