@@ -39,6 +39,37 @@
   text-transform: uppercase;
 }
 
+.hero-bottom {
+  @include display-flex($jc: space-between, $ai: flex-end);
+  width: 100%;
+  min-height: 160px;
+}
+
+.contact-bar {
+  @include display-flex($jc: flex-start);
+  height: 40px;
+  gap: 32px;
+}
+
+.vector {
+  content: url("../../assets/img/mail_vector.svg");
+}
+
+.hero-email {
+  @include font();
+  cursor: pointer;
+  transition: all 75ms ease-in-out;
+}
+
+.scroll-hint-box {
+  @include font();
+  @include display-column($ai: center, $g: 3px);
+}
+
+.scroll-hint {
+  writing-mode: vertical-lr;
+}
+
 // old code ----------
 
 // // rename + size + position!!!
@@ -68,37 +99,6 @@
 //   left: 0;
 //   top: -72px;
 //   z-index: -1;
-// }
-
-// .hero-bottom {
-//   @include display-flex($jc: space-between, $ai: flex-end);
-//   width: 100%;
-//   min-height: 160px;
-// }
-
-// .contact-bar {
-//   @include display-flex($jc: flex-start);
-//   height: 40px;
-//   gap: 32px;
-// }
-
-// .vector {
-//   content: url("../../assets/img/mail_vector.svg");
-// }
-
-// .hero-email {
-//   @include font();
-//   cursor: pointer;
-//   transition: all 75ms ease-in-out;
-// }
-
-// .scroll-hint-box {
-//   @include font();
-//   @include display-column($ai: center, $g: 3px);
-// }
-
-// .scroll-hint {
-//   writing-mode: vertical-lr;
 // }
 
 // // mobile
