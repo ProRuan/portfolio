@@ -99,20 +99,16 @@
 }
 
 @media (max-width: 1280px) {
+  .header {
+    padding: 37px 48px;
+  }
+
   .hero {
     padding: 109px 0 24px 0;
   }
 }
 
 @media (max-width: 1180px) {
-  .header {
-    padding: 37px 48px;
-  }
-
-  // .hero {
-  //   padding: 0 0 24px 0;
-  // }
-
   .about-me {
     padding: 156px 24px 24px 24px;
     justify-content: center;

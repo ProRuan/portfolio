@@ -35,7 +35,7 @@
 .img {
   height: 110%;
   position: relative;
-  left: 16px;
+  left: 12px;
   z-index: -1;
 }
 
@@ -248,5 +248,96 @@
 
   .scroll-hint-box {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .bg {
+    top: 448px;
+  }
+
+  .text {
+    height: 74px;
+    gap: 12px;
+  }
+
+  .vert-text {
+    max-width: 28px;
+    max-height: 66px;
+  }
+
+  .me-text {
+    @include font(28px, 400, 33.6px);
+    min-width: 66px;
+    min-height: 28px;
+  }
+
+  .name {
+    @include font(40px, 700, 48px);
+  }
+
+  .occupation {
+    @include font(27px, 400, 32.4px);
+  }
+
+  .vector {
+    content: url("../../assets/img/mail_vector_mobile.svg");
+  }
+}
+
+@media (max-width: 502px) {
+  .bg {
+    top: 460px;
+  }
+
+  .text {
+    height: 50px;
+    gap: 10px;
+  }
+
+  .vert-text {
+    max-width: 19px;
+    max-height: 45px;
+  }
+
+  .me-text {
+    @include font(19px, 400, 22.8px);
+    min-width: 45px;
+    min-height: 19px;
+  }
+
+  .name {
+    @include font(28px, 700, 33.6px);
+  }
+
+  .occupation {
+    @include font(19px, 400, 22.8px);
+  }
+}
+
+@media (max-width: 356px) {
+  .bg {
+    top: 468px;
+  }
+
+  .text {
+    height: 37px;
+    gap: 8px;
+  }
+
+  .vert-text {
+    display: none;
+  }
+
+  .name {
+    @include font(24px, 700, 28.8px);
+    width: 100%;
+    text-align: center;
+  }
+
+  .occupation {
+    @include font(16px, 400, 19.2px);
+    width: 100%;
+    text-align: center;
   }
 }
