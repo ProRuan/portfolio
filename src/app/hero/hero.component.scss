@@ -3,13 +3,11 @@
 .hero-main {
   @include display-flex($jc: flex-start);
   height: 100%;
-  gap: 40px;
 }
 
 .hero-box {
   margin: 24px 0 0 48px;
   width: 646px;
-  // width: 100%;
   height: calc(100% - 24px);
   position: relative;
 
@@ -55,6 +53,7 @@
 
 .text-button-box {
   @include display-column($ai: center);
+  margin-left: -24px;
 }
 
 .text {
@@ -70,7 +69,6 @@
 }
 
 .me-text {
-  @include size(152px, 63px);
   @include font(64px, 400, 76.8px);
   min-width: 152px;
   min-height: 63px;
@@ -123,211 +121,28 @@
   writing-mode: vertical-lr;
 }
 
-// old code ----------
+@media (max-width: 1762px) {
+  .text {
+    height: 142px;
+    gap: 24px;
+  }
 
-// // rename + size + position!!!
-// .hero-box {
-//   padding-left: 96px;
-//   position: relative;
-// }
+  .vert-text {
+    max-width: 52px;
+    max-height: 122px;
+  }
 
-// .shadow {
-//   height: 120%;
-//   position: absolute;
-//   left: 10%;
-//   top: 0;
-//   z-index: -1;
-// }
+  .me-text {
+    @include font(52px, 400, 62.4px);
+    min-width: 122px;
+    min-height: 52px;
+  }
 
-// .img {
-//   height: 120%;
-//   position: absolute;
-//   left: 200px;
-//   z-index: -1;
-// }
+  .name {
+    @include font(74px, 700, 88.8px);
+  }
 
-// .bg {
-//   width: 1920px;
-//   position: absolute;
-//   left: 0;
-//   top: -72px;
-//   z-index: -1;
-// }
-
-// // mobile
-// .mobile-content {
-//   @include size(100%, 100%);
-//   @include display-column($ai: center, $g: 24px);
-//   display: none;
-// }
-
-// .hero-box {
-//   @include size(390px, 493px);
-//   @include display-flex();
-//   position: relative;
-// }
-
-// .hero-shadow {
-//   @include size(560px, auto);
-//   @include position(absolute, -80px, 64px);
-//   z-index: -1;
-// }
-
-// .hero-img {
-//   @include size(unset, 100%);
-//   padding-left: 20px;
-//   z-index: -1;
-// }
-
-// .hero-bg {
-//   @include size(915.31px, 685.78px);
-//   @include position(absolute, -30px, 196px);
-//   z-index: -1;
-// }
-
-// @media (max-width: 1754px) {
-//   .vert-text {
-//     margin: -8px -8px 0 0;
-//     height: 216px;
-//   }
-// }
-
-// @media (max-width: 1495px) {
-//   .vert-text {
-//     height: 172.78px;
-//   }
-
-//   .me-text {
-//     @include size(120px, 49px);
-//     @include font(50px, 400, 60px);
-//   }
-
-//   .name {
-//     @include font(72px, 700, 86.4px);
-//   }
-
-//   .occupation {
-//     @include font(46px, 400, 55.2px);
-//   }
-
-//   @media (max-width: 1388px) {
-//     .content {
-//       padding-left: 600px;
-//     }
-
-//     .vert-text {
-//       height: 144px;
-//     }
-
-//     .me-text {
-//       @include size(107px, 43px);
-//       @include font(44px, 400, 52.8px);
-//     }
-
-//     .name {
-//       font-size: 60px;
-//       line-height: 72px;
-//     }
-
-//     .occupation {
-//       font-size: 38px;
-//       line-height: 45.6px;
-//     }
-//   }
-// }
-
-// @media (max-width: 1180px) {
-//   .desktop {
-//     display: none;
-//   }
-
-//   .mobile-content {
-//     display: flex;
-//   }
-
-//   .hero-content {
-//     @include display-column($ai: center, $g: 40px);
-//     width: 100%;
-//   }
-
-//   .text {
-//     padding: 0 24px;
-//   }
-
-//   .vert-text {
-//     margin: -1px -12px 0 0;
-//     height: 81.59px;
-//   }
-
-//   .me-text {
-//     @include size(72px, 33px);
-//     @include font(32px, 400, 32px);
-//   }
-
-//   .horiz-text {
-//     margin-right: 32px;
-//     height: 81.59px;
-//     gap: 4px;
-//   }
-
-//   .name {
-//     @include font(44px, 700, 44px);
-//   }
-
-//   .occupation {
-//     @include font(28px, 400, 33.6px);
-//   }
-
-//   .contact-bar {
-//     width: 100%;
-//     gap: 16px;
-//   }
-
-//   .vector {
-//     content: url("../../assets/img/mail_vector_mobile.svg");
-//   }
-
-//   .social-btn-group {
-//     @include display-flex($jc: space-between);
-//     width: 174px;
-//   }
-// }
-
-// @media (max-width: 594px) {
-//   .vert-text {
-//     margin: -18px -16px 0 0;
-//   }
-
-//   .me-text {
-//     @include size(72px, 25px);
-//     @include font(24px, 400, 24px);
-//   }
-
-//   .horiz-text {
-//     width: 214px;
-//   }
-
-//   .name {
-//     @include font(32px, 700, 32px);
-//   }
-
-//   .occupation {
-//     @include font(20px, 400, 20px);
-//   }
-// }
-
-// @media (max-width: 428px) {
-//   .text {
-//     padding: 0 16px;
-//   }
-// }
-
-// @media (max-width: 363px) {
-//   .text {
-//     padding: 0 0 0 0;
-//   }
-
-//   .social-btn-group {
-//     width: 150px;
-//   }
-// }
+  .occupation {
+    @include font(50px, 400, 60px);
+  }
+}
