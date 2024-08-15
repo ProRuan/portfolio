@@ -1,18 +1,32 @@
-<article class="text-button-box">
-    <div class="text">
-        <div class="vert-text">
-            <span class="me-text">I am</span>
+<div class="hero-main">
+    <div class="hero-box">
+        <div class="hero-subbox">
+            <img class="shadow" src="../../assets/img/hero_shadow.svg" alt="shadow">
         </div>
-        <div class="horiz-text">
-            <span class="name">Rudolf Sachslehner</span>
-            <span class="occupation">Frontend Developer</span>
+        <div class="hero-subbox">
+            <img class="img" src="../../assets/img/hero.png" alt="image">
+        </div>
+        <div class="hero-subbox jc-start">
+            <img class="bg" src="../../assets/img/hero_bg.svg" alt="background">
         </div>
     </div>
 
-    <button id="hero-btn" class="prim-btn" (click)="linkData.scroll('#contact')">{{ update().heroButton }}</button>
-</article>
+    <article class="text-button-box">
+        <div class="text">
+            <div class="vert-text">
+                <span class="me-text">I am</span>
+            </div>
+            <div class="horiz-text">
+                <span class="name">Rudolf Sachslehner</span>
+                <span class="occupation">Frontend Developer</span>
+            </div>
+        </div>
 
-<div class="hero-bottom desktop">
+        <button id="hero-btn" class="prim-btn" (click)="linkData.scroll('#contact')">{{ update().heroButton }}</button>
+    </article>
+</div>
+
+<div class="hero-bottom">
     <div class="contact-bar">
         <img class="vector" alt="vector">
         <button class="social-btn git-hub-btn" (click)="linkData.redirect('https://github.com/')"></button>
@@ -30,15 +44,6 @@
 
 
 <!-- old code -->
-
-
-
-
-<!-- <div class="hero-box">
-    <img class="shadow" src="../../assets/img/hero_shadow.svg" alt="shadow">
-    <img class="img" src="../../assets/img/hero.png" alt="hero">
-    <img class="bg" src="../../assets/img/hero_bg.svg" alt="background">
-</div> -->
 
 <!-- <article class="mobile-content">
     <div class="hero-box">

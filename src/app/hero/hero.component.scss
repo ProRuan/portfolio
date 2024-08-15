@@ -1,5 +1,58 @@
 @import "../../styles.scss";
 
+.hero-main {
+  @include display-flex($jc: flex-start);
+  height: 100%;
+  gap: 40px;
+}
+
+.hero-box {
+  margin: 24px 0 0 48px;
+  width: 646px;
+  // width: 100%;
+  height: calc(100% - 24px);
+  position: relative;
+
+  // to delete
+  // border: 1px solid $prim1;
+}
+
+.hero-subbox {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shadow {
+  // width: 120%;
+  // width: 559px; // to edit
+  position: relative;
+  top: 96px;
+  z-index: -1;
+}
+
+.img {
+  height: 110%;
+  position: relative;
+  left: 20px;
+  z-index: -1;
+}
+
+.bg {
+  min-width: 1920px;
+  position: relative;
+  left: -48px;
+  top: 476px;
+  z-index: -1;
+}
+
+.jc-start {
+  justify-content: flex-start;
+}
+
 .text-button-box {
   @include display-column($ai: center);
 }
@@ -42,7 +95,7 @@
 .hero-bottom {
   @include display-flex($jc: space-between, $ai: flex-end);
   width: 100%;
-  min-height: 160px;
+  max-height: 40px;
 }
 
 .contact-bar {

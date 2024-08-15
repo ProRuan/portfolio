@@ -35,7 +35,7 @@
 }
 
 .hero {
-  @include display-column($jc: space-between, $g: 0);
+  @include display-column($jc: space-between, $g: 24px);
   box-sizing: border-box;
   padding: 109px 100px 24px 0;
   height: 100vh;
