@@ -212,6 +212,10 @@
     margin: 24px 0 0 0;
   }
 
+  .shadow {
+    width: 720px;
+  }
+
   .bg {
     min-width: 2550px;
     left: -448px;
@@ -252,8 +256,20 @@
 }
 
 @media (max-width: 768px) {
+  .hero-main {
+    gap: 0;
+  }
+
+  .shadow {
+    width: 640px;
+  }
+
+  .img {
+    height: 90%;
+  }
+
   .bg {
-    top: 448px;
+    top: 414px;
   }
 
   .text {
@@ -287,7 +303,7 @@
 
 @media (max-width: 502px) {
   .bg {
-    top: 460px;
+    top: 422px;
   }
 
   .text {
@@ -317,7 +333,7 @@
 
 @media (max-width: 356px) {
   .bg {
-    top: 468px;
+    top: 428px;
   }
 
   .text {
