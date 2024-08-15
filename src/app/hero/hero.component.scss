@@ -164,6 +164,14 @@
 }
 
 @media (max-width: 1451px) {
+  .hero-main {
+    gap: 48px;
+  }
+
+  .hero-box {
+    width: 380px;
+  }
+
   .bg {
     left: -198px;
   }
@@ -191,13 +199,54 @@
   .occupation {
     @include font(38px, 400, 45.6px);
   }
+}
 
-  // to set
+@media (max-width: 1280px) {
   .hero-main {
-    gap: 48px;
+    @include display-column($ai: center);
+    width: 100%;
+    gap: 24px;
   }
 
   .hero-box {
-    width: 380px;
+    margin: 24px 0 0 0;
+  }
+
+  .bg {
+    min-width: 2550px;
+    left: -448px;
+    top: 436px;
+  }
+
+  .text {
+    height: 89px;
+    gap: 14px;
+  }
+
+  .vert-text {
+    max-width: 34px;
+    max-height: 80px;
+  }
+
+  .me-text {
+    @include font(34px, 400, 40.8px);
+    min-width: 80px;
+    min-height: 34px;
+  }
+
+  .name {
+    @include font(48px, 700, 57.6px);
+  }
+
+  .occupation {
+    @include font(32px, 400, 38.4px);
+  }
+
+  .hero-email {
+    display: none;
+  }
+
+  .scroll-hint-box {
+    display: none;
   }
 }
