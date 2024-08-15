@@ -35,7 +35,7 @@
 .img {
   height: 110%;
   position: relative;
-  left: 20px;
+  left: 16px;
   z-index: -1;
 }
 
@@ -121,7 +121,23 @@
   writing-mode: vertical-lr;
 }
 
-@media (max-width: 1762px) {
+@media (max-width: 1779px) {
+  .hero-main {
+    gap: 35px;
+  }
+
+  .hero-box {
+    width: 440px;
+  }
+
+  .bg {
+    left: -158px;
+  }
+
+  .text-button-box {
+    margin-left: 0;
+  }
+
   .text {
     height: 142px;
     gap: 24px;
@@ -143,6 +159,45 @@
   }
 
   .occupation {
-    @include font(50px, 400, 60px);
+    @include font(48px, 400, 57.6px);
+  }
+}
+
+@media (max-width: 1451px) {
+  .bg {
+    left: -198px;
+  }
+
+  .text {
+    height: 109px;
+    gap: 16px;
+  }
+
+  .vert-text {
+    max-width: 40px;
+    max-height: 94px;
+  }
+
+  .me-text {
+    @include font(40px, 400, 48px);
+    min-width: 94px;
+    min-height: 40px;
+  }
+
+  .name {
+    @include font(58px, 700, 69.6px);
+  }
+
+  .occupation {
+    @include font(38px, 400, 45.6px);
+  }
+
+  // to set
+  .hero-main {
+    gap: 48px;
+  }
+
+  .hero-box {
+    width: 380px;
   }
 }
