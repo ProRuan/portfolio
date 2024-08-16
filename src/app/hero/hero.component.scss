@@ -453,3 +453,9 @@
     top: 540px;
   }
 }
+
+@media (max-height: 568px) {
+  .text-button-box {
+    gap: 20px;
+  }
+}

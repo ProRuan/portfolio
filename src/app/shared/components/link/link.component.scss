@@ -13,3 +13,9 @@
     transition-delay: 10ms;
   }
 }
+
+@media (max-height: 568px) {
+  .link {
+    @include font(20px, 400, 24px);
+  }
+}

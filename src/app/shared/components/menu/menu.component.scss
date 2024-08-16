@@ -9,9 +9,10 @@
 @media (max-height: 568px) {
   .link-group {
     padding: 24px;
-    max-width: 296px;
+    max-width: unset;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 32px;
   }
 }
