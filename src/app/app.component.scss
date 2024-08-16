@@ -83,11 +83,13 @@
   }
 }
 
-@media (max-width: 1290px) {
+@media (max-width: 1439px) {
   .about-me {
     gap: 64px;
   }
+}
 
+@media (max-width: 1290px) {
   .my-skills {
     gap: 64px;
   }
@@ -106,14 +108,14 @@
   .hero {
     padding: 109px 0 24px 0;
   }
+
+  .about-me {
+    padding: 132px 24px 24px 24px;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 1180px) {
-  .about-me {
-    padding: 156px 24px 24px 24px;
-    justify-content: center;
-  }
-
   .my-skills {
     @include display-column($ai: center, $g: 24px);
     padding: 156px 0 24px 0;
