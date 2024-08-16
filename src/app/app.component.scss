@@ -152,3 +152,9 @@
     align-items: flex-start;
   }
 }
+
+@media (max-height: 910px) {
+  .hero {
+    gap: 0;
+  }
+}

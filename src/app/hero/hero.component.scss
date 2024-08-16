@@ -3,12 +3,14 @@
 .hero-main {
   @include display-flex($jc: flex-start);
   height: 100%;
+  // min-height: 714px;
 }
 
 .hero-box {
   margin: 24px 0 0 48px;
   width: 646px;
   height: calc(100% - 24px);
+  // min-height: 558.81px;
   position: relative;
 
   // to delete
@@ -34,6 +36,8 @@
 
 .img {
   height: 110%;
+  // min-height: 502.92px;
+  // min-height: 371px;
   position: relative;
   left: 12px;
   z-index: -1;
@@ -203,9 +207,8 @@
 
 @media (max-width: 1280px) {
   .hero-main {
-    @include display-column($ai: center);
+    @include display-column($ai: center, $g: 24px);
     width: 100%;
-    gap: 24px;
   }
 
   .hero-box {
@@ -355,5 +358,79 @@
     @include font(16px, 400, 19.2px);
     width: 100%;
     text-align: center;
+  }
+}
+
+@media (max-height: 910px) {
+  .hero-main {
+    height: calc(100% - 40px);
+    justify-content: center;
+    gap: 56px;
+  }
+
+  .hero-box {
+    margin-top: 0;
+    height: 360px;
+  }
+
+  .img {
+    // height: 320px;
+    height: 440px;
+  }
+
+  .bg {
+    top: 400px;
+  }
+}
+
+@media (max-height: 800px) {
+  .hero-box {
+    width: 255px;
+    height: 255px;
+  }
+
+  .img {
+    @include size(255px, 255px);
+    box-sizing: border-box;
+    content: url("../../assets/img/profile.png");
+    border: 3px solid $prim1;
+    border-radius: 50%;
+    left: 0;
+  }
+
+  .bg {
+    top: 344px;
+  }
+}
+
+@media (max-height: 648px) {
+  .hero-box {
+    width: 200px;
+    height: 200px;
+  }
+
+  .img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .bg {
+    top: 316px;
+  }
+}
+
+@media (max-height: 600px) {
+  .hero-box {
+    width: 160px;
+    height: 160px;
+  }
+
+  .img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .bg {
+    top: 300px;
   }
 }
