@@ -51,7 +51,7 @@
   @include display-flex(flex-end, flex-start);
   padding: 156px 0 24px 100px;
   min-height: 404px;
-  gap: 105px;
+  gap: 88px;
 }
 
 .portfolio {
@@ -87,13 +87,13 @@
   .about-me {
     gap: 64px;
   }
-}
 
-@media (max-width: 1290px) {
   .my-skills {
     gap: 64px;
   }
+}
 
+@media (max-width: 1290px) {
   .portfolio {
     padding: 156px 0 24px 100px;
     gap: 32px;
@@ -113,14 +113,14 @@
     padding: 132px 24px 24px 24px;
     justify-content: center;
   }
+
+  .my-skills {
+    @include display-column($ai: center, $g: 24px);
+    padding: 132px 0 24px 0;
+  }
 }
 
 @media (max-width: 1180px) {
-  .my-skills {
-    @include display-column($ai: center, $g: 24px);
-    padding: 156px 0 24px 0;
-  }
-
   .portfolio {
     padding: 156px 0 24px 24px;
   }

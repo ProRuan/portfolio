@@ -61,27 +61,22 @@
   display: none;
 }
 
-@media (max-width: 1408px) {
+@media (max-width: 1439px) {
   .skill-group {
-    gap: 41px 48px;
+    width: 580px;
+    gap: 41px 56px;
   }
-}
 
-@media (max-width: 1290px) {
   .exp-text {
     width: 400px;
   }
-
-  .skill-button-box {
-    width: 340px;
-  }
-
-  .another-skill-title {
-    @include font(24px, 700, 28.8px);
-  }
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 1280px) {
+  .skill-group {
+    gap: 41px 48px;
+  }
+
   .text-box {
     width: 100%;
     align-items: flex-end;
@@ -136,6 +131,12 @@
 
   .another-skill-text {
     max-width: 342px;
+  }
+}
+
+@media (max-width: 768px) {
+  .another-skill-title {
+    @include font(24px, 700, 28.8px);
   }
 }
 
