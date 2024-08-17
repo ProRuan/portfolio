@@ -56,7 +56,7 @@
 
 .portfolio {
   @include display-column($ai: flex-end, $g: 40px);
-  padding: 156px 0 24px 136px;
+  padding: 156px 0 24px 100px;
 }
 
 .contact {
@@ -93,13 +93,6 @@
   }
 }
 
-@media (max-width: 1290px) {
-  .portfolio {
-    padding: 156px 0 24px 100px;
-    gap: 32px;
-  }
-}
-
 @media (max-width: 1280px) {
   .header {
     padding: 37px 48px;
@@ -118,13 +111,14 @@
     @include display-column($ai: center, $g: 24px);
     padding: 132px 0 24px 0;
   }
+
+  .portfolio {
+    padding: 132px 0 24px 24px;
+    gap: 32px;
+  }
 }
 
 @media (max-width: 1180px) {
-  .portfolio {
-    padding: 156px 0 24px 24px;
-  }
-
   .contact {
     padding: 156px 24px 48px 0;
     gap: 32px;

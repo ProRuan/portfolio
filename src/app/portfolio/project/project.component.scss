@@ -56,14 +56,7 @@
   }
 }
 
-@media (max-width: 1290px) {
-  .img-box {
-    width: 505px;
-    min-width: 505px;
-  }
-}
-
-@media (max-width: 1180px) {
+@media (max-width: 1280px) {
   .project {
     flex-direction: column !important;
     align-items: center;
