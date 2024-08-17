@@ -154,6 +154,8 @@ textarea {
 
 .feedback {
   @include font(14px, 400, 16.8px);
+  width: 100%;
+  text-align: center;
   color: #70e61c;
   opacity: 0;
 }
@@ -162,7 +164,7 @@ textarea {
   opacity: 1;
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 1280px) {
   .form-box {
     gap: 12px;
   }

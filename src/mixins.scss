@@ -27,7 +27,7 @@
 @mixin contact-input($h: 50px) {
   @include font(16px, 400, 19.2px);
   box-sizing: border-box;
-  padding: 15px 25px;
+  padding: 15px 65px 15px 25px;
   width: 100%;
   height: $h;
   min-height: $h;

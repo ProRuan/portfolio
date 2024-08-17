@@ -116,14 +116,14 @@
     padding: 132px 0 24px 24px;
     gap: 32px;
   }
+
+  .contact {
+    padding: 132px 24px 48px 0;
+    gap: 32px;
+  }
 }
 
 @media (max-width: 1180px) {
-  .contact {
-    padding: 156px 24px 48px 0;
-    gap: 32px;
-  }
-
   .footer {
     padding: 66px 24px;
     height: unset;

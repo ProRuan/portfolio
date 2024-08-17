@@ -16,7 +16,7 @@
 .content {
   padding-left: 100px;
   display: flex;
-  gap: 149px;
+  gap: 132px;
 }
 
 .hint-box {
@@ -36,9 +36,12 @@
 
 .right-content {
   @include display-column($ai: flex-end, $g: 42px);
-  width: 617px;
   height: 598.39px;
   position: relative;
+}
+
+.app-form {
+  width: 617px;
 }
 
 .top-arrow {
@@ -60,22 +63,16 @@
 }
 
 @media (max-width: 1439px) {
-  .right-content {
-    width: 440px;
-  }
-}
-
-@media (max-width: 1290px) {
   .content {
     gap: 64px;
   }
 
-  .hint-box {
-    width: 459px;
+  .app-form {
+    width: 526px;
   }
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 1280px) {
   .content {
     box-sizing: border-box;
     padding-left: 24px;
@@ -95,7 +92,7 @@
 
   .hint-box {
     width: 100%;
-    max-width: 459px;
+    max-width: 474px;
     gap: 16px;
   }
 
@@ -104,11 +101,17 @@
   }
 
   .right-content {
+    height: 568.98px;
+  }
+
+  .app-form {
     width: 100%;
-    max-width: 440px;
+    max-width: 474px;
   }
 
   .top-arrow {
+    top: 529.98px;
+
     &:hover {
       background-image: url("../../assets/img/go_up_white.svg");
     }
@@ -116,5 +119,15 @@
     &:active {
       background-image: url("../../assets/img/go_up.svg");
     }
+  }
+}
+
+@media (max-width: 390px) {
+  .right-content {
+    height: 592.98px;
+  }
+
+  .top-arrow {
+    top: 553.98px;
   }
 }
