@@ -44,15 +44,15 @@
 }
 
 .l-0 {
-  @include position(absolute, 0, 5px);
+  @include position($p: absolute, $l: 0, $t: 5px);
 }
 
 .l-72 {
-  @include position(absolute, 72px, 5px);
+  @include position($p: absolute, $l: 72px, $t: 5px);
 }
 
 .l-144 {
-  @include position(absolute, 144px, 5px);
+  @include position($p: absolute, $l: 144px, $t: 5px);
 }
 
 @media (max-width: 1280px) {

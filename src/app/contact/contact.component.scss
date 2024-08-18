@@ -47,13 +47,11 @@
 .top-arrow {
   @include size(39px, 39px);
   @include min-size(39px, 39px);
+  @include position($p: absolute, $t: 559.38px, $r: 0);
   background-image: url("../../assets/img/go_up_white.svg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
-  position: absolute;
-  right: 0;
-  top: 559.38px;
   transition: all 100ms ease-in-out;
 
   &:hover {
@@ -62,9 +60,7 @@
 }
 
 .shadow {
-  position: absolute;
-  left: -420px;
-  bottom: -420px;
+  @include position($p: absolute, $l: -420px, $b: -420px);
   z-index: -1;
 }
 

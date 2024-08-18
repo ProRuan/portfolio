@@ -2,7 +2,7 @@
 
 .study-skill {
   @include display-column($jc: space-between, $ai: center, $g: 10px);
-  @include position(relative, 0, 0);
+  @include position($p: relative, $l: 0, $t: 0);
   box-sizing: border-box;
   padding-top: 12px;
   width: 88px;
@@ -35,7 +35,7 @@
 
 .special-interest {
   @include size(188px, 129px);
-  @include position(absolute, 0, -101px);
+  @include position($p: absolute, $l: 0, $t: -101px);
   opacity: 0;
   transition: all 300ms ease-in-out;
   pointer-events: none;

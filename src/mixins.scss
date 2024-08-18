@@ -40,26 +40,26 @@
 
 @mixin input-icon($s: 25.05px, $t: 12.475px) {
   @include size($s, $s);
+  @include position($p: absolute, $t: $t, $r: 25px);
   display: none;
-  position: absolute;
-  top: $t;
-  right: 25px;
 }
 
-@mixin max-size($w, $h) {
+@mixin max-size($w: none, $h: none) {
   max-width: $w;
   max-height: $h;
 }
 
-@mixin min-size($w, $h) {
+@mixin min-size($w: 0, $h: 0) {
   min-width: $w;
   min-height: $h;
 }
 
-@mixin position($p: absolute, $l: 0, $t: 0) {
+@mixin position($p: absolute, $l: auto, $t: auto, $r: auto, $b: auto) {
   position: $p;
   left: $l;
   top: $t;
+  right: $r;
+  bottom: $b;
 }
 
 @mixin size($w: auto, $h: auto) {

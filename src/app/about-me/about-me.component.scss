@@ -40,9 +40,7 @@
 }
 
 .shadow {
-  position: absolute;
-  right: -420px;
-  top: -160px;
+  @include position($p: absolute, $r: -420px, $t: -160px);
   z-index: -1;
 }
 

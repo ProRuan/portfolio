@@ -2,7 +2,7 @@
 
 .skill {
   @include display-column($jc: space-between, $ai: center, $g: 10px);
-  @include position(relative, 0, 0);
+  @include position($p: relative, $l: 0, $t: 0);
   box-sizing: border-box;
   padding-top: 12px;
   width: 88px;

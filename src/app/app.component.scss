@@ -3,16 +3,16 @@
 .header {
   @include width(100%, 1920px);
   @include display-flex($jc: space-between);
-  @include position($p: fixed);
   box-sizing: border-box;
   padding: 37px 100px;
   background-color: $primBg;
+  position: fixed;
   z-index: 10;
 }
 
 .menu {
   @include display-flex();
-  @include position(fixed, 0, 109px);
+  @include position($p: fixed, $l: 0, $t: 109px);
   box-sizing: border-box;
   padding-bottom: 109px;
   min-width: 100%;

@@ -20,23 +20,19 @@
 }
 
 .shadow {
-  position: relative;
-  top: 96px;
+  @include position($p: relative, $t: 96px);
   z-index: -1;
 }
 
 .img {
+  @include position($p: relative, $l: 12px);
   height: 110%;
-  position: relative;
-  left: 12px;
   z-index: -1;
 }
 
 .bg {
+  @include position($p: relative, $l: -48px, $t: 476px);
   min-width: 1920px;
-  position: relative;
-  left: -48px;
-  top: 476px;
   z-index: -1;
 }
 
