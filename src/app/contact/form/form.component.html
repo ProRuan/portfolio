@@ -2,37 +2,37 @@
     <div class="contact-form">
         <div class="input-box" [ngClass]="classes.name">
             <input [(ngModel)]="contact.name" name="name" class="contact-input" (focus)="focus('name', 'error')"
-                (blur)="blur('name')" type="text" minlength="2" placeholder="{{ update().placeholder.name }}" required>
+                (blur)="blur('name')" type="text" minlength="2" placeholder="{{ print().placeholder.name }}" required>
             <img class="check" src="../../assets/img/check.svg" alt="check">
             <img class="callsign" src="../../assets/img/callsign.svg" alt="callsign">
             @if (!contact.name) {
-            <span class="hint">{{ update().nameHint.default }}</span>
+            <span class="hint">{{ print().nameHint.default }}</span>
             } @else if (classes.name != 'done') {
-            <span class="hint">{{ update().nameHint.enhanced }}</span>
+            <span class="hint">{{ print().nameHint.enhanced }}</span>
             }
         </div>
         <div class="input-box" [ngClass]="classes.email">
             <input [(ngModel)]="contact.email" name="email" class="contact-input" (focus)="focus('email', 'error')"
                 (blur)="blur('email')" type="text" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-                placeholder="{{ update().placeholder.email }}" required>
+                placeholder="{{ print().placeholder.email }}" required>
             <img class="check" src="../../assets/img/check.svg" alt="check">
             <img class="callsign" src="../../assets/img/callsign.svg" alt="callsign">
             @if (!contact.email) {
-            <span class="hint">{{ update().emailHint.default }}</span>
+            <span class="hint">{{ print().emailHint.default }}</span>
             } @else if (classes.email != 'done') {
-            <span class="hint">{{ update().emailHint.enhanced }}</span>
+            <span class="hint">{{ print().emailHint.enhanced }}</span>
             }
         </div>
         <div class="textarea-box" [ngClass]="classes.message">
             <textarea [(ngModel)]="contact.message" name="message" minlength="20" class="contact-textarea"
                 (focus)="focus('message', 'empty')" (blur)="blur('message')"
-                placeholder="{{ update().placeholder.message }}" required></textarea>
+                placeholder="{{ print().placeholder.message }}" required></textarea>
             <img class="check" src="../../assets/img/check.svg" alt="check">
             <img class="callsign" src="../../assets/img/callsign.svg" alt="callsign">
             @if (!contact.message) {
-            <span class="hint">{{ update().messageHint.default }}</span>
+            <span class="hint">{{ print().messageHint.default }}</span>
             } @else if (classes.message != 'done') {
-            <span class="hint">{{ update().messageHint.enhanced }}</span>
+            <span class="hint">{{ print().messageHint.enhanced }}</span>
             }
         </div>
     </div>
@@ -41,17 +41,17 @@
         <div class="privacy-policy-line">
             <img class="checkbox" (click)="agree()" [src]="getCheckbox()" alt="check-button">
             <p class="privacy-policy-text">
-                {{ update().privacyPolicy[0] }}
-                <a class="privacy-policy-link" href="">{{ update().privacyPolicy[1] }}</a>
-                {{ update().privacyPolicy[2] }}
+                {{ print().privacyPolicy[0] }}
+                <a class="privacy-policy-link" href="">{{ print().privacyPolicy[1] }}</a>
+                {{ print().privacyPolicy[2] }}
             </p>
         </div>
         @if (!sent) {
-        <span class="check-hint" [ngClass]="updateCheckClass()">{{ update().checkHint }}</span>
+        <span class="check-hint" [ngClass]="updateCheckClass()">{{ print().checkHint }}</span>
         } @else if (sent) {
-        <span class="feedback" [ngClass]="showConfirmation()">{{ update().confirmation }}</span>
+        <span class="feedback" [ngClass]="isMessageSent()">{{ print().confirmation }}</span>
         }
     </div>
 
-    <button class="prim-btn" [disabled]="isDisabled()">{{ update().submitButton }}</button>
+    <button class="prim-btn" [disabled]="isDisabled()">{{ print().submitButton }}</button>
 </form>

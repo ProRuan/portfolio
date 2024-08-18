@@ -88,7 +88,6 @@
   }
 
   .project-group {
-    width: 100%;
-    max-width: 342px;
+    @include width(100%, 342px);
   }
 }

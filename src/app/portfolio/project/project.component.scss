@@ -6,9 +6,8 @@
 }
 
 .img-box {
+  @include min-size(620px, 339px);
   @include display-flex();
-  min-width: 620px;
-  min-height: 339px;
 }
 
 .img {
@@ -63,9 +62,8 @@
   }
 
   .img-box {
+    @include min-size(440px, 275px);
     width: 440px;
-    min-width: 440px;
-    min-height: 275px;
   }
 
   .title {
@@ -91,14 +89,12 @@
 
 @media (max-width: 768px) {
   .img-box {
+    @include min-size(unset, 213px);
     width: 342px;
-    min-width: unset;
-    min-height: 213px;
   }
 
   .content {
-    width: 100%;
-    max-width: 340px;
+    @include width(100%, 340px);
   }
 
   .button-box {

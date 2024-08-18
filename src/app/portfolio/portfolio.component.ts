@@ -11,6 +11,10 @@ import { LanguageService } from '../shared/services/language.service';
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss',
 })
+
+/**
+ * Represents a portfolio component.
+ */
 export class PortfolioComponent {
   projects: Project[] = [
     {
@@ -39,13 +43,24 @@ export class PortfolioComponent {
     },
   ];
 
+  /**
+   * Creates a portfolio component.
+   * @param langData - The language data to apply.
+   */
   constructor(public langData: LanguageService) {}
 
-  update() {
+  /**
+   * Prints the text based on the set language.
+   * @returns - The text to print.
+   */
+  print() {
     this.updateProjects();
     return this.langData.get();
   }
 
+  /**
+   * Updates the description of the projects.
+   */
   updateProjects() {
     let lang = this.langData.get();
     this.projects[0].description = lang.joinDesc;

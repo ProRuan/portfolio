@@ -11,10 +11,22 @@ import { LanguageService } from '../shared/services/language.service';
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
+
+/**
+ * Represents a contact component.
+ */
 export class ContactComponent {
+  /**
+   * Creates a contact component.
+   * @param langData - The language data to apply.
+   */
   constructor(private langData: LanguageService) {}
 
-  update() {
+  /**
+   * Prints the text based on the set language.
+   * @returns - The text to print.
+   */
+  print() {
     return this.langData.get();
   }
 }

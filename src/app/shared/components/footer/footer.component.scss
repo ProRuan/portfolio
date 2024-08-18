@@ -55,22 +55,10 @@
   @include position(absolute, 144px, 5px);
 }
 
-.mobile {
-  display: none;
-}
-
 @media (max-width: 1280px) {
   .logo {
     margin-bottom: 35px;
     text-align: center;
-  }
-
-  .desktop {
-    display: none;
-  }
-
-  .mobile {
-    display: flex;
   }
 
   .imprint-link {

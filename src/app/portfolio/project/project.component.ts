@@ -11,6 +11,10 @@ import { LanguageService } from '../../shared/services/language.service';
   templateUrl: './project.component.html',
   styleUrl: './project.component.scss',
 })
+
+/**
+ * Represents a project component.
+ */
 export class ProjectComponent {
   linkData: LinkService = inject(LinkService);
   langData: LanguageService = inject(LanguageService);
@@ -26,15 +30,17 @@ export class ProjectComponent {
     github: 'https://github.com/joNsiii/join-group',
   };
 
-  constructor() {}
-
-  update() {
+  /**
+   * Prints the text based on the set language.
+   * @returns - The text to print.
+   */
+  print() {
     return this.langData.get();
   }
 
   /**
-   * Provide the alternative text.
-   * @param project - The providing projecct.
+   * Provides the alternative text.
+   * @param project - The providing project.
    * @returns - The alternative text.
    */
   getAlt(project: any) {
@@ -43,7 +49,7 @@ export class ProjectComponent {
   }
 
   /**
-   * Set the style.
+   * Sets the style.
    * @param property - The property to set.
    * @param valueA - The value a to set.
    * @param valueB - The value b to set.
