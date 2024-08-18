@@ -12,6 +12,10 @@ import { LanguageService } from '../../services/language.service';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
+
+/**
+ * Represents a header component.
+ */
 export class HeaderComponent {
   linkData: LinkService = inject(LinkService);
   langData: LanguageService = inject(LanguageService);
@@ -21,7 +25,7 @@ export class HeaderComponent {
   @Output() menuEvent = new EventEmitter<boolean>();
 
   /**
-   * Represents a header component.
+   * Creates a header component.
    */
   constructor() {
     this.links = this.linkData.get(3);
@@ -43,7 +47,7 @@ export class HeaderComponent {
   }
 
   /**
-   * Gets the attribute value.
+   * Provides the attribute value.
    * @returns - The value of the attribute.
    */
   getAttribute() {

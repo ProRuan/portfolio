@@ -7,9 +7,8 @@
 
 .icon-box {
   @include size(48px, 48px);
+  @include min-size(48px, 48px);
   @include display-flex();
-  min-width: 48px;
-  min-height: 48px;
 }
 
 .icon {

@@ -29,9 +29,8 @@
 }
 
 .img {
+  @include min-size(449px, 449px);
   box-sizing: border-box;
-  min-width: 449px;
-  min-height: 449px;
   background-image: url("../../assets/img/profile.png");
   background-position: -10px 0;
   background-repeat: no-repeat;
@@ -53,16 +52,14 @@
   }
 
   .img {
-    min-width: 358px;
-    min-height: 358px;
+    @include min-size(358px, 358px);
     background-size: 358px 358px;
   }
 }
 
 @media (max-width: 1280px) {
   .w-475 {
-    width: 100%;
-    max-width: 475px;
+    @include width(100%, 475px);
   }
 
   .img-box {

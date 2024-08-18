@@ -12,6 +12,10 @@ import { LanguageService } from '../../services/language.service';
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.scss',
 })
+
+/**
+ * Represents a menu component.
+ */
 export class MenuComponent {
   linkData: LinkService = inject(LinkService);
   langData: LanguageService = inject(LanguageService);
@@ -20,7 +24,7 @@ export class MenuComponent {
   lang: string = 'EN';
 
   /**
-   * Represents a menu component.
+   * Creates a menu component.
    */
   constructor() {
     this.links = this.linkData.get(4);

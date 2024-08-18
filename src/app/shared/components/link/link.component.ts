@@ -10,6 +10,10 @@ import { LinkService } from '../../services/link.service';
   templateUrl: './link.component.html',
   styleUrl: './link.component.scss',
 })
+
+/**
+ * Represents a link component.
+ */
 export class LinkComponent {
   @Input() link: Link = {
     href: '',
@@ -18,7 +22,7 @@ export class LinkComponent {
   };
 
   /**
-   * Represents a link component.
+   * Creates a link component.
    * @param linkData - The link data to apply.
    */
   constructor(private linkData: LinkService) {}

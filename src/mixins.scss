@@ -46,6 +46,16 @@
   right: 25px;
 }
 
+@mixin max-size($w, $h) {
+  max-width: $w;
+  max-height: $h;
+}
+
+@mixin min-size($w, $h) {
+  min-width: $w;
+  min-height: $h;
+}
+
 @mixin position($p: absolute, $l: 0, $t: 0) {
   position: $p;
   left: $l;

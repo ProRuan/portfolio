@@ -9,11 +9,19 @@ import { LanguageService } from '../shared/services/language.service';
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss',
 })
+
+/**
+ * Represents a hero component.
+ */
 export class HeroComponent {
   linkData: LinkService = inject(LinkService);
   langData: LanguageService = inject(LanguageService);
 
-  update() {
+  /**
+   * Prints the text based on the set language.
+   * @returns - The text to print.
+   */
+  print() {
     return this.langData.get();
   }
 }

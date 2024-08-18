@@ -8,6 +8,10 @@ import { IntroItem } from '../../shared/interfaces/intro-item';
   templateUrl: './intro-item.component.html',
   styleUrl: './intro-item.component.scss',
 })
+
+/**
+ * Represents an intro item component.
+ */
 export class IntroItemComponent {
   @Input() item: IntroItem = {
     path: '',

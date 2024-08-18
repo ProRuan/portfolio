@@ -1,7 +1,7 @@
 <div class="text-box w-475">
-    <h2 class="headline-2 w-475">{{ update().headlines[0] }}</h2>
+    <h2 class="headline-2 w-475">{{ print().headlines[0] }}</h2>
     <div class="content">
-        <p class="intro-text">{{ update().introText }}</p>
+        <p class="intro-text">{{ print().introText }}</p>
         <div class="intro-list">
             <app-intro-item *ngFor="let item of items" [item]="item"></app-intro-item>
         </div>

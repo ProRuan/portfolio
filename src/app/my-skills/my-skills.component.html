@@ -1,10 +1,10 @@
 <div class="text-box mobile">
     <div class="title-vector-box">
-        <h2 class="headline-2 w-395">{{ update().headlines[1] }}</h2>
+        <h2 class="headline-2 w-395">{{ print().headlines[1] }}</h2>
         <img src="../../assets/img/skill_vector_mobile.svg" alt="vector">
     </div>
 
-    <p class="exp-text">{{ update().expText }}</p>
+    <p class="exp-text">{{ print().expText }}</p>
 </div>
 
 <div class="skill-group">
@@ -14,23 +14,23 @@
 
 <div class="text-box">
     <div class="title-vector-box desktop">
-        <h2 class="headline-2 w-395">{{ update().headlines[1] }}</h2>
+        <h2 class="headline-2 w-395">{{ print().headlines[1] }}</h2>
         <img src="../../assets/img/skill_vector.svg" alt="vector">
     </div>
 
     <div class="another-skill-box">
-        <p class="exp-text desktop">{{ update().expText }}</p>
+        <p class="exp-text desktop">{{ print().expText }}</p>
 
         <div class="skill-button-box">
             <div class="another-skill-subbox">
                 <h3 class="another-skill-title">
-                    {{ update().anotherSkill[0] }} <br class="break"><span class="c-prim-2">{{ update().anotherSkill[1]
+                    {{ print().anotherSkill[0] }} <br class="break"><span class="c-prim-2">{{ print().anotherSkill[1]
                         }}</span>?
                 </h3>
-                <p class="another-skill-text">{{ update().anotherText }}</p>
+                <p class="another-skill-text">{{ print().anotherText }}</p>
             </div>
 
-            <button class="prim-btn" (click)="linkData.scroll('#contact')">{{ update().skillButton }}</button>
+            <button class="prim-btn" (click)="linkData.scroll('#contact')">{{ print().skillButton }}</button>
         </div>
     </div>
 </div>

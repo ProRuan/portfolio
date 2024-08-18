@@ -57,10 +57,6 @@
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
-.mobile {
-  display: none;
-}
-
 .shadow {
   position: absolute;
   left: -560px;
@@ -90,10 +86,6 @@
     gap: 32px;
   }
 
-  .mobile {
-    display: flex;
-  }
-
   .title-vector-box {
     box-sizing: border-box;
     padding-left: 40px;
@@ -102,28 +94,21 @@
   }
 
   .w-395 {
-    width: 100%;
-    max-width: 395px;
+    @include width(100%, 395px);
   }
 
   .exp-text {
+    @include width(100%, 418px);
     box-sizing: border-box;
     padding: 0 40px;
-    width: 100%;
-    max-width: 418px;
   }
 
   .skill-group {
+    @include width(100%, 576px);
     box-sizing: border-box;
     padding: 0 24px;
-    width: 100%;
-    max-width: 576px;
     justify-content: center;
     gap: 41px 39px;
-  }
-
-  .desktop {
-    display: none;
   }
 
   .another-skill-box {

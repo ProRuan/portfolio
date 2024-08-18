@@ -172,16 +172,27 @@ p {
   }
 }
 
+.mobile {
+  display: none;
+}
+
 @media (min-width: 1920px) {
   body {
     @include display-flex($ai: flex-start);
   }
 }
 
-// before 1290px
 @media (max-width: 1280px) {
   .headline-2 {
     @include font(72px, 700, 86.4px);
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: flex;
   }
 }
 

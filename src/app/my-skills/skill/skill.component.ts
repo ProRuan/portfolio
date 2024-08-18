@@ -9,6 +9,10 @@ import { Skill } from '../../shared/interfaces/skill';
   templateUrl: './skill.component.html',
   styleUrl: './skill.component.scss',
 })
+
+/**
+ * Represents a skill component.
+ */
 export class SkillComponent {
   @Input() skill: Skill = {
     path: '',

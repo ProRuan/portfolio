@@ -11,6 +11,10 @@ import { LanguageService } from '../shared/services/language.service';
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss',
 })
+
+/**
+ * Represents an about-me component.
+ */
 export class AboutMeComponent {
   @Input() items: IntroItem[] = [
     {
@@ -42,13 +46,24 @@ export class AboutMeComponent {
     },
   ];
 
+  /**
+   * Creates an about-me component.
+   * @param langData - The language data to apply.
+   */
   constructor(public langData: LanguageService) {}
 
-  update() {
+  /**
+   * Prints the text based on the set language.
+   * @returns - The text to print.
+   */
+  print() {
     this.updateItems();
     return this.langData.get();
   }
 
+  /**
+   * Updates the text of the items.
+   */
   updateItems() {
     let lang = this.langData.get();
     this.items[0].text = lang.location;

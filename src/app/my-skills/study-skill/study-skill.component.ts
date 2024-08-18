@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
   templateUrl: './study-skill.component.html',
   styleUrl: './study-skill.component.scss',
 })
+
+/**
+ * Represents a study skill component.
+ */
 export class StudySkillComponent {}

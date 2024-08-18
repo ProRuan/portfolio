@@ -13,6 +13,10 @@ import { LanguageService } from '../shared/services/language.service';
   templateUrl: './my-skills.component.html',
   styleUrl: './my-skills.component.scss',
 })
+
+/**
+ * Represents a my-skill component.
+ */
 export class MySkillsComponent {
   linkData: LinkService = inject(LinkService);
   langData: LanguageService = inject(LanguageService);
@@ -30,9 +34,11 @@ export class MySkillsComponent {
     { path: '../../assets/img/material_design.svg', name: 'Material Design' },
   ];
 
-  constructor() {}
-
-  update() {
+  /**
+   * Prints the text based on the set language.
+   * @returns - The text to print.
+   */
+  print() {
     return this.langData.get();
   }
 }
