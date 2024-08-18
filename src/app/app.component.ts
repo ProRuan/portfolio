@@ -34,7 +34,7 @@ import { LinkService } from './shared/services/link.service';
  * Represents an app component.
  */
 export class AppComponent {
-  title = 'portfolio';
+  title = 'Rudolf Sachslehner';
 
   /**
    * Creates an app component.
