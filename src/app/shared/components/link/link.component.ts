@@ -17,10 +17,14 @@ export class LinkComponent {
     clicked: false,
   };
 
+  /**
+   * Represents a link component.
+   * @param linkData - The link data to apply.
+   */
   constructor(private linkData: LinkService) {}
 
   /**
-   * Close the menu.
+   * Closes the menu.
    */
   closeMenu() {
     this.linkData.menuOpened = false;

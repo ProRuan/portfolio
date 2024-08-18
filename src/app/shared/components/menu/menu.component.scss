@@ -2,8 +2,7 @@
 
 .link-group {
   @include display-column($g: 29px);
-  width: 100%;
-  max-width: 144px;
+  @include width(100%, 144px);
 }
 
 @media (max-height: 568px) {

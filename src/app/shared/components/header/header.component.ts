@@ -20,12 +20,15 @@ export class HeaderComponent {
   lang: string = 'EN';
   @Output() menuEvent = new EventEmitter<boolean>();
 
+  /**
+   * Represents a header component.
+   */
   constructor() {
     this.links = this.linkData.get(3);
   }
 
   /**
-   * Reset the menu.
+   * Resets the menu.
    */
   resetMenu() {
     this.linkData.menuOpened = false;
@@ -33,20 +36,23 @@ export class HeaderComponent {
   }
 
   /**
-   * Flip the menu.
+   * Flips the menu.
    */
   flipMenu() {
     this.linkData.menuOpened = !this.linkData.menuOpened ? true : false;
   }
 
   /**
-   * Get the attribute value.
+   * Gets the attribute value.
    * @returns - The value of the attribute.
    */
   getAttribute() {
     return this.linkData.menuOpened ? 'close-btn' : 'burger-btn';
   }
 
+  /**
+   * Changes the language.
+   */
   changeLang() {
     this.lang = this.langData.update();
     this.linkData.update(3);

@@ -15,15 +15,19 @@ import { LanguageService } from '../../services/language.service';
 export class MenuComponent {
   linkData: LinkService = inject(LinkService);
   langData: LanguageService = inject(LanguageService);
+
   links: Link[];
   lang: string = 'EN';
 
+  /**
+   * Represents a menu component.
+   */
   constructor() {
     this.links = this.linkData.get(4);
   }
 
   /**
-   * Highlight the link.
+   * Highlights the link.
    * @param link - The link to highlight.
    */
   highlight(link: Link) {
@@ -33,6 +37,9 @@ export class MenuComponent {
     }, 100);
   }
 
+  /**
+   * Changes the language.
+   */
   changeLang() {
     this.lang = this.langData.update();
     this.linkData.update(4);

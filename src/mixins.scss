@@ -56,3 +56,8 @@
   width: $w;
   height: $h;
 }
+
+@mixin width($w, $m) {
+  width: $w;
+  max-width: $m;
+}
