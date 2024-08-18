@@ -29,16 +29,24 @@ import { LinkService } from './shared/services/link.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss', '../../src/assets/fonts/font-face.scss'],
 })
+
+/**
+ * Represents an app component.
+ */
 export class AppComponent {
   title = 'portfolio';
 
+  /**
+   * Creates an app component.
+   * @param linkData - The link data to apply.
+   */
   constructor(private linkData: LinkService) {}
 
+  /**
+   * Flips the menu.
+   * @returns - The class to apply.
+   */
   flipMenu() {
-    if (this.linkData.menuOpened) {
-      return '';
-    } else {
-      return 'menu-out';
-    }
+    return !this.linkData.menuOpened ? 'menu-out' : '';
   }
 }

@@ -3,6 +3,10 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root',
 })
+
+/**
+ * Represents a language service.
+ */
 export class LanguageService {
   currLang: string = '';
   lang;
@@ -179,19 +183,33 @@ export class LanguageService {
     submitButton: 'Nachricht senden :)',
   };
 
+  /**
+   * Creates a language service.
+   */
   constructor() {
     this.lang = this.english;
   }
 
+  /**
+   * Provides the object of the current language.
+   * @returns - The object of the current language.
+   */
   get() {
     return this.currLang == 'german' ? this.german : this.english;
   }
 
+  /**
+   * Updates the language and the language button.
+   * @returns - The name of the language button.
+   */
   update() {
     this.change();
     return this.currLang == 'german' ? 'DE' : 'EN';
   }
 
+  /**
+   * Changes the language.
+   */
   change() {
     this.currLang = this.currLang != 'german' ? 'german' : 'english';
     this.lang = this.currLang == 'german' ? this.german : this.english;

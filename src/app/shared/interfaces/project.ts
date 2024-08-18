@@ -1,3 +1,6 @@
+/**
+ * Interface for objects that represent a project.
+ */
 export interface Project {
   path: string;
   name: string;
