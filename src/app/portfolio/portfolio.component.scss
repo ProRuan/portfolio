@@ -35,6 +35,13 @@
   width: 1168px;
 }
 
+.shadow {
+  position: absolute;
+  right: 0px;
+  bottom: -360px;
+  z-index: -1;
+}
+
 @media (max-width: 1439px) {
   .project-group {
     width: 1064px;

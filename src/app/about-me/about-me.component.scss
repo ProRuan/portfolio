@@ -40,6 +40,13 @@
   border-radius: 50%;
 }
 
+.shadow {
+  position: absolute;
+  right: -420px;
+  top: -160px;
+  z-index: -1;
+}
+
 @media (max-width: 1439px) {
   .img-box {
     min-width: 358px;

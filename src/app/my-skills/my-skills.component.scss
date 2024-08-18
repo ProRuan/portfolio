@@ -61,6 +61,13 @@
   display: none;
 }
 
+.shadow {
+  position: absolute;
+  left: -560px;
+  bottom: -680px;
+  z-index: -1;
+}
+
 @media (max-width: 1439px) {
   .skill-group {
     width: 580px;

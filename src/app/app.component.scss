@@ -45,6 +45,7 @@
   @include display-flex(flex-end, center);
   padding: 156px 0 24px 100px;
   gap: 149px;
+  position: relative;
 }
 
 .my-skills {
@@ -52,16 +53,19 @@
   padding: 156px 0 24px 100px;
   min-height: 404px;
   gap: 88px;
+  position: relative;
 }
 
 .portfolio {
   @include display-column($ai: flex-end, $g: 40px);
   padding: 156px 0 24px 100px;
+  position: relative;
 }
 
 .contact {
   @include display-column($g: 40px);
   padding: 156px 100px 90px 0;
+  position: relative;
 }
 
 .footer {
