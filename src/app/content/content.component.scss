@@ -1,0 +1,95 @@
+@import "../../styles.scss";
+
+.main {
+  max-width: 1920px;
+  position: relative;
+  overflow: clip;
+}
+
+.hero {
+  @include display-column($jc: space-between, $g: 24px);
+  box-sizing: border-box;
+  padding: 109px 100px 24px 0;
+  height: 100vh;
+}
+
+.about-me {
+  @include display-flex(flex-end, center);
+  padding: 156px 0 24px 100px;
+  gap: 149px;
+  position: relative;
+}
+
+.my-skills {
+  @include display-flex(flex-end, flex-start);
+  padding: 156px 0 24px 100px;
+  min-height: 404px;
+  gap: 88px;
+  position: relative;
+}
+
+.portfolio {
+  @include display-column($ai: flex-end, $g: 40px);
+  padding: 156px 0 24px 100px;
+  position: relative;
+}
+
+.contact {
+  @include display-column($g: 40px);
+  padding: 156px 100px 90px 0;
+  position: relative;
+}
+
+@media (min-width: 1920px) {
+  .main {
+    width: 1920px;
+  }
+}
+
+@media (max-width: 1439px) {
+  .about-me {
+    gap: 64px;
+  }
+
+  .my-skills {
+    gap: 64px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .hero {
+    padding: 109px 0 24px 0;
+  }
+
+  .about-me {
+    padding: 132px 24px 24px 24px;
+    justify-content: center;
+  }
+
+  .my-skills {
+    @include display-column($ai: center, $g: 24px);
+    padding: 132px 0 24px 0;
+  }
+
+  .portfolio {
+    padding: 132px 0 24px 24px;
+    gap: 32px;
+  }
+
+  .contact {
+    padding: 132px 24px 48px 0;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 373px) {
+  .portfolio {
+    align-items: flex-start;
+  }
+}
+
+@media (max-height: 910px) {
+  .hero {
+    gap: 0;
+  }
+}

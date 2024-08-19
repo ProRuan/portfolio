@@ -2,13 +2,8 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/components/header/header.component';
-import { HeroComponent } from './hero/hero.component';
-import { AboutMeComponent } from './about-me/about-me.component';
-import { MySkillsComponent } from './my-skills/my-skills.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
-import { ContactComponent } from './contact/contact.component';
-import { FooterComponent } from './shared/components/footer/footer.component';
 import { MenuComponent } from './shared/components/menu/menu.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
 import { LinkService } from './shared/services/link.service';
 
 @Component({
@@ -18,13 +13,8 @@ import { LinkService } from './shared/services/link.service';
     CommonModule,
     RouterOutlet,
     HeaderComponent,
-    HeroComponent,
-    AboutMeComponent,
-    MySkillsComponent,
-    PortfolioComponent,
-    ContactComponent,
-    FooterComponent,
     MenuComponent,
+    FooterComponent,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss', '../../src/assets/fonts/font-face.scss'],
