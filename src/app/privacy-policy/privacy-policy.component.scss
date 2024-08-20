@@ -6,12 +6,21 @@
 }
 
 .content {
-  @include display-column($g: 40px);
+  @include display-column($g: 24px);
   max-width: 960px;
+}
+
+.title {
+  @include font(40px, 700, 48px);
+  margin: 0;
 }
 
 .subcontent {
   @include display-column($g: 16px);
+}
+
+h2 {
+  @include font(24px, 700, 28.8px);
 }
 
 p {
@@ -23,10 +32,6 @@ p {
     padding: 156px 48px 48px 48px;
     min-height: calc(100vh - 204px);
   }
-
-  .content {
-    gap: 32px;
-  }
 }
 
 @media (max-width: 768px) {
@@ -34,13 +39,21 @@ p {
     padding: 156px 24px 48px 24px;
   }
 
-  .content {
-    gap: 24px;
+  .title {
+    @include font(28px, 700, 33.6px);
+  }
+
+  h2 {
+    @include font(20px, 700, 24px);
   }
 }
 
-@media (max-width: 332px) {
-  .content {
-    gap: 20px;
+@media (max-width: 389px) {
+  .title {
+    @include font(20px, 700, 24px);
+  }
+
+  h2 {
+    @include font(16px, 700, 19.2px);
   }
 }
