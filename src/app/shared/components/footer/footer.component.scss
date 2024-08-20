@@ -55,7 +55,7 @@
   @include position($p: absolute, $l: 144px, $t: 5px);
 }
 
-.mobile-link {
+.mobile {
   display: none;
 }
 
@@ -79,11 +79,11 @@
     }
   }
 
-  .desktop-link {
+  .desktop {
     display: none;
   }
 
-  .mobile-link {
+  .mobile {
     display: flex;
   }
 }

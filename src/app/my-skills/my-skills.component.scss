@@ -62,6 +62,10 @@
   z-index: -1;
 }
 
+.mobile {
+  display: none;
+}
+
 @media (max-width: 1439px) {
   .skill-group {
     width: 580px;
@@ -89,6 +93,14 @@
     padding-left: 40px;
     justify-content: flex-end;
     gap: 16px;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: flex;
   }
 
   .w-395 {
