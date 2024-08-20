@@ -176,6 +176,11 @@ p {
   display: none;
 }
 
+.alt-h2 {
+  @include font(40px, 700, 48px);
+  margin: 0;
+}
+
 @media (min-width: 1921px) {
   body {
     @include display-flex($ai: flex-start);
