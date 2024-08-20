@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LinkService } from '../../services/link.service';
 
 @Component({
   selector: 'app-footer',
@@ -11,4 +12,10 @@ import { Component } from '@angular/core';
 /**
  * Represents a footer component.
  */
-export class FooterComponent {}
+export class FooterComponent {
+  /**
+   * Creates a footer component.
+   * @param linkData - The link data to apply.
+   */
+  constructor(public linkData: LinkService) {}
+}

@@ -18,4 +18,8 @@ import { ContactComponent } from '../contact/contact.component';
   templateUrl: './content.component.html',
   styleUrl: './content.component.scss',
 })
+
+/**
+ * Represents a content component.
+ */
 export class ContentComponent {}
