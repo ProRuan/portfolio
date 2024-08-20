@@ -176,7 +176,7 @@ p {
   display: none;
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1921px) {
   body {
     @include display-flex($ai: flex-start);
   }
@@ -259,6 +259,12 @@ p {
       background-color: $prim1;
       border-color: $prim1;
     }
+  }
+}
+
+@media (max-width: 332px) {
+  .headline-2 {
+    @include font(40px, 700, 48px);
   }
 }
 

@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
   templateUrl: './imprint.component.html',
   styleUrl: './imprint.component.scss',
 })
+
+/**
+ * Represents an imprint component.
+ */
 export class ImprintComponent {}

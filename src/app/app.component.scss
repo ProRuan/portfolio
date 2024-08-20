@@ -36,9 +36,13 @@
   border-top: 4px solid $prim1;
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1921px) {
   .header {
     left: calc(calc(100% - 1920px) / 2);
+  }
+
+  .footer {
+    width: 1920px;
   }
 }
 
