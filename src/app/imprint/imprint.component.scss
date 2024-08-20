@@ -6,8 +6,12 @@
 }
 
 .content {
-  @include display-column($g: 40px);
+  @include display-column($g: 32px);
   max-width: 680px;
+}
+
+.title {
+  @include font(40px, 700, 48px);
 }
 
 .imprint {
@@ -24,10 +28,6 @@
     padding: 156px 48px 48px 48px;
     min-height: calc(100vh - 204px);
   }
-
-  .content {
-    gap: 32px;
-  }
 }
 
 @media (max-width: 768px) {
@@ -37,11 +37,5 @@
 
   .content {
     gap: 24px;
-  }
-}
-
-@media (max-width: 332px) {
-  .content {
-    gap: 20px;
   }
 }
