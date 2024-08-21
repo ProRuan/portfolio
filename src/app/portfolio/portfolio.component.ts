@@ -38,7 +38,7 @@ export class PortfolioComponent {
       Help the knight to collect items and unlock the key capability
       to defeat the shaman.
       `,
-      link: 'https://rudolf-sachslehner.developerakademie.net/portfolio-raising-fantasy/',
+      link: 'http://raising-fantasy.rudolf-sachslehner.eu/',
       github: 'https://github.com/ProRuan/portfolio-raising-fantasy',
     },
   ];
