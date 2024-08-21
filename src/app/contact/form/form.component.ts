@@ -26,7 +26,7 @@ export class FormComponent {
 
   emailPat = /[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}/;
   firstCheck = true;
-  mailTest = true;
+  mailTest = false;
   sent = false;
   contact: Contact = { name: '', email: '', message: '' };
   classes: Contact = { name: '', email: '', message: '' };
