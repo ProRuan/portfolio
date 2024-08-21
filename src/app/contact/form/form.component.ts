@@ -5,11 +5,18 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { LanguageService } from '../../shared/services/language.service';
 import { Contact } from '../../shared/interfaces/contact';
 import { Checklist } from '../../shared/interfaces/checklist';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-form',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [
+    FormsModule,
+    CommonModule,
+    RouterOutlet,
+    RouterLink,
+    RouterLinkActive,
+  ],
   templateUrl: './form.component.html',
   styleUrl: './form.component.scss',
 })
