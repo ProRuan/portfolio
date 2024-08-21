@@ -5,11 +5,13 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { LanguageService } from '../../shared/services/language.service';
 import { Contact } from '../../shared/interfaces/contact';
 import { Checklist } from '../../shared/interfaces/checklist';
+import { RouterLink } from '@angular/router';
+import { LinkService } from '../../shared/services/link.service';
 
 @Component({
   selector: 'app-form',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, RouterLink],
   templateUrl: './form.component.html',
   styleUrl: './form.component.scss',
 })
@@ -18,7 +20,9 @@ import { Checklist } from '../../shared/interfaces/checklist';
  * Represents a form component.
  */
 export class FormComponent {
-  http = inject(HttpClient);
+  http: HttpClient = inject(HttpClient);
+  langData: LanguageService = inject(LanguageService);
+  linkData: LinkService = inject(LinkService);
 
   emailPat = /[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}/;
   firstCheck = true;
@@ -32,12 +36,6 @@ export class FormComponent {
     message: false,
     checkbox: false,
   };
-
-  /**
-   * Creates a form component.
-   * @param langData - The language data to apply.
-   */
-  constructor(private langData: LanguageService) {}
 
   post = {
     endPoint: 'https://deineDomain.de/sendMail.php',

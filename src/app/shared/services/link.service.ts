@@ -86,9 +86,9 @@ export class LinkService {
   }
 
   /**
-   * Scrolls to the top position.
+   * Scrolls to the top scroll position.
    */
-  scrollToTop() {
+  top() {
     window.scrollTo(0, 0);
   }
 
