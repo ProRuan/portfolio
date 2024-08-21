@@ -38,7 +38,7 @@ export class FormComponent {
   };
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://rudolf-sachslehner.eu/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
