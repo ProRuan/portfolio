@@ -212,7 +212,7 @@ export class FormComponent {
       error: (error) => {
         console.error(error);
       },
-      complete: () => console.info('send post complete'),
+      complete: () => this.confirm(),
     });
   }
 
@@ -223,7 +223,6 @@ export class FormComponent {
   resetForm(ngForm: NgForm) {
     ngForm.resetForm();
     this.resetStyle();
-    this.confirm();
   }
 
   /**
@@ -265,7 +264,7 @@ export class FormComponent {
     this.sent = true;
     setTimeout(() => {
       this.sent = false;
-    }, 2000);
+    }, 3000);
   }
 
   /**
