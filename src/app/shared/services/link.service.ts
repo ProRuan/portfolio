@@ -86,6 +86,13 @@ export class LinkService {
   }
 
   /**
+   * Scrolls to the top position.
+   */
+  scrollToTop() {
+    window.scrollTo(0, 0);
+  }
+
+  /**
    * Redirects to a website.
    * @param path - The path of the website.
    */
