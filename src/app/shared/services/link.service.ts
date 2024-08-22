@@ -10,6 +10,7 @@ import { LanguageService } from './language.service';
  * Represents a link service.
  */
 export class LinkService {
+  dialogOpened: boolean = false;
   menuOpened: boolean = false;
 
   links: Link[] = [

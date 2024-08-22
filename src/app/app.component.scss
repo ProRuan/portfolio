@@ -1,5 +1,17 @@
 @import "../styles.scss";
 
+.dialog {
+  @include size(100%, 100vh);
+  @include display-flex();
+  @include position($p: fixed, $l: 0, $t: 0);
+  background-color: rgba(20, 29, 47, 0.8);
+  z-index: 100;
+}
+
+.hide {
+  display: none;
+}
+
 .header {
   @include width(100%, 1920px);
   @include display-flex($jc: space-between);

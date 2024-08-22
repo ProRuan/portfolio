@@ -5,6 +5,7 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { MenuComponent } from './shared/components/menu/menu.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { LinkService } from './shared/services/link.service';
+import { DialogComponent } from './dialog/dialog.component';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +16,7 @@ import { LinkService } from './shared/services/link.service';
     HeaderComponent,
     MenuComponent,
     FooterComponent,
+    DialogComponent,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss', '../../src/assets/fonts/font-face.scss'],
@@ -31,6 +33,21 @@ export class AppComponent {
    * @param linkData - The link data to apply.
    */
   constructor(private linkData: LinkService) {}
+
+  /**
+   * Hides the dialog.
+   * @returns - The class to apply.
+   */
+  hideDialog() {
+    return !this.linkData.dialogOpened ? 'hide' : '';
+  }
+
+  /**
+   * Closes the dialog.
+   */
+  closeDialog() {
+    this.linkData.dialogOpened = false;
+  }
 
   /**
    * Flips the menu.

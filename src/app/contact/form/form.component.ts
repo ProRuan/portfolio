@@ -5,13 +5,12 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { LanguageService } from '../../shared/services/language.service';
 import { Contact } from '../../shared/interfaces/contact';
 import { Checklist } from '../../shared/interfaces/checklist';
-import { RouterLink } from '@angular/router';
 import { LinkService } from '../../shared/services/link.service';
 
 @Component({
   selector: 'app-form',
   standalone: true,
-  imports: [FormsModule, CommonModule, RouterLink],
+  imports: [FormsModule, CommonModule],
   templateUrl: './form.component.html',
   styleUrl: './form.component.scss',
 })
@@ -273,5 +272,12 @@ export class FormComponent {
    */
   isMessageSent() {
     return this.sent ? 'show' : '';
+  }
+
+  /**
+   * Opens the dialog of the privacy policy.
+   */
+  openDialog() {
+    this.linkData.dialogOpened = true;
   }
 }
