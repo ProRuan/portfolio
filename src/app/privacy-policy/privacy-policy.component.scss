@@ -22,6 +22,10 @@
   cursor: pointer;
   content: url("../../assets/img/close_button.svg");
 
+  &:hover {
+    content: url("../../assets/img/close_button_blue.svg");
+  }
+
   &:active {
     content: url("../../assets/img/close_transition.svg");
   }
@@ -44,6 +48,16 @@ p {
     max-width: 560px;
   }
 
+  .close-btn {
+    &:hover {
+      content: url("../../assets/img/close_button.svg");
+    }
+
+    &:active {
+      content: url("../../assets/img/close_transition.svg");
+    }
+  }
+
   .title {
     @include font(28px, 700, 33.6px);
   }
@@ -54,8 +68,6 @@ p {
 }
 
 @media (max-width: 768px) {
-  // .content {}
-
   .title {
     @include font(24px, 700, 28.8px);
   }
@@ -76,5 +88,17 @@ p {
 
   h2 {
     @include font(16px, 700, 19.2px);
+  }
+}
+
+@media (max-height: 696px) {
+  .content {
+    max-height: calc(100vh - 216px);
+  }
+}
+
+@media (max-width: 768px) and (max-height: 696px) {
+  .content {
+    max-height: calc(100vh - 156px);
   }
 }

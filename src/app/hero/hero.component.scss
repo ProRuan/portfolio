@@ -344,7 +344,7 @@
   .hero-main {
     height: calc(100% - 40px);
     justify-content: center;
-    gap: 56px;
+    gap: 40px;
   }
 
   .hero-box {
@@ -380,7 +380,7 @@
   }
 }
 
-@media (max-height: 648px) {
+@media (max-height: 667px) {
   .hero-box {
     @include size(200px, 200px);
   }
@@ -394,7 +394,7 @@
   }
 }
 
-@media (max-height: 600px) {
+@media (max-height: 616px) {
   .hero-box {
     @include size(160px, 160px);
   }
@@ -408,7 +408,7 @@
   }
 }
 
-@media (max-height: 568px) {
+@media (max-height: 591px) {
   .hero-box {
     display: none;
   }
@@ -420,7 +420,7 @@
   }
 }
 
-@media (max-height: 568px) {
+@media (max-height: 399px) {
   .text-button-box {
     gap: 20px;
   }
