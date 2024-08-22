@@ -20,6 +20,11 @@
   @include size(30px, 27.72px);
   @include position($p: absolute, $t: 24px, $r: 24px);
   cursor: pointer;
+  content: url("../../assets/img/close_button.svg");
+
+  &:active {
+    content: url("../../assets/img/close_transition.svg");
+  }
 }
 
 .subcontent {
