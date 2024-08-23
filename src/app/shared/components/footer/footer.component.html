@@ -16,9 +16,9 @@
 <span class="copyright">&#169; Rudolf Sachslehner 2024</span>
 
 <div class="social-button-group">
-    <button class="social-btn git-hub-btn l-0" (click)="linkData.redirect('https://github.com/')"></button>
+    <button class="social-btn git-hub-btn l-0" (click)="linkData.redirect(linkData.gitHub)"></button>
     <button class="social-btn email-btn l-72" (click)="linkData.scroll('#contact')"></button>
-    <button class="social-btn linked-in-btn l-144" (click)="linkData.redirect('https://www.linkedin.com/')"></button>
+    <button class="social-btn linked-in-btn l-144" (click)="linkData.redirect(linkData.linkedIn)"></button>
 </div>
 
 <a class="imprint-link mobile" routerLink="imprint" (click)="linkData.top()">

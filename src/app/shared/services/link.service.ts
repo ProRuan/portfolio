@@ -12,6 +12,9 @@ import { LanguageService } from './language.service';
 export class LinkService {
   dialogOpened: boolean = false;
   menuOpened: boolean = false;
+  gitHub = 'https://github.com/ProRuan';
+  linkedIn =
+    'https://www.linkedin.com/in/rudolf-johann-sachslehner-898798311?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B%2Fw7UHFkaT5uhIuSXMPk5SA%3D%3D';
 
   links: Link[] = [
     { href: '#about-me', text: 'About me', clicked: false },
