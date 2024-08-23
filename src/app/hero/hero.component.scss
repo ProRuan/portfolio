@@ -335,12 +335,42 @@
 }
 
 @media (min-height: 912px) {
+  .hero-box {
+    max-height: 690px;
+  }
+
   .bg {
     top: 476px;
   }
 }
 
+@media (max-width: 1280px) and (min-height: 912px) {
+  .hero-box {
+    max-height: 474.41px;
+  }
+
+  .bg {
+    top: 436px;
+  }
+}
+
+@media (max-width: 768px) and (min-height: 912px) {
+  .bg {
+    top: 394px;
+  }
+}
+
 @media (max-height: 910px) {
+  .hero-box {
+    max-height: 604px;
+  }
+
+  .bg {
+    top: 436px;
+  }
+}
+
+@media (max-width: 1280px) and (max-height: 910px) {
   .hero-main {
     height: calc(100% - 40px);
     justify-content: center;
@@ -362,6 +392,21 @@
 }
 
 @media (max-height: 800px) {
+  .img {
+    @include size(255px, 255px);
+    box-sizing: border-box;
+    content: url("../../assets/img/profile.png");
+    border: 3px solid $prim1;
+    border-radius: 50%;
+    left: 0;
+  }
+
+  .bg {
+    top: 356px;
+  }
+}
+
+@media (max-width: 1280px) and (max-height: 800px) {
   .hero-box {
     @include size(255px, 255px);
   }
@@ -380,7 +425,7 @@
   }
 }
 
-@media (max-height: 667px) {
+@media (max-width: 1280px) and (max-height: 667px) {
   .hero-box {
     @include size(200px, 200px);
   }
@@ -394,7 +439,7 @@
   }
 }
 
-@media (max-height: 616px) {
+@media (max-width: 1280px) and (max-height: 616px) {
   .hero-box {
     @include size(160px, 160px);
   }
@@ -414,9 +459,27 @@
   }
 }
 
-@media (max-width: 1280px) and (min-height: 912px) {
-  .bg {
-    top: 540px;
+@media (min-width: 769px) and (max-height: 440px) {
+  .text {
+    height: 74px;
+    gap: 12px;
+  }
+
+  .vert-text {
+    @include max-size(28px, 66px);
+  }
+
+  .me-text {
+    @include min-size(66px, 28px);
+    @include font(28px, 400, 33.6px);
+  }
+
+  .name {
+    @include font(40px, 700, 48px);
+  }
+
+  .occupation {
+    @include font(27px, 400, 32.4px);
   }
 }
 
