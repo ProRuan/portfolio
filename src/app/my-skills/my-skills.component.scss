@@ -29,7 +29,7 @@
 .exp-text {
   @include font(16px, 400, 19.2px);
   width: 471px;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .skill-button-box {
@@ -44,7 +44,7 @@
 .another-skill-title {
   @include font(32px, 700, 38.4px);
   margin: 0;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .break {
@@ -54,7 +54,7 @@
 .another-skill-text {
   @include font(16px, 400, 19.2px);
   margin: 0;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .shadow {

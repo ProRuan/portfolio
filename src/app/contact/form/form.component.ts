@@ -196,6 +196,7 @@ export class FormComponent {
       this.sendPost(ngForm);
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       this.resetForm(ngForm);
+      this.confirm();
     }
   }
 

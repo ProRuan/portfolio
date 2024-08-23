@@ -102,6 +102,7 @@ textarea {
 
 .contact-textarea {
   @include contact-input(202px);
+  max-width: 617px;
 
   &::-webkit-resizer {
     background-image: url("../../../assets/img/resizer.svg");
@@ -165,6 +166,12 @@ textarea {
   opacity: 1;
 }
 
+@media (max-width: 1439px) {
+  .contact-textarea {
+    max-width: 526px;
+  }
+}
+
 @media (max-width: 1280px) {
   .form-box {
     gap: 12px;
@@ -202,6 +209,7 @@ textarea {
   .contact-textarea {
     height: 162px;
     min-height: 162px;
+    resize: none;
   }
 
   .privacy-policy-line {
