@@ -93,6 +93,14 @@
     width: 342px;
   }
 
+  .title {
+    @include font(28px, 700, 33.6px);
+  }
+
+  .skills {
+    @include font(20px, 400, 24px);
+  }
+
   .content {
     @include width(100%, 340px);
   }

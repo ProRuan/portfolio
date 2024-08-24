@@ -98,10 +98,10 @@ export class LanguageService {
   };
 
   german = {
-    links: ['Über mich', 'Fertigkeiten', 'Portfolio', 'Kontakt'],
+    links: ['Über mich', 'Skills', 'Portfolio', 'Kontakt'],
     heroButton: 'Auf geht´s!',
     scrollHint: 'Scrollen',
-    headlines: ['Über mich', 'Fertigkeiten', 'Portfolio', 'Kontakt'],
+    headlines: ['Über mich', 'Skills', 'Portfolio', 'Kontakt'],
     introText: `
       Ich bin ein Frontend-Webentwickler im Zentrum von Niederösterreich.
       Meine Mission lautet, meine Programmier-Fertigkeiten zu nutzen,
@@ -126,7 +126,7 @@ export class LanguageService {
       Bei der Umsetzung meiner Projekte konnte ich
       verschiedene Technologien und Konzepte anwenden.
     `,
-    anotherSkill: ['Sie brauchen', 'andere Fertigkeiten'],
+    anotherSkill: ['Sie brauchen', 'andere Skills'],
     anotherText: `
       Lassen Sie es mich wissen.
       Ich freue mich darauf, mein Wissen zu erweitern.

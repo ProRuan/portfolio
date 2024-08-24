@@ -26,7 +26,7 @@ export class PortfolioComponent {
       Create and organize tasks using drag and drop functions,
       assign users and categories.
       `,
-      link: 'http://join.rudolf-sachslehner.eu/',
+      link: 'https://join.rudolf-sachslehner.eu/',
       github: 'https://github.com/ProRuan/portfolio-join',
     },
     {
@@ -38,7 +38,7 @@ export class PortfolioComponent {
       Help the knight to collect items and unlock the key capability
       to defeat the shaman.
       `,
-      link: 'http://raising-fantasy.rudolf-sachslehner.eu/',
+      link: 'https://raising-fantasy.rudolf-sachslehner.eu/',
       github: 'https://github.com/ProRuan/portfolio-raising-fantasy',
     },
   ];
