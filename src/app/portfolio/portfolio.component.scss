@@ -6,16 +6,8 @@
   gap: 32px;
 }
 
-.left-line {
-  content: url("../../assets/img/portfolio_left_line.svg");
-}
-
 .ta-center {
   text-align: center;
-}
-
-.right-line {
-  content: url("../../assets/img/portfolio_right_line.svg");
 }
 
 .content {
@@ -41,6 +33,10 @@
   transform: scale(-1, 1) rotate(110deg);
 }
 
+.mobile {
+  display: none;
+}
+
 @media (max-width: 1439px) {
   .project-group {
     width: 1064px;
@@ -50,14 +46,6 @@
 @media (max-width: 1280px) {
   .title-box {
     gap: 16px;
-  }
-
-  .left-line {
-    content: url("../../assets/img/portfolio_left_line_mobile.svg");
-  }
-
-  .right-line {
-    content: url("../../assets/img/portfolio_right_line_mobile.svg");
   }
 
   .hint-text {
@@ -78,6 +66,14 @@
     width: 718.4px;
     right: -400px;
     bottom: -280px;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: unset;
   }
 }
 

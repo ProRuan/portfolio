@@ -89,10 +89,6 @@
   gap: 32px;
 }
 
-.vector {
-  content: url("../../assets/img/mail_vector.svg");
-}
-
 .hero-email {
   @include font();
   cursor: pointer;
@@ -106,6 +102,10 @@
 
 .scroll-hint {
   writing-mode: vertical-lr;
+}
+
+.mobile {
+  display: none;
 }
 
 @media (max-width: 1779px) {
@@ -233,6 +233,14 @@
   .scroll-hint-box {
     display: none;
   }
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: unset;
+  }
 }
 
 @media (max-width: 768px) {
@@ -272,10 +280,6 @@
 
   .occupation {
     @include font(27px, 400, 32.4px);
-  }
-
-  .vector {
-    content: url("../../assets/img/mail_vector_mobile.svg");
   }
 }
 

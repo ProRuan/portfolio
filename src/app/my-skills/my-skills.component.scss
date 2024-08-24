@@ -13,7 +13,7 @@
 }
 
 .title-vector-box {
-  display: flex;
+  @include display-flex($jc: flex-start);
   gap: 32px;
 }
 
