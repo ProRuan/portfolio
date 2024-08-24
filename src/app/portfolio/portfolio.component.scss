@@ -36,8 +36,9 @@
 }
 
 .shadow {
-  @include position($p: absolute, $r: 0, $b: -360px);
+  @include position($p: absolute, $r: -500px, $b: -340px);
   z-index: -1;
+  transform: scale(-1, 1) rotate(110deg);
 }
 
 @media (max-width: 1439px) {
@@ -74,8 +75,8 @@
   }
 
   .shadow {
-    width: 299.2px;
-    right: -80px;
+    width: 718.4px;
+    right: -400px;
     bottom: -280px;
   }
 }

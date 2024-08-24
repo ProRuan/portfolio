@@ -60,7 +60,8 @@
 }
 
 .shadow {
-  @include position($p: absolute, $l: -420px, $b: -420px);
+  @include position($p: absolute, $l: -420px, $b: -295px);
+  width: 960px;
   z-index: -1;
 }
 
@@ -124,7 +125,7 @@
   .shadow {
     width: 867.2px;
     left: -400px;
-    bottom: -460px;
+    bottom: -384px;
   }
 }
 
