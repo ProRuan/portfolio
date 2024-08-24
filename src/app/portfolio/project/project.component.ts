@@ -26,8 +26,8 @@ export class ProjectComponent {
     skills: 'Angular | TypeScript | HTML | CSS | Firebase',
     description:
       'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-    link: 'https://join-43.developerakademie.net/join-43/login.html',
-    github: 'https://github.com/joNsiii/join-group',
+    link: 'http://join.rudolf-sachslehner.eu/',
+    github: 'https://github.com/ProRuan/portfolio-join',
   };
 
   /**

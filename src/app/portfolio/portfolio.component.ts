@@ -26,7 +26,7 @@ export class PortfolioComponent {
       Create and organize tasks using drag and drop functions,
       assign users and categories.
       `,
-      link: 'https://rudolf-sachslehner.developerakademie.net/portfolio-join/login.html',
+      link: 'http://join.rudolf-sachslehner.eu/',
       github: 'https://github.com/ProRuan/portfolio-join',
     },
     {
