@@ -1,7 +1,12 @@
 @import "../../styles.scss";
 
 .main {
+  @include display-flex($ai: flex-start);
+}
+
+.content {
   max-width: 1920px;
+  width: 100%;
   position: relative;
   overflow: clip;
 }
@@ -38,12 +43,6 @@
   @include display-column($g: 40px);
   padding: 156px 100px 90px 0;
   position: relative;
-}
-
-@media (min-width: 1921px) {
-  .main {
-    width: 1920px;
-  }
 }
 
 @media (max-width: 1439px) {
