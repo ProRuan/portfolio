@@ -1,15 +1,12 @@
 @import "../../styles.scss";
 
 .hero-main {
+  @include size(100%, 100%);
   @include display-flex($jc: flex-start);
-  height: 100%;
 }
 
 .hero-box {
-  margin: 24px 0 0 48px;
-  width: 646px;
-  height: calc(100% - 24px);
-  max-height: 690px;
+  @include min-size(470px, 705px);
   position: relative;
 }
 
@@ -21,17 +18,18 @@
 
 .shadow {
   @include position($p: relative, $t: 96px);
+  width: 720px;
   z-index: -1;
 }
 
 .img {
   @include position($p: relative, $l: 12px);
-  height: 110%;
+  object-fit: contain;
   z-index: -1;
 }
 
 .bg {
-  @include position($p: relative, $l: -48px, $t: 476px);
+  @include position($p: relative, $l: -100px, $t: 448px);
   min-width: 1920px;
   z-index: -1;
 }
@@ -42,7 +40,6 @@
 
 .text-button-box {
   @include display-column($ai: center);
-  margin-left: -24px;
 }
 
 .text {
@@ -89,6 +86,16 @@
   gap: 32px;
 }
 
+.vector-box {
+  @include size(0, 40px);
+  @include display-flex($jc: flex-end);
+  position: relative;
+}
+
+.vector {
+  @include position($p: absolute, $t: 20px, $r: 0);
+}
+
 .hero-email {
   @include font();
   cursor: pointer;
@@ -108,21 +115,9 @@
   display: none;
 }
 
-@media (max-width: 1779px) {
+@media (max-width: 1800px) {
   .hero-main {
-    gap: 35px;
-  }
-
-  .hero-box {
-    width: 440px;
-  }
-
-  .bg {
-    left: -158px;
-  }
-
-  .text-button-box {
-    margin-left: 0;
+    gap: 24px;
   }
 
   .text {
@@ -148,19 +143,7 @@
   }
 }
 
-@media (max-width: 1451px) {
-  .hero-main {
-    gap: 48px;
-  }
-
-  .hero-box {
-    width: 380px;
-  }
-
-  .bg {
-    left: -198px;
-  }
-
+@media (max-width: 1560px) {
   .text {
     height: 109px;
     gap: 16px;
@@ -184,26 +167,7 @@
   }
 }
 
-@media (max-width: 1280px) {
-  .hero-main {
-    @include display-column($jc: center, $ai: center, $g: 24px);
-    width: 100%;
-  }
-
-  .hero-box {
-    margin: 24px 0 0 0;
-  }
-
-  .shadow {
-    width: 720px;
-  }
-
-  .bg {
-    min-width: 2550px;
-    left: -448px;
-    top: 436px;
-  }
-
+@media (max-width: 1360px) {
   .text {
     height: 89px;
     gap: 14px;
@@ -225,39 +189,29 @@
   .occupation {
     @include font(32px, 400, 38.4px);
   }
-
-  .hero-email {
-    display: none;
-  }
-
-  .scroll-hint-box {
-    display: none;
-  }
-
-  .desktop {
-    display: none;
-  }
-
-  .mobile {
-    display: unset;
-  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1280px) {
   .hero-main {
-    gap: 0;
+    @include display-column($jc: center, $ai: center, $g: 24px);
+  }
+
+  .hero-box {
+    @include min-size(300px, 450px);
   }
 
   .shadow {
-    width: 640px;
+    width: 576px;
   }
 
   .img {
-    height: 90%;
+    @include size(100%, 100%);
   }
 
   .bg {
-    top: 414px;
+    min-width: 2550px;
+    left: -448px;
+    top: 400px;
   }
 
   .text {
@@ -281,13 +235,25 @@
   .occupation {
     @include font(27px, 400, 32.4px);
   }
-}
 
-@media (max-width: 502px) {
-  .bg {
-    top: 422px;
+  .hero-email {
+    display: none;
   }
 
+  .scroll-hint-box {
+    display: none;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: unset;
+  }
+}
+
+@media (max-width: 768px) {
   .text {
     height: 50px;
     gap: 10px;
@@ -311,11 +277,7 @@
   }
 }
 
-@media (max-width: 356px) {
-  .bg {
-    top: 428px;
-  }
-
+@media (max-width: 390px) {
   .text {
     height: 37px;
     gap: 8px;
