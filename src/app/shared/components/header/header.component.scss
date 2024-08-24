@@ -1,5 +1,12 @@
 @import "../../../../styles.scss";
 
+.header {
+  @include width(100%, 1920px);
+  @include display-flex($jc: space-between);
+  box-sizing: border-box;
+  padding: 37px 100px;
+}
+
 .logo {
   @include font(35px, bold, 35px);
   letter-spacing: 1px;
@@ -38,7 +45,17 @@
   }
 }
 
+@media (max-width: 1920px) {
+  .header {
+    padding: 37px 48px;
+  }
+}
+
 @media (max-width: 768px) {
+  .header {
+    padding: 37px 24px;
+  }
+
   .link-group {
     display: none;
   }

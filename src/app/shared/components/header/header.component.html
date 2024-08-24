@@ -1,15 +1,17 @@
-<a class="logo" href="#top" (click)="resetMenu()">
-    <span>R</span>
-    <span class="c-prim-2">u</span>
-    <span class="c-prim-1">d</span>
-    <span>o</span>
-    <span>l</span>
-    <span>f</span>
-</a>
+<header class="header">
+    <a class="logo" href="#top" (click)="resetMenu()">
+        <span>R</span>
+        <span class="c-prim-2">u</span>
+        <span class="c-prim-1">d</span>
+        <span>o</span>
+        <span>l</span>
+        <span>f</span>
+    </a>
 
-<div class="link-group">
-    <app-link *ngFor="let link of links, index as i" [link]="link" (click)="linkData.highlight(link)"></app-link>
-    <button class="lang-btn" (click)="changeLang()">{{ lang }}</button>
-</div>
+    <div class="link-group">
+        <app-link *ngFor="let link of links, index as i" [link]="link" (click)="linkData.highlight(link)"></app-link>
+        <button class="lang-btn" (click)="changeLang()">{{ lang }}</button>
+    </div>
 
-<img class="menu-btn" (click)="flipMenu()" [ngClass]="getAttribute()" [alt]="getAttribute()">
+    <img class="menu-btn" (click)="flipMenu()" [ngClass]="getAttribute()" [alt]="getAttribute()">
+</header>
