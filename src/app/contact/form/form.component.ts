@@ -229,11 +229,21 @@ export class FormComponent {
    * Resets the style of the form.
    */
   resetStyle() {
-    this.classes.name = '';
-    this.classes.email = '';
-    this.classes.message = '';
     this.firstCheck = true;
-    this.checklist.checkbox = false;
+    this.resetObject(this.contact, '');
+    this.resetObject(this.classes, '');
+    this.resetObject(this.checklist, false);
+  }
+
+  /**
+   * Resets an object.
+   * @param object - The object to reset.
+   * @param value - The value to set.
+   */
+  resetObject(object: Contact | Checklist, value: string | boolean) {
+    for (const [key] of Object.entries(object)) {
+      object[key] = value;
+    }
   }
 
   /**
