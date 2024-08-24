@@ -19,7 +19,7 @@
 
 .about-me {
   @include display-flex($jc: flex-start);
-  padding: 156px 0 24px 100px;
+  padding: 156px 100px 24px 100px;
   gap: 149px;
   position: relative;
 }
@@ -60,7 +60,7 @@
   }
 
   .about-me {
-    padding: 132px 24px 24px 24px;
+    padding: 132px 48px 24px 48px;
     justify-content: center;
   }
 
@@ -83,6 +83,10 @@
 @media (max-width: 768px) {
   .hero {
     padding: 109px 24px 24px 24px;
+  }
+
+  .about-me {
+    padding: 132px 24px 24px 24px;
   }
 }
 
