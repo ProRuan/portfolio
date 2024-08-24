@@ -92,14 +92,8 @@
   }
 }
 
-@media (max-height: 910px) {
+@media (max-height: 600px) {
   .hero {
     gap: 0;
-  }
-}
-
-@media (max-height: 800px) {
-  .hero {
-    align-items: center;
   }
 }
