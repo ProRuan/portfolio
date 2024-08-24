@@ -25,10 +25,10 @@
 }
 
 .my-skills {
-  @include display-flex(flex-end, flex-start);
-  padding: 156px 0 24px 100px;
+  @include display-flex(flex-start, flex-start);
+  padding: 156px 100px 24px 100px;
   min-height: 404px;
-  gap: 88px;
+  gap: 105px;
   position: relative;
 }
 
@@ -66,7 +66,7 @@
 
   .my-skills {
     @include display-column($ai: center, $g: 24px);
-    padding: 132px 0 24px 0;
+    padding: 132px 48px 24px 48px;
   }
 
   .portfolio {
@@ -86,6 +86,10 @@
   }
 
   .about-me {
+    padding: 132px 24px 24px 24px;
+  }
+
+  .my-skills {
     padding: 132px 24px 24px 24px;
   }
 }

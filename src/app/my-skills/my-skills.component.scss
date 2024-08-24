@@ -14,16 +14,24 @@
 
 .title-vector-box {
   @include display-flex($jc: flex-start);
-  gap: 32px;
 }
 
 .w-395 {
   width: 395px;
 }
 
+.vector-box {
+  @include size(0, 40px);
+  @include display-flex($jc: flex-start);
+  position: relative;
+}
+
+.vector {
+  @include position($p: absolute, $l: 32px, $t: 18px);
+}
+
 .another-skill-box {
   @include display-column($ai: flex-end, $g: 24px);
-  padding-right: 100px;
 }
 
 .exp-text {
@@ -90,9 +98,11 @@
 
   .title-vector-box {
     box-sizing: border-box;
-    padding-left: 40px;
     justify-content: flex-end;
-    gap: 16px;
+  }
+
+  .vector {
+    @include position($p: absolute, $l: 16px, $t: 18px);
   }
 
   .desktop {
@@ -110,19 +120,17 @@
   .exp-text {
     @include width(100%, 418px);
     box-sizing: border-box;
-    padding: 0 40px;
   }
 
   .skill-group {
     @include width(100%, 576px);
     box-sizing: border-box;
-    padding: 0 24px;
     justify-content: center;
     gap: 41px 39px;
   }
 
   .another-skill-box {
-    padding: 8px 24px 0 24px;
+    padding: 8px 0 0 0;
   }
 
   .skill-button-box {
@@ -143,6 +151,14 @@
 }
 
 @media (max-width: 768px) {
+  .headline-2 {
+    padding-right: 16px;
+  }
+
+  .vector {
+    left: 0;
+  }
+
   .another-skill-title {
     @include font(24px, 700, 28.8px);
   }
