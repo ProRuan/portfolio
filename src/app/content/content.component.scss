@@ -34,7 +34,7 @@
 
 .portfolio {
   @include display-column($ai: flex-end, $g: 40px);
-  padding: 156px 0 24px 100px;
+  padding: 156px 100px 24px 100px;
   position: relative;
 }
 
@@ -70,7 +70,7 @@
   }
 
   .portfolio {
-    padding: 132px 0 24px 24px;
+    padding: 132px 48px 24px 48px;
     gap: 32px;
   }
 
@@ -90,6 +90,10 @@
   }
 
   .my-skills {
+    padding: 132px 24px 24px 24px;
+  }
+
+  .portfolio {
     padding: 132px 24px 24px 24px;
   }
 }

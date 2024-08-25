@@ -1,19 +1,37 @@
 @import "../../styles.scss";
 
 .title-box {
-  @include display-flex($jc: flex-end);
-  width: fit-content;
-  gap: 32px;
+  @include display-flex();
+  width: 100%;
 }
 
 .ta-center {
   text-align: center;
 }
 
+.left-vector-box {
+  @include size(0, 40px);
+  @include display-flex($jc: flex-end);
+  position: relative;
+}
+
+.left-vector {
+  @include position($p: absolute, $t: 18px, $r: 32px);
+}
+
+.right-vector-box {
+  @include size(0, 40px);
+  @include display-flex($jc: flex-start);
+  position: relative;
+}
+
+.right-vector {
+  @include position($p: absolute, $t: 18px, $l: 32px);
+}
+
 .content {
   @include display-column($ai: center, $g: 32px);
   box-sizing: border-box;
-  padding-right: 100px;
   width: 100%;
 }
 
@@ -44,8 +62,12 @@
 }
 
 @media (max-width: 1280px) {
-  .title-box {
-    gap: 16px;
+  .left-vector {
+    right: 16px;
+  }
+
+  .right-vector {
+    left: 16px;
   }
 
   .hint-text {
@@ -53,7 +75,6 @@
   }
 
   .content {
-    padding-right: 24px;
     gap: 24px;
   }
 
