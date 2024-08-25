@@ -4,7 +4,7 @@
             <img class="shadow" src="../../assets/img/hero_shadow.svg" alt="shadow">
         </div>
         <div class="hero-subbox">
-            <img data-aos="fade-right" class="img" src="../../assets/img/hero.png" alt="image">
+            <img class="img" src="../../assets/img/hero.png" alt="image">
         </div>
         <div class="hero-subbox jc-start">
             <img class="bg" src="../../assets/img/hero_bg.svg" alt="background">
@@ -12,7 +12,7 @@
     </div>
 
     <article class="text-button-box">
-        <div class="text">
+        <div data-aos="fade-left" class="text">
             <div class="vert-text">
                 <span class="me-text">I am</span>
             </div>
@@ -22,7 +22,8 @@
             </div>
         </div>
 
-        <button id="hero-btn" class="prim-btn" (click)="linkData.scroll('#contact')">{{ print().heroButton }}</button>
+        <button data-aos="fade-up-left" id="hero-btn" class="prim-btn" (click)="linkData.scroll('#contact')">{{
+            print().heroButton }}</button>
     </article>
 </div>
 
