@@ -40,7 +40,7 @@
 
 .contact {
   @include display-column($g: 40px);
-  padding: 156px 100px 90px 0;
+  padding: 156px 100px 90px 100px;
   position: relative;
 }
 
@@ -75,7 +75,7 @@
   }
 
   .contact {
-    padding: 132px 24px 48px 0;
+    padding: 132px 48px 48px 48px;
     gap: 32px;
   }
 }
@@ -95,6 +95,10 @@
 
   .portfolio {
     padding: 132px 24px 24px 24px;
+  }
+
+  .contact {
+    padding: 132px 24px 48px 24px;
   }
 }
 
