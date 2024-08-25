@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { LinkService } from '../../services/link.service';
 import { RouterLink } from '@angular/router';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-footer',
@@ -14,9 +15,14 @@ import { RouterLink } from '@angular/router';
  * Represents a footer component.
  */
 export class FooterComponent {
+  linkData: LinkService = inject(LinkService);
+  langData: LanguageService = inject(LanguageService);
+
   /**
-   * Creates a footer component.
-   * @param linkData - The link data to apply.
+   * Prints the text based on the set language.
+   * @returns - The text to print.
    */
-  constructor(public linkData: LinkService) {}
+  print() {
+    return this.langData.get();
+  }
 }

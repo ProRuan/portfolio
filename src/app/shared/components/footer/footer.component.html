@@ -9,7 +9,7 @@
             <span>f</span>
         </a>
         <a class="imprint-link desktop" routerLink="imprint" (click)="linkData.top()">
-            <span>Impressum</span>
+            <span>{{ print().imprint }}</span>
             <img src="../../../../assets/img/imprint_underline.svg" alt="underline">
         </a>
     </div>
@@ -23,7 +23,7 @@
     </div>
 
     <a class="imprint-link mobile" routerLink="imprint" (click)="linkData.top()">
-        <span>Impressum</span>
+        <span>{{ print().imprint }}</span>
         <img src="../../../../assets/img/imprint_underline.svg" alt="underline">
     </a>
 </footer>

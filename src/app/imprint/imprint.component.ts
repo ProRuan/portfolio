@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { LanguageService } from '../shared/services/language.service';
 
 @Component({
   selector: 'app-imprint',
@@ -11,4 +12,14 @@ import { Component } from '@angular/core';
 /**
  * Represents an imprint component.
  */
-export class ImprintComponent {}
+export class ImprintComponent {
+  langData: LanguageService = inject(LanguageService);
+
+  /**
+   * Prints the text based on the set language.
+   * @returns - The text to print.
+   */
+  print() {
+    return this.langData.get();
+  }
+}

@@ -1,13 +1,13 @@
 <main class="main">
     <article class="content">
-        <h2 class="title">Impressum</h2>
+        <h2 class="title">{{ print().imprint }}</h2>
 
         <section class="imprint">
             <address class="address">
                 Rudolf Johann Sachslehner<br>
                 Wiener Straße 6-8/1/21<br>
                 3430 Tulln an der Donau<br>
-                Österreich
+                {{ print().state }}
             </address>
 
             <p>
@@ -15,15 +15,11 @@
                 E-Mail: <a href="mailto:rudolf.sachslehner@gmx.at">rudolf.sachslehner&#64;gmx.at</a>
             </p>
 
-            <p>Plattform der EU-Kommission zur Online-Streitbeilegung:
+            <p>{{ print().platform }}:
                 <a href="https://ec.europa.eu/odr" target="_blank">https://ec.europa.eu/odr</a>
             </p>
 
-            <p>
-                Wir sind zur Teilnahme an einem Streitbeilegungsverfahren
-                vor einer Verbraucherschlichtungsstelle weder
-                verpflichtet noch bereit.
-            </p>
+            <p>{{ print().term }}</p>
         </section>
     </article>
 </main>

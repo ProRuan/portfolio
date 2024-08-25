@@ -95,6 +95,14 @@ export class LanguageService {
     checkHint: 'Please accept the privacy policy.',
     confirmation: 'Thank you for your message!',
     submitButton: 'Send message :)',
+    imprint: 'Imprint',
+    state: 'Austria',
+    platform:
+      'The official website of the European Commission for the Online Dispute Resolution',
+    term: `
+      We are neither obliged or willing to participate in a dispute resolution procedure 
+      before a consumer arbitration board.
+    `,
   };
 
   german = {
@@ -181,6 +189,13 @@ export class LanguageService {
     checkHint: 'Bitte akzeptieren Sie die Datenschutzerklärung.',
     confirmation: 'Vielen Dank für Ihre Nachricht!',
     submitButton: 'Nachricht senden :)',
+    imprint: 'Impressum',
+    state: 'Österreich',
+    platform: 'Plattform der EU-Kommission zur Online-Streitbeilegung',
+    term: `
+        Wir sind zur Teilnahme an einem Streitbeilegungsverfahren
+        vor einer Verbraucherschlichtungsstelle weder verpflichtet noch bereit.
+      `,
   };
 
   /**

@@ -2,7 +2,7 @@
 
 .main {
   @include display-flex($ai: flex-start);
-  min-height: 100vh;
+  min-height: calc(100vh - 295px);
 }
 
 .content {
@@ -10,7 +10,6 @@
   @include display-column($g: 32px);
   box-sizing: border-box;
   padding: 180px 100px 90px 100px;
-  min-height: calc(100vh - 270px);
 }
 
 .title {
@@ -28,9 +27,12 @@
 }
 
 @media (max-width: 1280px) {
+  .main {
+    min-height: calc(100vh - 384px);
+  }
+
   .content {
     padding: 156px 48px 48px 48px;
-    min-height: calc(100vh - 204px);
   }
 }
 
