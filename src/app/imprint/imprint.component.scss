@@ -2,6 +2,7 @@
 
 .main {
   @include display-flex($ai: flex-start);
+  min-height: 100vh;
 }
 
 .content {
