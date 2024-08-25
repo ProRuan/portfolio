@@ -2,6 +2,7 @@
 
 .main {
   @include display-flex($ai: flex-start);
+  overflow-x: clip;
 }
 
 .content {

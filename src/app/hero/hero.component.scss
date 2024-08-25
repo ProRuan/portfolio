@@ -96,6 +96,11 @@
   @include position($p: absolute, $t: 18px, $r: 0);
 }
 
+.contact-links {
+  @include display-flex($jc: flex-start);
+  gap: 32px;
+}
+
 .hero-email {
   @include font();
   cursor: pointer;
@@ -109,10 +114,6 @@
 
 .scroll-hint {
   writing-mode: vertical-lr;
-}
-
-.mobile {
-  display: none;
 }
 
 @media (max-width: 1800px) {
@@ -236,20 +237,16 @@
     @include font(27px, 400, 32.4px);
   }
 
+  .contact-bar {
+    gap: 16px;
+  }
+
   .hero-email {
     display: none;
   }
 
   .scroll-hint-box {
     display: none;
-  }
-
-  .desktop {
-    display: none;
-  }
-
-  .mobile {
-    display: unset;
   }
 }
 

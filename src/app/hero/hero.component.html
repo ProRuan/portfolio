@@ -30,17 +30,16 @@
 <div class="hero-bottom">
     <div class="contact-bar">
         <div class="vector-box">
-            <svg class="vector desktop" width="1060" height="4">
+            <svg class="vector" width="1060" height="4">
                 <path d="M 0 2 H 1060" stroke="#00bee8" stroke-width="4" />
             </svg>
-            <svg class="vector mobile" width="48" height="4">
-                <path d="M 0 2 H 48" stroke="#00bee8" stroke-width="4" />
-            </svg>
         </div>
-        <button class="social-btn git-hub-btn" (click)="linkData.redirect(linkData.gitHub)"></button>
-        <button class="social-btn email-btn" (click)="linkData.scroll('#contact')"></button>
-        <button class="social-btn linked-in-btn" (click)="linkData.redirect(linkData.linkedIn)"></button>
-        <a class="hero-email" (click)="linkData.scroll('#contact')">rudolf.sachslehner&#64;gmx.at</a>
+        <div class="contact-links">
+            <button class="social-btn git-hub-btn" (click)="linkData.redirect(linkData.gitHub)"></button>
+            <button class="social-btn email-btn" (click)="linkData.scroll('#contact')"></button>
+            <button class="social-btn linked-in-btn" (click)="linkData.redirect(linkData.linkedIn)"></button>
+            <a class="hero-email" (click)="linkData.scroll('#contact')">rudolf.sachslehner&#64;gmx.at</a>
+        </div>
     </div>
 
     <div class="scroll-hint-box">
