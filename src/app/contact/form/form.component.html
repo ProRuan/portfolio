@@ -1,6 +1,6 @@
 <form #contactForm="ngForm" class="form-box" (keyup)="verify(contactForm)" (ngSubmit)="onSubmit(contactForm)">
     <div class="contact-form">
-        <div data-aos="fade-down-left" class="input-box" [ngClass]="classes.name">
+        <div class="input-box" [ngClass]="classes.name">
             <input [(ngModel)]="contact.name" name="name" class="contact-input" (focus)="focus('name', 'error')"
                 (blur)="blur('name')" type="text" minlength="2" placeholder="{{ print().placeholder.name }}" required>
             <img class="check" src="../../assets/img/check.svg" alt="check">
@@ -11,7 +11,7 @@
             <span class="hint">{{ print().nameHint.enhanced }}</span>
             }
         </div>
-        <div data-aos="fade-down-left" class="input-box" [ngClass]="classes.email">
+        <div class="input-box" [ngClass]="classes.email">
             <input [(ngModel)]="contact.email" name="email" class="contact-input" (focus)="focus('email', 'error')"
                 (blur)="blur('email')" type="text" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
                 placeholder="{{ print().placeholder.email }}" required>
@@ -23,7 +23,7 @@
             <span class="hint">{{ print().emailHint.enhanced }}</span>
             }
         </div>
-        <div data-aos="fade-down-left" class="textarea-box" [ngClass]="classes.message">
+        <div class="textarea-box" [ngClass]="classes.message">
             <textarea [(ngModel)]="contact.message" name="message" minlength="20" class="contact-textarea"
                 (focus)="focus('message', 'empty')" (blur)="blur('message')"
                 placeholder="{{ print().placeholder.message }}" required></textarea>
@@ -37,7 +37,7 @@
         </div>
     </div>
 
-    <div data-aos="fade-down-left" class="privacy-policy-box">
+    <div class="privacy-policy-box">
         <div class="privacy-policy-line">
             <img class="checkbox" (click)="agree()" [src]="getCheckbox()" alt="check-button">
             <p class="privacy-policy-text">
@@ -54,5 +54,5 @@
         }
     </div>
 
-    <button data-aos="fade-down-left" class="prim-btn" [disabled]="isDisabled()">{{ print().submitButton }}</button>
+    <button class="prim-btn" [disabled]="isDisabled()">{{ print().submitButton }}</button>
 </form>

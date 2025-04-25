@@ -20,7 +20,7 @@ export class LanguageService {
       Hi, I´m an Austrian Frontend Developer based at the center of Lower Austria.
       Delighted by the limitless opportunities within IT,
       I discovered programming as my mission to craft
-      salient and intuitve websites and applications.
+      salient and intuitive websites and applications.
     `,
     location: `
       Flexible in terms of working environments,
@@ -113,7 +113,7 @@ export class LanguageService {
     introText: `
       Ich bin ein Frontend-Webentwickler im Zentrum von Niederösterreich.
       Meine Mission lautet, meine Programmier-Fertigkeiten zu nutzen,
-      um hervorragende und inuitive Webseiten und Applikationen zu schaffen.
+      um hervorragende und intuitive Webseiten und Applikationen zu schaffen.
     `,
     location: `
       Hinsichtlich meines Arbeitsumfeldes bin ich flexibel und
@@ -141,7 +141,7 @@ export class LanguageService {
     `,
     skillButton: 'Kontaktieren',
     projectIntro: `
-      Here eine Auswahl meiner Projekte -
+      Hier eine Auswahl meiner Projekte -
       Interagieren Sie mit einem Projekt und
       überzeugen Sie sich selbst.
     `,
