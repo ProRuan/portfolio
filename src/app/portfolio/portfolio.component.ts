@@ -20,14 +20,14 @@ export class PortfolioComponent {
     {
       path: '../../assets/img/join.png',
       name: 'Join',
-      skills: 'JavaScript | HTML | CSS',
+      skills: 'Angular | TypeScript | Firebase',
       description: `
       Task manager inspired by the Kanban System.
       Create and organize tasks using drag and drop functions,
       assign users and categories.
       `,
       link: 'https://join.rudolf-sachslehner.eu/',
-      github: 'https://github.com/ProRuan/portfolio-join',
+      github: 'https://github.com/ProRuan/join-angular',
     },
     {
       path: '../../assets/img/raising_fantasy.jpg',
