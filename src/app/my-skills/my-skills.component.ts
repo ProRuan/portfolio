@@ -32,6 +32,14 @@ export class MySkillsComponent {
     { path: '../../assets/img/api.svg', name: 'Rest-Api' },
     { path: '../../assets/img/scrum.svg', name: 'Scrum' },
     { path: '../../assets/img/material_design.svg', name: 'Material Design' },
+    { path: '../../assets/img/rxjs.svg', name: 'RxJs' },
+    { path: '../../assets/img/django.svg', name: 'Django' },
+    { path: '../../assets/img/python.svg', name: 'Python' },
+    { path: '../../assets/img/docker.svg', name: 'Docker' },
+    { path: '../../assets/img/postgresql.svg', name: 'PostgreSQL' },
+    { path: '../../assets/img/redis.svg', name: 'Redis' },
+    { path: '../../assets/img/linux.svg', name: 'Linux' },
+    { path: '../../assets/img/cloud.svg', name: 'Cloud' },
   ];
 
   /**

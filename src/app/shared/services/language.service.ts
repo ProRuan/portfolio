@@ -52,6 +52,11 @@ export class LanguageService {
       with a project to see my skills in action.
     `,
     testButton: 'Live test',
+    videoflixDesc: `
+      A video platform using a Django-based backend.
+      Register and log in to browse a library and
+      watch videos by player.
+    `,
     joinDesc: `
       Task manager inspired by the Kanban System.
       Create and organize tasks using drag and drop functions,
@@ -146,6 +151,11 @@ export class LanguageService {
       überzeugen Sie sich selbst.
     `,
     testButton: 'Live-Test',
+    videoflixDesc: `
+      Eine Django-basierte Videoplattform.
+      Erstellen Sie einen Account, um die Bibliothek
+      zu durchstöbern und Videos abzuspielen.
+    `,
     joinDesc: `
       Ein Taskmanager inspiriert nach dem Kanban-Prinzip.
       Kreiere und verwalte Aufgaben und

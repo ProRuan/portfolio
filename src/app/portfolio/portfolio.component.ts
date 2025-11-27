@@ -18,6 +18,18 @@ import { LanguageService } from '../shared/services/language.service';
 export class PortfolioComponent {
   projects: Project[] = [
     {
+      path: '../../assets/img/videoflix.png',
+      name: 'Videoflix',
+      skills: 'Django | Python | Google Cloud',
+      description: `
+      A video platform using a Django-based backend.
+      Register and log in to browse a library and
+      watch videos by player.
+      `,
+      link: 'https://videoflix.rudolf-sachslehner.eu/',
+      github: 'https://github.com/ProRuan/videoflix-frontend',
+    },
+    {
       path: '../../assets/img/join.png',
       name: 'Join',
       skills: 'Angular | TypeScript | Firebase',
@@ -63,7 +75,8 @@ export class PortfolioComponent {
    */
   updateProjects() {
     let lang = this.langData.get();
-    this.projects[0].description = lang.joinDesc;
-    this.projects[1].description = lang.gameDesc;
+    this.projects[0].description = lang.videoflixDesc;
+    this.projects[1].description = lang.joinDesc;
+    this.projects[2].description = lang.gameDesc;
   }
 }
